@@ -17,6 +17,7 @@
   "dependencies": {
     "@camome/core": "^0.0.19",
     "@camome/system": "^0.1.20",
+    "@headlessui/react": "^1.7.9",
     "@heroicons/react": "^2.0.10",
     "@mdx-js/loader": "^2.2.1",
     "@mdx-js/mdx": "^2.1.5",

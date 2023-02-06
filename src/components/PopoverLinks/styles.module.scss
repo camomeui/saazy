@@ -37,9 +37,10 @@
     background-color: var(--cmm-color-neutral-1);
   }
 
-  svg {
-    width: 1.5rem;
-    height: 1.5rem;
+  > svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    stroke-width: 2;
     color: var(--cmm-color-primary-5);
   }
 }

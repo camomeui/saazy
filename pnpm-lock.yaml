@@ -4,6 +4,7 @@ specifiers:
   '@camome/core': ^0.0.19
   '@camome/system': ^0.1.20
   '@camome/utils': ^0.1.10
+  '@headlessui/react': ^1.7.9
   '@heroicons/react': ^2.0.10
   '@mdx-js/loader': ^2.2.1
   '@mdx-js/mdx': ^2.1.5
@@ -59,6 +60,7 @@ specifiers:
 dependencies:
   '@camome/core': 0.0.19_react@18.2.0
   '@camome/system': 0.1.20
+  '@headlessui/react': 1.7.9_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.14_react@18.2.0
   '@mdx-js/loader': 2.2.1
   '@mdx-js/mdx': 2.2.1
@@ -1852,6 +1854,18 @@ packages:
       long: 4.0.0
       protobufjs: 7.2.1
       yargs: 16.2.0
+    dev: false
+
+  /@headlessui/react/1.7.9_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-Bobh/+mDciu8kEE2hvdukFYjbfaG4MEkK/6TjWOgqcODLKYpRhWPKPE+dCcCSz/YrwjFVrEAMOiWtfk6sW20/w==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@heroicons/react/2.0.14_react@18.2.0:
