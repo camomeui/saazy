@@ -23,8 +23,10 @@ export default function PageLayout({
         <main>
           {title && (
             <div className={styles.titleSection}>
-              <h1 className={styles.title}>{title}</h1>
-              <p className={styles.description}>{description}</p>
+              <div className={styles.titleSectionInner}>
+                <h1 className={styles.title}>{title}</h1>
+                <p className={styles.description}>{description}</p>
+              </div>
             </div>
           )}
           {children}

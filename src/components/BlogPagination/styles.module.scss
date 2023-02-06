@@ -7,17 +7,10 @@
   position: relative;
 }
 
-.button {
-  display: flex;
-
-  @include variables.mq("sm") {
-    font-size: var(--cmm-font-size-sm) !important;
-  }
-}
-
 .arrow {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  stroke-width: 2.5;
 
   @include variables.mq("sm") {
     display: none;

@@ -5,9 +5,6 @@ const sidebar = {
       id: "introduction",
     },
     {
-      id: "components",
-    },
-    {
       id: "develop",
       label: "Develop",
       open: true,

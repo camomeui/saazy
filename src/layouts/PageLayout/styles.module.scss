@@ -5,9 +5,6 @@
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   min-height: 100vh;
-  background-image: url("/images/gradient-bg.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
 
   @include variables.mq("md") {
     background-size: 60rem;
@@ -16,27 +13,30 @@
 }
 
 .titleSection {
-  @include variables.container(variables.$xl);
-
-  padding: 1.5rem 1rem 3rem 1rem;
+  background: var(--cmm-color-surface-2);
   text-align: center;
-  border-bottom: 1px solid var(--cmm-color-neutral-2);
+  border-bottom: 1px solid var(--cmm-color-border-base);
 
   .title {
     font-weight: var(--cmm-font-weight-extrabold);
-    font-size: var(--cmm-font-size-5xl);
+    font-size: var(--cmm-font-size-6xl);
 
     @include variables.mq("md") {
       font-size: var(--cmm-font-size-3xl);
     }
   }
 
+  .titleSectionInner {
+    @include variables.container(variables.$xl);
+    padding: 1.5rem 1rem 3rem 1rem;
+  }
+
   .description {
     max-width: 30rem;
     margin: 0 auto;
     margin-top: 0.75rem;
-    font-weight: var(--cmm-font-weight-light);
     font-size: var(--cmm-font-size-lg);
+    color: var(--cmm-color-font-muted);
 
     @include variables.mq("md") {
       font-size: var(--cmm-font-size-md);

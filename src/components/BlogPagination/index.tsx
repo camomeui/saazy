@@ -1,8 +1,5 @@
 import { Button } from "@camome/core";
-import {
-  ArrowSmallLeftIcon,
-  ArrowSmallRightIcon,
-} from "@heroicons/react/20/solid";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Link from "next/link";
 
@@ -22,19 +19,15 @@ export default function BlogPagination({
   const prevPage = currentPage - 1 > 0;
   const nextPage = currentPage + 1 <= totalPages;
 
-  const newerButtonContent = (
-    <>
-      <ArrowSmallLeftIcon className={styles.arrow} />
-      <span>Newer</span>
-    </>
-  );
+  const newerButtonProps = {
+    startDecorator: <ChevronLeftIcon className={styles.arrow} />,
+    children: <span>Newer</span>,
+  };
 
-  const olderButtonContent = (
-    <>
-      <span>Older</span>
-      <ArrowSmallRightIcon className={styles.arrow} />
-    </>
-  );
+  const olderButtonProps = {
+    endDecorator: <ChevronRightIcon className={styles.arrow} />,
+    children: <span>Older</span>,
+  };
 
   return (
     <nav className={clsx(styles.nav, className)}>
@@ -45,10 +38,9 @@ export default function BlogPagination({
             currentPage - 1 === 1 ? `/blog/` : `/blog/page/${currentPage - 1}`
           }
           variant={buttonVariant}
-          className={styles.button}
-        >
-          {newerButtonContent}
-        </Button>
+          size="sm"
+          {...newerButtonProps}
+        />
       ) : (
         <div />
       )}
@@ -60,10 +52,9 @@ export default function BlogPagination({
           component={Link}
           href={`/blog/page/${currentPage + 1}`}
           variant={buttonVariant}
-          className={styles.button}
-        >
-          {olderButtonContent}
-        </Button>
+          size="sm"
+          {...olderButtonProps}
+        />
       ) : (
         <div />
       )}

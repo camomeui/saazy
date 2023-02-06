@@ -1,7 +1,6 @@
-// import { Popover } from "@camome/core";
 import Popover from "@/components/Popover";
 import { SvgComponent } from "@camome/utils";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 import styles from "./styles.module.scss";

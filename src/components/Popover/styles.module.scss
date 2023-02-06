@@ -12,16 +12,15 @@ $panelZ: 10;
   margin-top: 0.75rem;
   z-index: $panelZ;
   animation: show 0.3s forwards;
-  font-size: var(--cmm-font-size-sm);
 
   &__content {
     position: absolute;
     left: 50%;
     translate: -50%;
-    box-shadow: var(--cmm-shadow-sm);
     border-radius: var(--cmm-radius-lg);
     background: var(--cmm-color-surface-0);
     border: 1px solid var(--cmm-color-border-base);
+    min-width: 7rem;
   }
 }
 

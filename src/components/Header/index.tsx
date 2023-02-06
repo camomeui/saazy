@@ -60,11 +60,6 @@ const navItems: NavItem[] = [
         label: "Introduction",
       },
       {
-        id: "docs-components",
-        href: "/docs/components",
-        label: "Components",
-      },
-      {
         id: "docs-cms-markdown",
         href: "/docs/cms/markdown",
         label: "Markdown",
@@ -167,6 +162,7 @@ export default function Header({ menuContent, classNames }: Props) {
             component={Link}
             href="/signin"
             variant="ghost"
+            colorScheme="neutral"
             className={styles.desktopOnly}
           >
             Sign in
