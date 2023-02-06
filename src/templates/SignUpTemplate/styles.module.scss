@@ -40,3 +40,14 @@
     }
   }
 }
+
+.terms {
+  font-size: var(--cmm-font-size-xs);
+  margin-top: -1rem;
+  text-align: center;
+  color: var(--cmm-color-font-base);
+
+  a {
+    text-decoration: underline;
+  }
+}
