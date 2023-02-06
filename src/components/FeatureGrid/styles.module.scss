@@ -1,0 +1,58 @@
+@use "@/styles/variables";
+
+.Block {
+  @include variables.container;
+
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include variables.mq("lg") {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  @include variables.mq("md") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  border: 1px solid var(--cmm-color-neutral-2);
+  border-radius: var(--cmm-radius-xl);
+  padding: 1.5rem;
+  position: relative;
+  background-color: white;
+  transition: transform 0.3s;
+
+  &__title {
+    font-size: var(--cmm-font-size-xl);
+    font-weight: var(--cmm-font-weight-bold);
+  }
+
+  &__description {
+    font-size: var(--cmm-font-size-md);
+    color: var(--cmm-color-neutral-6);
+    line-height: 1.75;
+    flex: 1;
+  }
+}
+
+.iconWrapper {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--cmm-color-primary-5);
+  border-radius: var(--cmm-radius-lg);
+
+  & svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+  }
+}

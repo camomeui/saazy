@@ -1,0 +1,39 @@
+@use "@/styles/variables";
+
+.container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.card {
+  max-width: 60rem;
+  margin: 0 auto;
+  color: var(--cmm-color-white);
+  padding: 5rem;
+  border-radius: var(--cmm-radius-2xl);
+  display: grid;
+  place-content: start;
+  row-gap: 1.5rem;
+  background-image: url("/images/cta-saazy-bg.webp");
+  background-size: cover;
+  background-position: right;
+
+  &__title {
+    font-weight: var(--cmm-font-weight-bold);
+    font-size: var(--cmm-font-size-3xl);
+    line-height: 1;
+  }
+
+  &__sub {
+    color: var(--cmm-color-neutral-2);
+  }
+
+  @include variables.mq("md") {
+    padding: 2rem;
+  }
+}
+
+.newsletter {
+  margin: 0 auto;
+  margin-top: 2rem;
+}

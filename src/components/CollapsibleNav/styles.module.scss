@@ -1,0 +1,62 @@
+@use "@/styles/variables";
+
+$rowGap: 0.25rem;
+
+.list {
+  display: grid;
+  row-gap: $rowGap;
+  color: var(--cmm-color-neutral-6);
+}
+
+.category {
+  details[open] {
+    > summary svg {
+      rotate: 90deg;
+    }
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      color: var(--cmm-color-neutral-5);
+      translate: 0.25rem;
+    }
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  ul {
+    margin-left: 1rem;
+    margin-top: $rowGap;
+  }
+}
+
+.button {
+  display: flex;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--cmm-radius-md);
+  font-weight: var(--cmm-font-weight-medium);
+  transition: var(--cmm-transition-bg);
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: 100%;
+
+  &.isActive {
+    font-weight: var(--cmm-font-weight-semibold);
+    color: var(--cmm-color-primary-5);
+    background-color: var(--cmm-color-neutral-0);
+    border-color: var(--cmm-color-neutral-2);
+  }
+
+  &:hover {
+    background-color: var(--cmm-color-neutral-1);
+  }
+}

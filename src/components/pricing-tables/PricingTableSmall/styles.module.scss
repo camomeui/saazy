@@ -1,0 +1,82 @@
+$borderColor: var(--cmm-color-neutral-2);
+
+.Block {
+  width: 100%;
+  border-collapse: collapse;
+
+  :where(th, td) {
+    padding: 1.25rem;
+    background-color: var(--cmm-color-white);
+  }
+
+  :where(th) {
+    font-size: var(--cmm-font-size-2xl);
+  }
+
+  :where(td) {
+    font-size: var(--cmm-font-size-lg);
+    font-weight: var(--cmm-font-weight-semibold);
+    border: 1px solid $borderColor;
+  }
+}
+
+.section {
+  background-color: var(--cmm-color-neutral-6);
+  color: var(--cmm-color-white);
+  font-size: var(--cmm-font-size-xl);
+  font-weight: var(--cmm-font-weight-semibold);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.topHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--cmm-color-neutral-8);
+}
+
+.planCell {
+  display: grid;
+  place-content: center;
+  row-gap: 0.5rem;
+
+  &__name {
+    font-size: var(--cmm-font-size-xl);
+    color: var(--cmm-color-white);
+    line-height: 1;
+  }
+
+  &__priceValue {
+    font-size: var(--cmm-font-size-2xl);
+    font-weight: var(--cmm-font-weight-extrabold);
+    color: var(--cmm-color-white);
+  }
+
+  &__pricePeriod {
+    font-size: var(--cmm-font-size-lg);
+    font-weight: var(--cmm-font-weight-semibold);
+    color: var(--cmm-color-neutral-3);
+  }
+}
+
+.featureCell {
+  display: grid;
+  place-items: center;
+  row-gap: 0.5rem;
+
+  &__title {
+    font-size: var(--cmm-font-size-xl);
+  }
+
+  &__contents {
+    font-weight: var(--cmm-font-weight-medium);
+    font-size: var(--cmm-font-size-lg);
+  }
+}
+
+.check {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #38a169;
+}

@@ -1,0 +1,120 @@
+---
+title: "CMS overview"
+id: "cms-overview"
+---
+
+Saazy's blog and docs features are powered by the following libraries and technologies:
+
+- [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) and [MDX](https://mdxjs.com/) for document format.
+- [Front Matter](https://jekyllrb.com/docs/front-matter/) for document's metadata.
+- [Remark/Rehype](https://remark.js.org/) for processing markdown/mdx and converting them into HTML.
+- [Contentlayer](https://www.contentlayer.dev) for reading local markdown/MDX files.
+- [Static Generation of Next.js](https://nextjs.org/docs/basic-features/pages#static-generation) for generating actual pages.
+
+## How it works
+
+Here is a simplified code to illustrate the process:
+
+```tsx:/pages/blog/[slug].tsx
+// Thanks to contentlayer, `.mdx` files are aggregated and
+// TypeScript types are generated in the build process.
+import { allBlogs, type Blog } from "contentlayer/generated";
+
+type Props = {
+  post: Blog;
+};
+
+// Render the blog post page.
+export default function BlogPostPage({ post }: Props) {
+  return <BlogPostTemplate post={post} />;
+}
+
+// `post` is passed to `BlogPostPage` component above.
+export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
+  const post = allBlogs.find((post) => post.slug === params.slug);
+  // `post.title` and `post.date` are statically typed
+  // as defined in `contentlayer.config.ts`.
+  return {
+    props: {
+      post,
+    },
+  };
+};
+
+// Get all URLs for each posts.
+export const getStaticPaths = async () => {
+  const paths = allBlogs.map((post) => ({ params: { slug: post } }));
+  return {
+    paths,
+    fallback: false,
+  };
+};
+```
+
+```ts:/contentlayer.config.ts
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import rehypePrismPlus from "rehype-prism-plus";
+import remarkGfm from "remark-gfm";
+
+export const Blog = defineDocumentType(() => ({
+  name: "Blog",
+  filePathPattern: `blog/**/*.mdx`,
+  contentType: "mdx",
+    // Define the meta fields so that contentlayer doesn't allow invalid documents.
+    fields: {
+      title: {
+        type: "string",
+        required: true,
+      },
+      date: {
+        type: "date",
+        required: true,
+      },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.replace("blog/", ""),
+    },
+  },
+}));
+
+export default makeSource({
+  contentDirPath: "content", // Specify the root directory for contents.
+  documentTypes: [Blog],
+  // contentlayer is responsible for processing md/mdx with remark/rehype plugins.
+  mdx: {
+    remarkPlugins: [remarkGfm], // Support GitHub Flavoured Markdown.
+    rehypePlugins: [
+      [rehypePrismPlus, { ignoreMissing: true }], // Support syntax highlight by Prism.
+    ],
+  },
+});
+```
+
+```md:/content/blog/example.mdx
+---
+title: "This post is an example"
+date: "2022-11-11"
+---
+
+You must supply `title` and `date` fields in the above format as defined in `/contentlayer.config.ts`.
+```
+
+## How to write blog/docs
+
+1. Start dev server
+1. Edit/add markdown contents
+1. Preview them in your browser
+
+:::info
+Thanks to contentlayer, you can live-preview the changes as you edit and save the file.
+:::
+
+## Markdown / MDX
+
+See [Markdown guide](/docs/cms/markdown)
+
+## Images
+
+Images embedded in md/mdx documents are optimized with [`next/image`](https://nextjs.org/docs/api-reference/next/image). Their width and height are calculated in a remark plugin so that they do not cause layout shift.

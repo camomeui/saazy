@@ -1,0 +1,49 @@
+---
+title: "Docs"
+id: "docs"
+---
+
+Docs is powered by [CMS](/docs/cms/overview) along with [Blog](/docs/cms/blog).
+
+:::info
+This docs site is created with the feature.
+:::
+
+## How to write docs
+
+See [CMS overview](/docs/cms/overview#how-to-write-blogdocs) for writing content in Markdown.
+
+## Sidebar
+
+You can define the order, label, and categories of items in the sidebar by editing `/content/docs/_sidebar.js`.
+
+```js:/content/docs/_sidebar.js
+/** @type {import('@/types').DocsSidebarConfig} */
+const sidebar = {
+  items: [
+    // Link items.
+    {
+      id: "introduction", // Specify `Docs.id`. This defaults to `Docs.slug` but you can change in front matter.
+    },
+    {
+      id: "development",
+      label: "Custom label", // `Docs.title` is used if not supplied.
+    },
+    // Category item.
+    {
+      id: "cms", // Currently this ID is not related anywhere.
+      label: "CMS",
+      open: true, // Specify whether it's open by default or not.
+      // If `items` is supplied this is treated as a category.
+      items: [
+        {
+          id: "cms/blog", // Sub-directory is supported, but not mandatory for creating categories.
+        },
+        {
+          id: "cms/docs",
+        },
+      ],
+    },
+  ],
+};
+```

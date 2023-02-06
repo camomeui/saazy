@@ -1,0 +1,21 @@
+@use "@/styles/variables";
+
+.Block {
+  @include variables.container(variables.$xl);
+
+  padding-top: 3rem;
+}
+
+.large {
+  @include variables.mq("md") {
+    display: none;
+  }
+}
+
+.small {
+  display: none;
+
+  @include variables.mq("md") {
+    display: table;
+  }
+}

@@ -1,0 +1,16 @@
+@use "@/styles/variables";
+
+.Block {
+  background-color: var(--cmm-color-neutral-1);
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @include variables.mq("lg") {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

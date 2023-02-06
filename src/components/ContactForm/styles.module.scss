@@ -1,0 +1,22 @@
+@use "@/styles/variables";
+
+.Block {
+  display: grid;
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
+  gap: 1.5rem;
+
+  a {
+    text-decoration: underline;
+  }
+
+  & .column2 {
+    display: flex;
+    gap: 1rem;
+
+    @include variables.mq("sm") {
+      flex-direction: column;
+    }
+  }
+}

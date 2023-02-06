@@ -1,0 +1,37 @@
+---
+title: "Blog"
+id: "blog"
+---
+
+Blog is powered by [CMS](/docs/cms/overview) along with [Docs](/docs/cms/docs).
+
+:::info
+You can see a live example at [/blog](/blog)
+:::
+
+## How to write blog
+
+See [CMS overview](/docs/cms/overview#how-to-write-blogdocs) for writing content in Markdown.
+
+## Authors
+
+You can define an author of blog posts in `/content/authors.ts`.
+
+If `author` field in a blog post is undefined, `defaultAuthor` in [siteData](/docs/site-configuration#site-data-object) is used.
+
+## Tags
+
+Simply add `tags` field in the blog posts and all tags are automatically aggregated under `/blog/tags/[slug]` routes.
+
+:::info
+You don't need to pre-define tags somewhere else than posts' metadata.
+:::
+
+## Caveats
+
+### Nested routes are not supported
+
+All md/mdx files are expected to be placed at the **top level** of the `/content/blog` directory.
+
+- DO - `/content/blog/post.mdx`
+- DON'T - `/content/blog/category/post.mdx`

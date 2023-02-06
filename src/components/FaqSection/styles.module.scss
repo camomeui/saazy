@@ -1,0 +1,68 @@
+@use "@/styles/variables";
+
+.container {
+  background: linear-gradient(130deg, rgba(230, 237, 255, 0.5) 0%, #ffffff 70%),
+    #ffffff;
+
+  @include variables.mq("md") {
+    background: linear-gradient(
+        130deg,
+        rgba(230, 237, 255, 0.6) 0%,
+        #ffffff 50%
+      ),
+      #ffffff;
+  }
+}
+
+.inner {
+  @include variables.container;
+
+  padding: 3rem 0 3rem 0;
+  display: grid;
+  grid-template-columns: 38% 1fr;
+  gap: 2rem;
+
+  @include variables.mq("lg") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  &__main {
+    font-weight: var(--cmm-font-weight-extrabold);
+    font-size: var(--cmm-font-size-3xl);
+
+    @include variables.mq("lg") {
+      font-size: var(--cmm-font-size-2xl);
+    }
+  }
+
+  &__sub {
+    color: var(--cmm-color-neutral-7);
+  }
+
+  a {
+    font-weight: var(--cmm-font-weight-semibold);
+    color: var(--cmm-color-primary-6);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.summary {
+  @include variables.mq("lg") {
+    padding: 0.75rem 0 !important;
+  }
+}
+
+.contents {
+  @include variables.mq("lg") {
+    padding: 0 0 0.75rem 0 !important;
+  }
+}

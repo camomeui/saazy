@@ -1,0 +1,16 @@
+.Block {
+  padding: 1rem;
+  border: 1px solid var(--cmm-color-neutral-2);
+  border-radius: var(--cmm-radius-lg);
+  background-color: var(--cmm-color-white);
+  display: flex;
+  gap: 1rem;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+.vertical {
+  flex-direction: column;
+}

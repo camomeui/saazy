@@ -1,0 +1,41 @@
+---
+title: "Site config"
+id: "site-config"
+---
+
+## `siteData` object
+
+You can customize your site's metadata in `/content/siteData.ts`.
+
+```ts:/content/siteData.ts
+const url = "https://saazy.camome.net";
+const siteData = {
+  title: "Saazy",
+  subTitle: "Grow your business with your customers",
+  description: "This is description text about your website.",
+  url,
+  ogImage: url + "/images/og.png",
+  defaultAuthor: "john-doe",
+  defaultBlogPostImg: "/images/post-placeholder.webp",
+  blogPostsPerPage: 9,
+};
+```
+
+## OG image
+
+Just replace `/public/images/og.png` or modify `/src/components/DefaultSeo.tsx` for more precise control.
+
+## Favicon
+
+Default icons and settings followed this article: [How to Favicon in 2022: Six files that fit most needs](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs).
+
+To change the favicon, you need to replace the following images:
+
+```md
+- /public
+  - favicon.ico
+  - icon.svg
+  - icon-192.png
+  - icon-512.png
+  - apple-touch-icon.png
+```

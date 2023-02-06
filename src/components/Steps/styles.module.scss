@@ -1,0 +1,143 @@
+@use "@/styles/variables";
+
+$circleSize: 1rem;
+
+.container {
+  @include variables.container;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: repeat(3, 25rem);
+  grid-auto-flow: dense;
+  column-gap: 3rem;
+
+  @include variables.mq("lg") {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    column-gap: 2rem;
+  }
+}
+
+.texts {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: flex-start;
+
+  &__title {
+    font-size: var(--cmm-font-size-4xl);
+    font-weight: var(--cmm-font-weight-bold);
+    line-height: 1.25;
+
+    @include variables.mq("lg") {
+      font-size: var(--cmm-font-size-3xl);
+    }
+  }
+
+  &__description {
+    color: var(--cmm-color-neutral-5);
+  }
+}
+
+.image {
+  grid-column: 3;
+
+  &__wrap {
+    position: relative;
+    aspect-ratio: 968 / 600;
+    margin-bottom: 3rem;
+
+    img {
+      object-fit: contain;
+    }
+
+    @include variables.mq("lg") {
+      margin-top: 3rem;
+      max-height: 20rem;
+    }
+  }
+
+  @include variables.mq("lg") {
+    grid-column: 1;
+  }
+}
+
+.arrowRight {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.feature {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    color: var(--cmm-color-primary-6);
+    font-weight: var(--cmm-font-weight-medium);
+  }
+
+  &__check {
+    display: grid;
+    place-items: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--cmm-color-primary-5);
+    color: var(--cmm-color-white);
+    border-radius: var(--cmm-radius-full);
+
+    & > svg {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
+
+.timeline {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2;
+    transform: translateY(1rem);
+
+    @include variables.mq("lg") {
+      grid-column: 3;
+    }
+
+    &[data-index="0"] {
+      @include variables.mq("lg") {
+        grid-row: 1 / span 2;
+      }
+    }
+    &[data-index="1"] {
+      @include variables.mq("lg") {
+        grid-row: 3 / span 2;
+      }
+    }
+    &[data-index="2"] {
+      @include variables.mq("lg") {
+        grid-row: 5 / span 2;
+      }
+    }
+  }
+
+  &__circle {
+    width: $circleSize;
+    height: $circleSize;
+    border-radius: var(--cmm-radius-full);
+    border: solid 1px var(--cmm-color-primary-5);
+  }
+
+  &__line {
+    width: 1px;
+    height: 100%;
+    background-color: var(--cmm-color-primary-5);
+  }
+}

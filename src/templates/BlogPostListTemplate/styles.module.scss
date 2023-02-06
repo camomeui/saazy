@@ -1,0 +1,10 @@
+@use "@/styles/variables";
+
+.container {
+  @include variables.container;
+
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  display: grid;
+  row-gap: 3rem;
+}

@@ -1,0 +1,25 @@
+import { Message } from "@camome/components";
+import MdxPageLayout from "@/layouts/MdxPageLayout";
+import { NextSeo } from "next-seo";
+
+export default ({ children }) => (
+  <>
+    <NextSeo title="Success" />
+    <MdxPageLayout>{children}</MdxPageLayout>
+  </>
+);
+
+<Message
+  status="success"
+  title="We're happy with your form submission!"
+  isAlert
+  className="no-markup"
+>
+  Don't worry. This is a fake message.
+</Message>
+
+You're redirected from `/api/*.ts` serverless function (unless you came here via navigation menu).
+
+Check out the handler function in `/pages/api/*.ts` to actually handle the form submission.
+
+In case any error occurs, user will be redirected to `/pages/failure`.

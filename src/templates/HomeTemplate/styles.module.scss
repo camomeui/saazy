@@ -1,0 +1,37 @@
+@use "@/styles/variables.scss";
+
+.hero {
+  background: linear-gradient(
+      130deg,
+      #ffffff 40%,
+      rgba(230, 237, 255, 0.29) 55%
+    ),
+    #ffffff;
+  padding-bottom: 2rem;
+
+  &__container {
+    @include variables.container;
+
+    padding-top: 2rem;
+    display: grid;
+    row-gap: 1rem;
+  }
+}
+
+.steps {
+  display: grid;
+  margin-top: 3.5rem;
+  row-gap: 3.5rem;
+}
+
+.features {
+  margin-top: 3rem;
+}
+
+.logoCloud {
+  margin-top: 1rem;
+}
+
+.cta {
+  @include variables.container;
+}

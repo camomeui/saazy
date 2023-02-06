@@ -1,0 +1,111 @@
+@use "@/styles/variables";
+
+.Block {
+  background-color: var(--cmm-color-neutral-1);
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  display: grid;
+  row-gap: 3rem;
+}
+
+.list {
+  @include variables.container;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @include variables.mq("lg") {
+    grid-template-columns: repeat((1, 1fr));
+  }
+}
+
+.item {
+  background-color: var(--cmm-color-white);
+  border: 1px solid var(--cmm-color-neutral-2);
+  border-radius: var(--cmm-radius-xl);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  place-content: start;
+  row-gap: 1.5rem;
+  max-width: 30rem;
+  margin: 0 auto;
+
+  &__upper {
+    display: grid;
+    row-gap: 0.5rem;
+  }
+
+  &__name {
+    font-weight: var(--cmm-font-weight-bold);
+    font-size: var(--cmm-font-size-xl);
+    line-height: 1;
+  }
+
+  &__price {
+    font-weight: var(--cmm-font-weight-bold);
+    font-size: var(--cmm-font-size-5xl);
+  }
+
+  &__priceUnit {
+    font-weight: var(--cmm-font-weight-medium);
+    font-size: var(--cmm-font-size-xl);
+  }
+
+  &__description {
+    color: var(--cmm-color-neutral-5);
+  }
+
+  &__featureList {
+    display: grid;
+    row-gap: 0.5rem;
+    place-content: start;
+  }
+
+  &__feature {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    color: var(--cmm-color-neutral-5);
+  }
+
+  &__check {
+    display: grid;
+    place-items: center;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--cmm-color-primary-5);
+    color: var(--cmm-color-white);
+    border-radius: var(--cmm-radius-full);
+
+    & > svg {
+      width: 0.6rem;
+      height: 0.6rem;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+
+  &.mostPopular {
+    border: 3px solid var(--cmm-color-primary-5);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "Most Popular";
+      top: 0;
+      left: 50%;
+      translate: -50% -50%;
+      background-color: var(--cmm-color-primary-5);
+      color: var(--cmm-color-white);
+      font-weight: var(--cmm-font-weight-medium);
+      border-radius: var(--cmm-radius-full);
+      padding: 0 1rem;
+      line-height: 2;
+      font-size: var(--cmm-font-size-sm);
+    }
+  }
+}

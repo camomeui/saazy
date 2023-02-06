@@ -1,0 +1,31 @@
+@use "@/styles/variables";
+
+.container {
+  @include variables.container;
+
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  display: grid;
+  place-items: center;
+  row-gap: 3rem;
+}
+
+.title {
+  font-weight: var(--cmm-font-weight-extrabold);
+  font-size: var(--cmm-font-size-4xl);
+  text-align: center;
+}
+
+.sub {
+  text-align: center;
+  margin-top: 1rem;
+
+  a {
+    color: var(--cmm-color-primary-5);
+    font-weight: var(--cmm-font-weight-bold);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+import MdxPageLayout from "@/layouts/MdxPageLayout";
+import { NextSeo } from "next-seo";
+
+export const meta = {
+  title: "MDX Page",
+  description: "This is description text",
+};
+
+export default ({ children }) => (
+  <>
+    <NextSeo title={meta.title} />
+    <MdxPageLayout {...meta}>{children}</MdxPageLayout>
+  </>
+);
+
+You can easily create static pages by adding `[slug].mdx` file under the `/pages` directory.
+
+Any MDX (and Markdown) features are supported the same as the blog.
+
+See [Markdown Guide](/docs/cms/markdown) for details.

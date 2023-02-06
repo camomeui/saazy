@@ -1,0 +1,91 @@
+@use "@/styles/variables";
+
+.container {
+  display: grid;
+  row-gap: 3rem;
+  padding: 3rem 0 7rem 0;
+  position: relative;
+}
+
+.list {
+  @include variables.container;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+
+  @include variables.mq("lg") {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.item {
+  display: grid;
+  grid-template-columns: min(20%, 9rem) 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  place-items: center;
+  border: solid 1px var(--cmm-color-neutral-2);
+  border-radius: var(--cmm-radius-xl);
+  padding: 1rem;
+  background-color: var(--cmm-color-white);
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    img {
+      object-fit: contain;
+    }
+
+    @include variables.mq("sm") {
+      width: max(30%, 10rem);
+    }
+  }
+
+  &__quoteIcon {
+    color: var(--cmm-color-neutral-2);
+  }
+
+  &__content {
+    margin: 1rem 0;
+  }
+
+  &__name {
+    font-weight: var(--cmm-font-weight-bold);
+  }
+
+  &__belonging {
+    color: var(--cmm-color-neutral-5);
+    font-size: var(--cmm-font-size-sm);
+  }
+
+  & cite {
+    font-style: normal;
+    display: block;
+  }
+
+  @include variables.mq("sm") {
+    grid-template-columns: 1fr;
+    grid-template-rows: 9rem auto;
+  }
+}
+
+.dotsUpperLeft {
+  width: max(8rem, 28%);
+  height: 20rem;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.dotsBottomRight {
+  width: max(8rem, 30%);
+  height: 16rem;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+}

@@ -1,0 +1,8 @@
+@use "@/styles/variables";
+
+.Block {
+  @include variables.container(variables.$md);
+
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}

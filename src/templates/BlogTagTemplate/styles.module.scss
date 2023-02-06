@@ -1,0 +1,7 @@
+@use "@/styles/variables";
+
+.breadcrumbs {
+  @include variables.container;
+
+  padding-top: 0.5rem;
+}

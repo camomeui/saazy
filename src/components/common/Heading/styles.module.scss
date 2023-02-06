@@ -1,0 +1,28 @@
+@use "@/styles/variables";
+
+.heading {
+  @include variables.container;
+
+  text-align: center;
+  display: grid;
+  row-gap: 1.5rem;
+  max-width: 36rem;
+
+  &__main {
+    font-weight: var(--cmm-font-weight-extrabold);
+    font-size: var(--cmm-font-size-5xl);
+    line-height: 1.2;
+
+    @include variables.mq("md") {
+      font-size: var(--cmm-font-size-4xl);
+      text-align: start;
+    }
+  }
+
+  &__sub {
+    color: var(--cmm-color-neutral-5);
+    @include variables.mq("md") {
+      text-align: start;
+    }
+  }
+}

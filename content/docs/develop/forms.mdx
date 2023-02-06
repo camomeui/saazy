@@ -1,0 +1,73 @@
+---
+title: "Forms"
+id: "forms"
+---
+
+## Built-in forms
+
+The following forms are connected to the API routes out of the box:
+
+- Newsletter
+- Contact us
+
+You can make them work by filling in the code commented below:
+
+```ts:/pages/api/newsletter
+import { NextApiRequest, NextApiResponse } from "next";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") {
+    return res.status(400).end();
+  }
+  const { email } = req.body;
+  if (!email) {
+    return res.redirect(302, "/failure");
+  }
+  try {
+    // Connect any external service or DB to add a subscriber here.
+    res.redirect(302, "/success");
+  } catch (e) {
+    console.error(e);
+    res.redirect(302, "/failure");
+  }
+}
+```
+
+## Success/failure page
+
+In the above code, user is redirected to either `/success` or `/failure` page depending on the result. Feel free to customize the content or create another one.
+
+## Creating forms
+
+Built-in forms are simply created with web standard APIs as follows:
+
+```tsx:Form.tsx
+import { Button, Checkbox, Field, Input, Textarea } from "@camome/components";
+
+<form
+  action="/api/contact"
+  method="POST"
+>
+  <Field labelText="Name" isRequired>
+    <Input name="name" required />
+  </Field>
+  <Field labelText="Email" isRequired>
+    <Input type="email" name="email" required />
+  </Field>
+  <Field labelText="Message" isRequired>
+    <Textarea rows={5} name="message" required />
+  </Field>
+  <Checkbox
+    label="Agree to our privacy policy"
+    name="accept-terms"
+    value="true"
+    isRequired
+  />
+  <Button>Submit</Button>
+</form>
+```
+
+You can follow this way or make a `fetch` request if you prefer.

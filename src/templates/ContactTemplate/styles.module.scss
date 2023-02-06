@@ -1,0 +1,11 @@
+@use "@/styles/variables";
+
+.Block {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+
+  @include variables.mq("md") {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

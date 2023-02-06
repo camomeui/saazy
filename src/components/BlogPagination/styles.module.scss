@@ -1,0 +1,33 @@
+@use "@/styles/variables";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.button {
+  display: flex;
+
+  @include variables.mq("sm") {
+    font-size: var(--cmm-font-size-sm) !important;
+  }
+}
+
+.arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  @include variables.mq("sm") {
+    display: none;
+  }
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  font-weight: var(--cmm-font-weight-medium);
+  font-size: var(--cmm-font-size-sm);
+}

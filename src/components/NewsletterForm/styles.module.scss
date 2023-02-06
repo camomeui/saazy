@@ -1,0 +1,30 @@
+@use "@/styles/variables";
+
+.Block {
+  max-width: 34rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  background-color: var(--cmm-color-neutral-0);
+  padding: 1rem;
+  border: 1px solid var(--cmm-color-neutral-2);
+  border-radius: var(--cmm-radius-xl);
+
+  @include variables.mq("sm") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.title {
+  grid-column: 1 / -1;
+  font-size: var(--cmm-font-size-sm);
+  font-weight: var(--cmm-font-weight-bold);
+  color: var(--cmm-color-primary-6);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.subTitle {
+  grid-column: 1 / -1;
+  color: var(--cmm-color-neutral-7);
+}

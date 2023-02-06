@@ -1,0 +1,47 @@
+@use "@/styles/variables";
+
+.background {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  @include variables.container;
+
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 2rem;
+
+  @include variables.mq("md") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.title {
+  font-weight: var(--cmm-font-weight-extrabold);
+  font-size: var(--cmm-font-size-9xl);
+  line-height: 1;
+
+  @include variables.mq("md") {
+    font-size: var(--cmm-font-size-8xl);
+  }
+}
+
+.description {
+  font-weight: var(--cmm-font-weight-bold);
+  font-size: var(--cmm-font-size-2xl);
+  color: var(--cmm-color-neutral-5);
+}
+
+.button {
+  margin-top: 2rem;
+}
+
+.image {
+  max-height: 20rem;
+  width: auto;
+}
