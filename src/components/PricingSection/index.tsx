@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 
-import Heading from "@/components/common/Heading";
+import Heading from "@/components/Heading";
 import CheckSvg from "@/public/icons/check.svg";
 
 import styles from "./styles.module.scss";

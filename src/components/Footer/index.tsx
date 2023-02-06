@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { FaGithub, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 
-import IconLink from "@/components/common/IconLink";
+import IconLink from "@/components/IconLink";
 import LogoSvg from "@/public/icons/logo.svg";
 
 import styles from "./styles.module.scss";

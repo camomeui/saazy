@@ -24,7 +24,7 @@ import LogoCloud from "@/components/LogoCloud";
 import PricingSection from "@/components/PricingSection";
 import Steps from "@/components/Steps";
 import TestimonialsSection from "@/components/TestimonialSection";
-import Heading from "@/components/common/Heading";
+import Heading from "@/components/Heading";
 
 import styles from "./styles.module.scss";
 import Link from "next/link";

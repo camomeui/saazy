@@ -3,7 +3,7 @@ import React from "react";
 
 import FeatureGrid, { FeatureGridProps } from "@/components/FeatureGrid";
 import FeatureTabs, { type FeatureTabsProps } from "@/components/FeatureTabs";
-import Heading from "@/components/common/Heading";
+import Heading from "@/components/Heading";
 
 import styles from "./styles.module.scss";
 

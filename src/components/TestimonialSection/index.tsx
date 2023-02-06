@@ -1,8 +1,8 @@
 import React from "react";
 
 import Image from "@/components/Image";
-import BackgroundDots from "@/components/common/BackgroundDots";
-import Heading from "@/components/common/Heading";
+import BackgroundDots from "@/components/BackgroundDots";
+import Heading from "@/components/Heading";
 import QuoteDoubleSvg from "@/public/icons/quote-double.svg";
 
 import styles from "./styles.module.scss";
