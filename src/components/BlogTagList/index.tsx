@@ -16,7 +16,7 @@ export default function BlogTagList({ tags }: Props) {
       {tags?.map((t) => (
         <li key={t}>
           <Link href={`/blog/tags/${kebabCase(t)}`}>
-            <Tag>{t}</Tag>
+            <Tag size="sm">{t}</Tag>
           </Link>
         </li>
       ))}
