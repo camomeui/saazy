@@ -12,7 +12,7 @@ The following forms are connected to the API routes out of the box:
 
 You can make them work by filling in the code commented below:
 
-```ts:/pages/api/newsletter
+```ts title="/pages/api/newsletter"
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
@@ -44,13 +44,10 @@ In the above code, user is redirected to either `/success` or `/failure` page de
 
 Built-in forms are simply created with web standard APIs as follows:
 
-```tsx:Form.tsx
+```tsx title="Form.tsx"
 import { Button, Checkbox, Field, Input, Textarea } from "@camome/components";
 
-<form
-  action="/api/contact"
-  method="POST"
->
+<form action="/api/contact" method="POST">
   <Field labelText="Name" isRequired>
     <Input name="name" required />
   </Field>
@@ -67,7 +64,7 @@ import { Button, Checkbox, Field, Input, Textarea } from "@camome/components";
     isRequired
   />
   <Button>Submit</Button>
-</form>
+</form>;
 ```
 
 You can follow this way or make a `fetch` request if you prefer.

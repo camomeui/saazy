@@ -1,6 +1,5 @@
 import { Button } from "@camome/core";
 import Link from "next/link";
-import React from "react";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -16,12 +15,8 @@ export default function NotFoundTemplate() {
         <div>
           <div className={styles.title}>404</div>
           <div className={styles.description}>Page not found...</div>
-          <Button className={styles.button}>
-            {(props) => (
-              <Link {...props} href="/">
-                Go home
-              </Link>
-            )}
+          <Button component={Link} href="/" className={styles.button}>
+            Go home
           </Button>
         </div>
         <div>

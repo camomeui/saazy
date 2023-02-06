@@ -5,9 +5,6 @@ const sidebar = {
       id: "introduction",
     },
     {
-      id: "next-vs-static",
-    },
-    {
       id: "components",
     },
     {

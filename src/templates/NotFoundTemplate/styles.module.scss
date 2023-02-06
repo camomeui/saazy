@@ -23,7 +23,7 @@
 
 .title {
   font-weight: var(--cmm-font-weight-extrabold);
-  font-size: var(--cmm-font-size-9xl);
+  font-size: 5rem;
   line-height: 1;
 
   @include variables.mq("md") {

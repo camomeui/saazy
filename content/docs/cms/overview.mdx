@@ -15,7 +15,7 @@ Saazy's blog and docs features are powered by the following libraries and techno
 
 Here is a simplified code to illustrate the process:
 
-```tsx:/pages/blog/[slug].tsx
+```tsx title="/pages/blog/[slug].tsx"
 // Thanks to contentlayer, `.mdx` files are aggregated and
 // TypeScript types are generated in the build process.
 import { allBlogs, type Blog } from "contentlayer/generated";
@@ -51,7 +51,7 @@ export const getStaticPaths = async () => {
 };
 ```
 
-```ts:/contentlayer.config.ts
+```ts title="/contentlayer.config.ts"
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypePrismPlus from "rehype-prism-plus";
 import remarkGfm from "remark-gfm";
@@ -60,16 +60,16 @@ export const Blog = defineDocumentType(() => ({
   name: "Blog",
   filePathPattern: `blog/**/*.mdx`,
   contentType: "mdx",
-    // Define the meta fields so that contentlayer doesn't allow invalid documents.
-    fields: {
-      title: {
-        type: "string",
-        required: true,
-      },
-      date: {
-        type: "date",
-        required: true,
-      },
+  // Define the meta fields so that contentlayer doesn't allow invalid documents.
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    date: {
+      type: "date",
+      required: true,
+    },
   },
   computedFields: {
     slug: {
@@ -92,7 +92,7 @@ export default makeSource({
 });
 ```
 
-```md:/content/blog/example.mdx
+```md title="/content/blog/example.mdx"
 ---
 title: "This post is an example"
 date: "2022-11-11"

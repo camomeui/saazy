@@ -4,7 +4,6 @@ import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import remarkDirective from "remark-directive";
-import remarkCodeTitles from "./remark/remarkCodeTitles.mjs";
 import remarkAdmonitions from "./remark/remarkAdmonitions.mjs";
 import remarkImgToJsx from "./remark/remarkImgToJsx.mjs";
 import { options as rehypePrettyCodeOptions } from "./rehype/rehypePrettyCode.mjs";

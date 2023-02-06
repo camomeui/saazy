@@ -1,5 +1,4 @@
 import { NextSeo } from "next-seo";
-import React from "react";
 
 import NotFoundTemplate from "@/templates/NotFoundTemplate";
 
