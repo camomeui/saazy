@@ -3,7 +3,6 @@ import {
   type BreadcrumbsProps,
 } from "@camome/core";
 import Link from "next/link";
-import React from "react";
 
 type Props = Omit<BreadcrumbsProps, "renderLink">;
 

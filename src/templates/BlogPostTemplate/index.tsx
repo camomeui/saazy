@@ -1,5 +1,5 @@
 import { Avatar, Markup, Button } from "@camome/core";
-import { ArrowSmallLeftIcon } from "@heroicons/react/20/solid";
+import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 import BlogTagList from "@/components/BlogTagList";
@@ -75,9 +75,10 @@ export default function BlogPostTemplate({
           <Button
             component={Link}
             href="/blog"
-            variant="soft"
+            variant="ghost"
+            size="sm"
             startDecorator={
-              <ArrowSmallLeftIcon className={styles.backButtonIcon} />
+              <ChevronLeftIcon className={styles.backButtonIcon} />
             }
           >
             Back to blog

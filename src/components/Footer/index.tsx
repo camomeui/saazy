@@ -1,6 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import { FaGithub, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  TbBrandGithub,
+  TbBrandFacebook,
+  TbBrandInstagram,
+  TbBrandTwitter,
+} from "react-icons/tb";
 
 import IconLink from "@/components/IconLink";
 import LogoSvg from "@/public/icons/logo.svg";
@@ -168,21 +173,21 @@ const socialLinks: Props["socialLinks"] = [
   {
     href: "#twitter",
     ariaLabel: "twitter",
-    Icon: FaTwitter,
+    Icon: TbBrandTwitter,
   },
   {
     href: "#instagram",
     ariaLabel: "instagram",
-    Icon: FaInstagram,
+    Icon: TbBrandInstagram,
   },
   {
     href: "#facebook",
     ariaLabel: "facebook",
-    Icon: FaFacebook,
+    Icon: TbBrandFacebook,
   },
   {
     href: "#github",
     ariaLabel: "github",
-    Icon: FaGithub,
+    Icon: TbBrandGithub,
   },
 ];
