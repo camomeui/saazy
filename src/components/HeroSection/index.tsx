@@ -1,7 +1,7 @@
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { Button } from "@camome/core/Button";
 import Image from "@/components/Image";
 import Stats from "@/components/Stats";
-import ArrowRightSvg from "@/public/icons/arrow-right.svg";
 
 import styles from "./styles.module.scss";
 import Link from "next/link";
@@ -11,7 +11,7 @@ export default function HeroSection() {
     <section className={styles.container}>
       <div className={styles.left}>
         <a href="#" className={styles.tagLink}>
-          New feature has come <ArrowRightSvg />
+          New feature has come <ChevronRightIcon />
         </a>
         <div className={styles.mainCopy}>
           <div>Grow your business</div>

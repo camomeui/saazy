@@ -5,6 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
+  background: var(--cmm-color-surface-0);
 
   @include variables.mq("sm") {
     grid-template-columns: 1fr;
@@ -12,7 +13,7 @@
 }
 
 .link {
-  border: 1px solid var(--cmm-color-neutral-2);
+  border: 1px solid var(--cmm-color-border-base);
   border-radius: var(--cmm-radius-lg);
   padding: 1rem;
   display: grid;
@@ -31,8 +32,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    font-weight: var(--cmm-font-weight-bold);
-    color: var(--cmm-color-primary-6);
+    font-weight: var(--cmm-font-weight-medium);
+    color: var(--cmm-color-link);
 
     svg {
       width: 1.5rem;
@@ -49,7 +50,7 @@
   }
 
   &:hover {
-    background-color: var(--cmm-color-neutral-1);
+    background: var(--cmm-color-surface-1);
   }
 
   @include variables.mq("sm") {

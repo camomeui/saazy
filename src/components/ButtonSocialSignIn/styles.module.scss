@@ -1,7 +1,7 @@
 .Block {
   display: grid;
   place-content: center;
-  color: var(--cmm-color-black);
+  color: var(--cmm-color-font-base);
   border: 1px solid var(--cmm-color-border-base);
   border-radius: var(--cmm-radius-md);
   width: 100%;
@@ -10,6 +10,14 @@
 
   &:hover {
     background-color: var(--cmm-color-surface-1);
+  }
+
+  [data-theme="dark"] & {
+    background: var(--cmm-color-surface-1);
+
+    &:hover {
+      background-color: var(--cmm-color-surface-2);
+    }
   }
 
   & > svg {

@@ -3,7 +3,6 @@ export type Styles = {
   footer: string;
   or: string;
   social: string;
-  social__button: string;
 };
 
 export type ClassNames = keyof Styles;

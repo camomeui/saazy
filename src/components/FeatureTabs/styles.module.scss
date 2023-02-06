@@ -47,9 +47,9 @@
     font-weight: var(--cmm-font-weight-semibold);
     padding: 1rem;
     color: var(--cmm-color-neutral-4);
-    border: solid 2px var(--cmm-color-neutral-1);
+    border: solid 2px var(--cmm-color-border-base);
     border-radius: var(--cmm-radius-lg);
-    background-color: var(--cmm-color-white);
+    background: var(--cmm-color-surface-1);
     transition: var(--cmm-transition-bg), color 300ms, border 200ms;
 
     & > svg {
@@ -109,12 +109,12 @@
     width: 100%;
     height: auto;
     opacity: 1;
-    background-color: var(--cmm-color-neutral-0);
+    background-color: var(--cmm-color-surface-1);
     padding: 2.5rem;
     margin-right: 1.75rem;
     border-radius: var(--cmm-radius-xl);
-    border: 1px solid var(--cmm-color-neutral-3);
-    filter: drop-shadow($shadowWidth $shadowWidth 0 var(--cmm-color-neutral-6));
+    border: 1px solid var(--cmm-color-border-base);
+    filter: drop-shadow($shadowWidth $shadowWidth 0 var(--cmm-color-surface-4));
     transform: translateZ(0);
 
     & .panelImg {

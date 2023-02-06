@@ -36,19 +36,16 @@ export default function SignInForm() {
           Icon={FaGoogle}
           svgSize="1.1rem"
           aria-label="Sign up with Google"
-          className={styles.social__button}
         />
         <ButtonSocialSignIn
           Icon={FaFacebook}
           svgSize="1.2rem"
           aria-label="Sign up with Facebook"
-          className={styles.social__button}
         />
         <ButtonSocialSignIn
           Icon={FaGithub}
           svgSize="1.2rem"
           aria-label="Sign up with GitHub"
-          className={styles.social__button}
         />
       </div>
       <div className={styles.footer}>

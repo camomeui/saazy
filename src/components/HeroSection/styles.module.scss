@@ -18,8 +18,8 @@
   row-gap: 1.75rem;
 
   & .tagLink {
-    background-color: var(--cmm-color-primary-0);
-    color: var(--cmm-color-primary-6);
+    background-color: var(--cmm-color-primary-soft-bg);
+    color: var(--cmm-color-primary-soft-font);
     display: inline-flex;
     align-items: center;
     column-gap: 0.25rem;
@@ -32,16 +32,17 @@
     border-radius: var(--cmm-radius-full);
 
     &:hover {
+      background: var(--cmm-color-primary-soft-bg-hover);
+
       & > svg {
-        translate: 0.25rem;
+        translate: 0.15rem;
       }
     }
 
     & > svg {
-      width: 1.2rem;
-      height: 1.2rem;
+      width: 1em;
+      height: 1em;
       transition: translate 0.3s;
-      transform: translateY(-0.05rem);
     }
   }
 

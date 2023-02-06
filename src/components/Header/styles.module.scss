@@ -1,7 +1,7 @@
 @use "@/styles/variables";
 
 .Block {
-  border-bottom: 1px solid var(--cmm-color-neutral-2);
+  border-bottom: 1px solid var(--cmm-color-border-base);
   height: variables.$headerHeight;
   z-index: 50;
 }
@@ -98,9 +98,9 @@
     display: flex;
     align-items: center;
     padding: 0 1rem;
-    background-color: var(--cmm-color-white);
+    background-color: var(--cmm-color-surface-0);
     z-index: 10;
-    border-bottom: 1px solid var(--cmm-color-neutral-2);
+    border-bottom: 1px solid var(--cmm-color-border-base);
   }
 
   &__content {

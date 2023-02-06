@@ -33,7 +33,6 @@ export default function HomeTemplate() {
   return (
     <>
       <div className={styles.hero}>
-        <Header />
         <div className={styles.hero__container}>
           <HeroSection />
           <LogoCloud className={styles.logoCloud} />
@@ -253,7 +252,6 @@ export default function HomeTemplate() {
       />
       <FaqSection />
       <Cta className={styles.cta} />
-      <Footer />
     </>
   );
 }

@@ -17,6 +17,10 @@
   text-align: center;
   border-bottom: 1px solid var(--cmm-color-border-base);
 
+  [data-theme="dark"] & {
+    background: var(--cmm-color-surface-1);
+  }
+
   .title {
     font-weight: var(--cmm-font-weight-extrabold);
     font-size: var(--cmm-font-size-6xl);

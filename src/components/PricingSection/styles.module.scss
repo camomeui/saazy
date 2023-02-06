@@ -1,11 +1,15 @@
 @use "@/styles/variables";
 
 .Block {
-  background-color: var(--cmm-color-neutral-1);
   padding-top: 3rem;
   padding-bottom: 4rem;
   display: grid;
   row-gap: 3rem;
+  background: var(--cmm-color-surface-2);
+
+  [data-theme="dark"] & {
+    background: var(--cmm-color-surface-0);
+  }
 }
 
 .list {
@@ -21,8 +25,7 @@
 }
 
 .item {
-  background-color: var(--cmm-color-white);
-  border: 1px solid var(--cmm-color-neutral-2);
+  border: 1px solid var(--cmm-color-border-base);
   border-radius: var(--cmm-radius-xl);
   padding: 1.5rem;
   display: grid;
@@ -31,6 +34,11 @@
   row-gap: 1.5rem;
   max-width: 30rem;
   margin: 0 auto;
+  background: var(--cmm-color-surface-0);
+
+  [data-theme="dark"] & {
+    background: var(--cmm-color-surface-2);
+  }
 
   &__upper {
     display: grid;
@@ -54,7 +62,7 @@
   }
 
   &__description {
-    color: var(--cmm-color-neutral-5);
+    color: var(--cmm-color-font-muted);
   }
 
   &__featureList {
@@ -67,7 +75,7 @@
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
-    color: var(--cmm-color-neutral-5);
+    color: var(--cmm-color-font-muted);
   }
 
   &__check {

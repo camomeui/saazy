@@ -23,6 +23,7 @@ import LogoSvg from "@/public/icons/logo.svg";
 import { NavItem, NavItemLink } from "@/types";
 
 import styles from "./styles.module.scss";
+import ThemeSwitch from "@/components/ThemeSwitch";
 
 const DIALOG_ID = "header-menu";
 
@@ -158,6 +159,7 @@ export default function Header({ menuContent, classNames }: Props) {
           <Navigation items={navItems} className={styles.desktopOnly} />
         </div>
         <div className={clsx(styles.rightSection)}>
+          <ThemeSwitch />
           <Button
             component={Link}
             href="/signin"

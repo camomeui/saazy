@@ -25,10 +25,10 @@
   column-gap: 1.5rem;
   row-gap: 1rem;
   place-items: center;
-  border: solid 1px var(--cmm-color-neutral-2);
+  border: solid 1px var(--cmm-color-border-base);
   border-radius: var(--cmm-radius-xl);
   padding: 1rem;
-  background-color: var(--cmm-color-white);
+  background: var(--cmm-color-surface-0);
 
   &__avatar {
     width: 100%;
@@ -45,7 +45,7 @@
   }
 
   &__quoteIcon {
-    color: var(--cmm-color-neutral-2);
+    color: var(--cmm-color-font-base);
   }
 
   &__content {
@@ -57,7 +57,7 @@
   }
 
   &__belonging {
-    color: var(--cmm-color-neutral-5);
+    color: var(--cmm-color-font-subtle);
     font-size: var(--cmm-font-size-sm);
   }
 

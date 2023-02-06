@@ -1,9 +1,8 @@
 import Script from "next/script";
 import { NextPage } from "next/types";
-
 import type { AppProps } from "next/app";
-
 import DefaultSeo from "@/components/DefaultSeo";
+import { ThemeProvider } from "next-themes";
 
 import "@/styles/theme.css";
 import "@/styles/globals.scss";
@@ -28,7 +27,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "4d5fce9b2e5d487a9ff345ae78909049"}'
       />
-      {getLayout(<Component {...pageProps} />)}
+      <ThemeProvider attribute="data-theme">
+        {getLayout(<Component {...pageProps} />)}
+      </ThemeProvider>
     </>
   );
 }

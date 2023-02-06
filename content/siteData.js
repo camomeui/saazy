@@ -9,7 +9,7 @@ const siteData = {
   ogImage: url + "/images/og.png",
   defaultAuthor: "john-doe",
   defaultBlogThumbImg: "/images/post-placeholder.webp",
-  blogPostsPerPage: 8,
+  blogPostsPerPage: 6,
 };
 
 export default siteData;

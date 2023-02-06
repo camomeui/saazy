@@ -1,8 +1,7 @@
 @use "@/styles/variables";
 
 .container {
-  background: linear-gradient(130deg, rgba(230, 237, 255, 0.5) 0%, #ffffff 70%),
-    #ffffff;
+  background: var(--cmm-color-surface-0);
 
   @include variables.mq("md") {
     background: linear-gradient(
@@ -42,12 +41,12 @@
   }
 
   &__sub {
-    color: var(--cmm-color-neutral-7);
+    color: var(--cmm-color-font-subtle);
   }
 
   a {
     font-weight: var(--cmm-font-weight-semibold);
-    color: var(--cmm-color-primary-6);
+    color: var(--cmm-color-link);
 
     &:hover {
       text-decoration: underline;

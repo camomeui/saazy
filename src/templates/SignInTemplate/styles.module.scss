@@ -4,6 +4,10 @@
   padding-top: 2rem;
   padding-bottom: 5rem;
   background: var(--cmm-color-surface-2);
+
+  [data-theme="dark"] & {
+    background: var(--cmm-color-surface-1);
+  }
 }
 
 .inner {

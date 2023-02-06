@@ -6,8 +6,8 @@
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  background-color: var(--cmm-color-neutral-0);
-  border-top: 1px solid var(--cmm-color-neutral-2);
+  background: var(--cmm-color-surface-0);
+  border-top: 1px solid var(--cmm-color-border-base);
 }
 
 .inner {
@@ -61,7 +61,7 @@
     }
 
     & a {
-      color: var(--cmm-color-neutral-8);
+      color: var(--cmm-color-font-base);
       font-size: var(--cmm-font-size-sm);
 
       &:hover {
@@ -85,7 +85,7 @@
   row-gap: 0.5rem;
 
   &__copyright {
-    color: var(--cmm-color-neutral-8);
+    color: var(--cmm-color-font-subtle);
     font-size: var(--cmm-font-size-sm);
 
     @include variables.mq("md") {
@@ -95,7 +95,7 @@
 
   &__nav {
     font-size: var(--cmm-font-size-sm);
-    color: var(--cmm-color-neutral-8);
+    color: var(--cmm-color-font-subtle);
 
     & ul {
       display: flex;

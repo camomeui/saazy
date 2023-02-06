@@ -7,7 +7,7 @@
 
   &:hover {
     .icon {
-      color: var(--cmm-color-black);
+      color: var(--cmm-color-font-base);
     }
   }
 }
@@ -15,6 +15,6 @@
 .icon {
   height: 1.25rem;
   width: 1.25rem;
-  color: var(--cmm-color-neutral-5);
+  color: var(--cmm-color-font-subtle);
   transition: color 0.3s;
 }

@@ -22,11 +22,11 @@
   flex-direction: column;
   align-items: center;
   row-gap: 1rem;
-  border: 1px solid var(--cmm-color-neutral-2);
+  border: 1px solid var(--cmm-color-border-base);
   border-radius: var(--cmm-radius-xl);
   padding: 1.5rem;
   position: relative;
-  background-color: white;
+  background: var(--cmm-color-surface-1);
   transition: transform 0.3s;
 
   &__title {
@@ -36,8 +36,7 @@
 
   &__description {
     font-size: var(--cmm-font-size-md);
-    color: var(--cmm-color-neutral-6);
-    line-height: 1.75;
+    color: var(--cmm-color-font-muted);
     flex: 1;
   }
 }
@@ -45,14 +44,14 @@
 .iconWrapper {
   display: grid;
   place-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: var(--cmm-color-primary-5);
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: var(--cmm-color-primary-emphasis);
   border-radius: var(--cmm-radius-lg);
 
   & svg {
-    width: 2rem;
-    height: 2rem;
-    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--cmm-color-font-on-emphasis);
   }
 }

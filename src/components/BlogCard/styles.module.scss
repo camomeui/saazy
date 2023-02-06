@@ -1,7 +1,7 @@
 .Block {
   overflow: hidden;
   border-radius: var(--cmm-radius-lg);
-  border: 1px solid var(--cmm-color-neutral-2);
+  border: 1px solid var(--cmm-color-border-base);
   display: grid;
   grid-template-rows: auto 1fr;
   transition-property: transform;
@@ -9,6 +9,14 @@
   background: var(--cmm-color-surface-0);
   padding: 0.5rem;
   row-gap: 0.5rem;
+
+  [data-theme="dark"] & {
+    background: var(--cmm-color-surface-1);
+
+    &:hover {
+      background: var(--cmm-color-surface-0);
+    }
+  }
 
   &:hover {
     background: var(--cmm-color-surface-1);
@@ -41,8 +49,12 @@
   width: fit-content;
   line-height: 1.2;
 
-  &:hover {
-    text-decoration: underline;
+  > a {
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

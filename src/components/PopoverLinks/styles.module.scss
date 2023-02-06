@@ -38,13 +38,13 @@
   border-radius: var(--cmm-radius-md);
 
   &:hover {
-    background-color: var(--cmm-color-neutral-1);
+    background-color: var(--cmm-color-surface-2);
   }
 
   > svg {
     width: 1.2em;
     height: 1.2em;
     stroke-width: 2;
-    color: var(--cmm-color-primary-font);
+    color: var(--cmm-color-primary-emphasis);
   }
 }
