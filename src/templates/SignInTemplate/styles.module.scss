@@ -1,28 +1,40 @@
 @use "@/styles/variables";
 
 .container {
-  @include variables.container;
-
   padding-top: 2rem;
   padding-bottom: 5rem;
-  display: grid;
-  place-items: center;
-  row-gap: 3rem;
+  background: var(--cmm-color-surface-2);
 }
 
-.title {
-  font-weight: var(--cmm-font-weight-extrabold);
-  font-size: var(--cmm-font-size-4xl);
+.inner {
+  @include variables.container;
+
+  display: grid;
+  place-items: center;
+  row-gap: 2rem;
+}
+
+.hgroup {
   text-align: center;
+
+  p {
+    font-weight: var(--cmm-font-weight-extrabold);
+    font-size: var(--cmm-font-size-4xl);
+  }
+
+  h1 {
+    font-size: var(--cmm-font-size-md);
+    color: var(--cmm-color-font-muted);
+  }
 }
 
 .sub {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 
   a {
-    color: var(--cmm-color-primary-5);
-    font-weight: var(--cmm-font-weight-bold);
+    color: var(--cmm-color-link);
+    font-weight: var(--cmm-font-weight-semibold);
 
     &:hover {
       text-decoration: underline;

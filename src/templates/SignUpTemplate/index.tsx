@@ -1,6 +1,3 @@
-import Link from "next/link";
-import React from "react";
-
 import SignUpForm from "@/components/SignUpForm";
 
 import styles from "./styles.module.scss";
@@ -8,13 +5,13 @@ import styles from "./styles.module.scss";
 export default function SignUpTemplate() {
   return (
     <div className={styles.container}>
-      <div>
-        <h1 className={styles.title}>Create your account</h1>
-        <div className={styles.sub}>
-          Already have an account? <Link href="/signin">Sign in</Link>
-        </div>
+      <div className={styles.inner}>
+        <hgroup className={styles.hgroup}>
+          <p>Let&apos;s get started.</p>
+          <h1>Create a new account</h1>
+        </hgroup>
+        <SignUpForm />
       </div>
-      <SignUpForm />
     </div>
   );
 }

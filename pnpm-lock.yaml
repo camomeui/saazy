@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@camome/core': ^0.0.20
-  '@camome/system': ^0.1.20
+  '@camome/core': ^0.0.22
+  '@camome/system': ^0.1.22
   '@camome/utils': ^0.1.10
   '@headlessui/react': ^1.7.9
   '@heroicons/react': ^2.0.10
@@ -14,6 +14,7 @@ specifiers:
   '@types/mdx': ^2.0.3
   '@types/react': ^18.0.27
   '@types/react-dom': ^18.0.10
+  camome: ^0.1.19
   clsx: ^1.2.1
   concurrently: ^7.6.0
   contentlayer: ^0.3.0
@@ -58,8 +59,8 @@ specifiers:
   unist-util-visit: ^4.1.1
 
 dependencies:
-  '@camome/core': 0.0.20_react@18.2.0
-  '@camome/system': 0.1.20
+  '@camome/core': 0.0.22_react@18.2.0
+  '@camome/system': 0.1.22
   '@headlessui/react': 1.7.9_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.14_react@18.2.0
   '@mdx-js/loader': 2.2.1
@@ -101,6 +102,7 @@ devDependencies:
   '@types/mdx': 2.0.3
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
+  camome: 0.1.19
   concurrently: 7.6.0
   cross-env: 7.0.3
   eslint: 8.33.0
@@ -1381,25 +1383,24 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@camome/core/0.0.20_react@18.2.0:
-    resolution: {integrity: sha512-Iy9swSgIFlDj2t4WozoiKL3hvPHm2qZg4Iu5hBQxvNOaUWjTcZ4PGIo9PVIL1pWogUBXOZxBs6V1ITv/QtgisA==}
+  /@camome/core/0.0.22_react@18.2.0:
+    resolution: {integrity: sha512-qb4co5t45LXhLYTF6dde/YC/JOMDfQRmYf52aUqTumOXk8Ya44yLUsfBhIi4wKgK4Euh2u2wqU1jS7tJbZGkUg==}
     peerDependencies:
       react: '>=18'
     dependencies:
-      '@camome/system': 0.1.20
+      '@camome/system': 0.1.22
       '@camome/utils': 0.1.10
       '@heroicons/react': 2.0.14_react@18.2.0
       clsx: 1.2.1
       react: 18.2.0
     dev: false
 
-  /@camome/system/0.1.20:
-    resolution: {integrity: sha512-cb36Dr5jOzErqHkf3ilqufGl4TrnGdfH5lpDgSOySodhLzZAVFcAf4z5Ri2drmHjxOvc6P4VGnHOfs3XN99m2Q==}
+  /@camome/system/0.1.22:
+    resolution: {integrity: sha512-+XeYTrSgzlKMXrLhVx6U8m7nKEOJvzL0eEVKchUyySodMJWfjPn9BGITzbPPyYQ2fuCVA6Ttlv9e8ZUZnZn0XA==}
     dependencies:
       '@camome/utils': 0.1.10
       deepmerge-ts: 4.2.2
       prettier: 2.8.3
-    dev: false
 
   /@camome/utils/0.1.10:
     resolution: {integrity: sha512-buM8mOWQ+GxvL2uM5EbvYOwduK7MHMFOQJi8qlpFJJQHRveh2xJjRzJ1xm4QYSIME4YCPlaMfotgMF642mkqpA==}
@@ -3165,6 +3166,15 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /camome/0.1.19:
+    resolution: {integrity: sha512-bMtlCrq5sy07hUQNeJ4wMnA32t/36oRdcaZi4LQ1PTol3q+aNRArEtwiPGuK+IiKCTr/DHU9aKwZU6m0ThtBdA==}
+    hasBin: true
+    dependencies:
+      '@camome/system': 0.1.22
+      '@camome/utils': 0.1.10
+      yargs: 17.6.2
+    dev: true
+
   /caniuse-lite/1.0.30001450:
     resolution: {integrity: sha512-qMBmvmQmFXaSxexkjjfMvD5rnDL0+m+dUMZKoDYsGG8iZN29RuYh9eRoMvKsT6uMAWlyUUGDEQGJJYjzCIO9ew==}
 
@@ -3605,7 +3615,6 @@ packages:
   /deepmerge-ts/4.2.2:
     resolution: {integrity: sha512-Ka3Kb21tiWjvQvS9U+1Dx+aqFAHsdTnMdYptLTmC2VAmDFMugWMY1e15aTODstipmCun8iNuqeSfcx6rsUUk0Q==}
     engines: {node: '>=12.4.0'}
-    dev: false
 
   /deepmerge/4.3.0:
     resolution: {integrity: sha512-z2wJZXrmeHdvYJp/Ux55wIjqo81G5Bp4c+oELTW+7ar6SogWHajt5a9gO3s3IDaGSAXjDk0vlQKN3rms8ab3og==}

@@ -14,7 +14,7 @@
   @include variables.container;
 
   display: grid;
-  grid-template-columns: minmax(auto, 22rem) 1fr;
+  grid-template-columns: minmax(auto, 12rem) 1fr;
   gap: 2.5rem;
 
   @include variables.mq("lg") {

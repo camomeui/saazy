@@ -8,4 +8,11 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  :global {
+    .TextInput,
+    .Textarea {
+      background: var(--cmm-color-surface-1);
+    }
+  }
 }

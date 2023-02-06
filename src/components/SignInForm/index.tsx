@@ -27,7 +27,7 @@ export default function SignInForm() {
 
       <div className={styles.or}>
         <hr />
-        <span>or</span>
+        <span>or continue with</span>
         <hr />
       </div>
 
@@ -50,6 +50,9 @@ export default function SignInForm() {
           aria-label="Sign up with GitHub"
           className={styles.social__button}
         />
+      </div>
+      <div className={styles.footer}>
+        No account yet? <Link href="/signup">Sign up.</Link>
       </div>
     </section>
   );

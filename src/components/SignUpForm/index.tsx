@@ -5,6 +5,7 @@ import { FaGithub, FaGoogle, FaFacebook } from "react-icons/fa";
 import ButtonSocialSignIn from "@/components/ButtonSocialSignIn";
 
 import styles from "./styles.module.scss";
+import Link from "next/link";
 
 export default function SignUpForm() {
   return (
@@ -23,7 +24,7 @@ export default function SignUpForm() {
 
       <div className={styles.or}>
         <hr />
-        <span>or</span>
+        <span>or continue with</span>
         <hr />
       </div>
 
@@ -46,6 +47,10 @@ export default function SignUpForm() {
           aria-label="Sign up with GitHub"
           className={styles.social__button}
         />
+      </div>
+
+      <div className={styles.footer}>
+        Already have an account? <Link href="/signin">Sign in.</Link>
       </div>
     </section>
   );

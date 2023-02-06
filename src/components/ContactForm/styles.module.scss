@@ -11,9 +11,13 @@
     text-decoration: underline;
   }
 
-  & .column2 {
+  .column2 {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+
+    > * {
+      width: 50%;
+    }
 
     @include variables.mq("sm") {
       flex-direction: column;

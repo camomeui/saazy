@@ -2,15 +2,14 @@
   display: grid;
   place-content: center;
   color: var(--cmm-color-black);
-  border: 1px solid var(--cmm-color-neutral-2);
-  border-radius: var(--cmm-radius-lg);
-  transition: background-color 0.3s;
+  border: 1px solid var(--cmm-color-border-base);
+  border-radius: var(--cmm-radius-md);
   width: 100%;
   height: 2.5rem;
-  background-color: var(--cmm-color-white);
+  background: var(--cmm-color-surface-0);
 
   &:hover {
-    background-color: var(--cmm-color-neutral-1);
+    background-color: var(--cmm-color-surface-1);
   }
 
   & > svg {

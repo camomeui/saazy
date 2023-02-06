@@ -1,5 +1,6 @@
 export type Styles = {
   Block: string;
+  footer: string;
   or: string;
   social: string;
   social__button: string;

@@ -1,21 +1,30 @@
 .Block {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 2rem;
+  row-gap: 1rem;
   width: 100%;
-  max-width: 30rem;
+  max-width: 28rem;
   padding: 2rem;
   border-radius: var(--cmm-radius-xl);
   border: 1px solid var(--cmm-color-border-base);
+  background: var(--cmm-color-surface-0);
 
-  & form {
+  form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    row-gap: 1.5rem;
+    align-items: stretch;
+    row-gap: 1rem;
     width: 100%;
+  }
+
+  a {
+    font-size: var(--cmm-font-size-sm);
+    font-weight: var(--cmm-font-weight-semibold);
+    color: var(--cmm-color-link);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -25,12 +34,12 @@
   width: 100%;
   column-gap: 0.5rem;
   font-size: var(--cmm-font-size-sm);
-  color: var(--cmm-color-neutral-5);
+  color: var(--cmm-color-font-muted);
   white-space: nowrap;
 
   & hr {
     width: 100%;
-    border-color: var(--cmm-color-neutral-2);
+    border-color: var(--cmm-color-border-base);
   }
 }
 
@@ -44,4 +53,12 @@
   &__button {
     border: 1px solid var(--cmm-color-neutral-2);
   }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  font-size: var(--cmm-font-size-sm);
+  gap: 0.5em;
+  color: var(--cmm-color-font-muted);
 }
