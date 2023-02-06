@@ -70,11 +70,15 @@
   .author {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 
     &__name {
       font-size: var(--cmm-font-size-md);
       font-weight: var(--cmm-font-weight-medium);
+    }
+
+    :global(.Avatar) {
+      --cmm-Avatar-size: 1.5rem;
     }
   }
 }

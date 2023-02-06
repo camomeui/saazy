@@ -57,7 +57,7 @@ export default function BlogPostTemplate({
               )}
             </div>
             <div className={styles.author}>
-              <Avatar src={_author.avatarImg} />
+              <Avatar src={_author.avatarImg} size="sm" />
               <div className={styles.author__name}>{_author.name}</div>
             </div>
           </header>
