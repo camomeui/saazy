@@ -25,7 +25,8 @@
       "@/public/*": ["public/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
-    "incremental": true
+    "incremental": true,
+    "rootDirs": [".", ".scss-types"]
   },
   "include": [
     "next-env.d.ts",
