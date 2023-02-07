@@ -10,7 +10,7 @@ export default function SignUpTemplate() {
     <div className={styles.container}>
       <div className={styles.inner}>
         <div className={styles.left}>
-          <Link href="/">
+          <Link href="/" className={styles.link}>
             <LogoSvg className={styles.logo} />
           </Link>
           <p className={styles.title}>Nice words to attract customers.</p>

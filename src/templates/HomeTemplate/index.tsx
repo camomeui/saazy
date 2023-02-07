@@ -35,7 +35,6 @@ export default function HomeTemplate() {
       <div className={styles.hero}>
         <div className={styles.hero__container}>
           <HeroSection />
-          <LogoCloud className={styles.logoCloud} />
         </div>
       </div>
       <section className={styles.steps}>

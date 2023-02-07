@@ -1,7 +1,6 @@
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { Button } from "@camome/core/Button";
-import Image from "@/components/Image";
-import Stats from "@/components/Stats";
+import Balancer from "react-wrap-balancer";
 
 import styles from "./styles.module.scss";
 import Link from "next/link";
@@ -11,15 +10,22 @@ export default function HeroSection() {
     <section className={styles.container}>
       <div className={styles.left}>
         <a href="#" className={styles.tagLink}>
-          New feature has come <ChevronRightIcon />
+          <span className={styles.tagLink__tag}>New feature</span>
+          <span className={styles.tagLink__text}>Read the release note</span>
+          <ChevronRightIcon />
         </a>
         <div className={styles.mainCopy}>
-          <div>Grow your business</div>
-          <div>with your customers</div>
+          <div>
+            Words to{" "}
+            <span className={styles.mainCopy__accent}>attract customers</span>.
+          </div>
+          <div>This is important, take it serious.</div>
         </div>
         <div className={styles.subCopy}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et.
+          <Balancer>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et.
+          </Balancer>
         </div>
         <div className={styles.ctas}>
           <Button component={Link} href="/signup">
@@ -29,27 +35,6 @@ export default function HeroSection() {
             Request demo
           </Button>
         </div>
-        <Stats
-          items={[
-            {
-              term: "Revenue increase",
-              data: "$3k+",
-            },
-            {
-              term: "Happy customers",
-              data: "5k+",
-            },
-            {
-              term: "Productivity gain",
-              data: "20%",
-            },
-          ]}
-          className={styles.stats}
-        />
-      </div>
-
-      <div className={styles.heroImage}>
-        <Image src="/images/hero.webp" alt="Hero image" fill />
       </div>
     </section>
   );

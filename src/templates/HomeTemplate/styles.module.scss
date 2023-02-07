@@ -2,6 +2,12 @@
 
 .hero {
   padding-bottom: 2rem;
+  background: linear-gradient(
+    to bottom,
+    hsla(220 100% 80% / 0.15),
+    hsla(220 100% 80% / 0.1),
+    transparent
+  );
 
   &__container {
     @include variables.container;
