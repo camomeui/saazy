@@ -11,5 +11,3 @@ export default function SignInPage() {
     </>
   );
 }
-
-SignInPage.getLayout = createGetLayout({});

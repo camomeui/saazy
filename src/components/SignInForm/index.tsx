@@ -9,6 +9,7 @@ import styles from "./styles.module.scss";
 export default function SignInForm() {
   return (
     <section className={styles.Block}>
+      <h2 className={styles.title}>Sign in to your account</h2>
       <form>
         <TextInput
           label="Email"

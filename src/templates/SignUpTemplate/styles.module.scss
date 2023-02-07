@@ -1,13 +1,18 @@
 @use "@/styles/variables";
 
 .container {
-  padding-top: 6rem;
-  padding-bottom: 5rem;
   background: var(--cmm-color-surface-1);
   min-height: 100dvh;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 
   [data-theme="dark"] & {
     background: var(--cmm-color-surface-1);
+  }
+
+  @include variables.mq(md) {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
   }
 }
 

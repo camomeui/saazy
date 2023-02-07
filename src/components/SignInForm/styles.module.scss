@@ -32,6 +32,11 @@
   }
 }
 
+.title {
+  font-weight: var(--cmm-font-weight-bold);
+  font-size: var(--cmm-font-size-2xl);
+}
+
 .or {
   display: flex;
   align-items: center;
