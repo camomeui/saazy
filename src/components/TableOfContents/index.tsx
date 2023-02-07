@@ -1,6 +1,5 @@
-import { BookmarkIcon } from "@heroicons/react/24/outline";
+import { BookmarkIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
-import React from "react";
 
 import useTocHighlight from "@/hooks/useTocHighlight";
 import { type Toc } from "@/types";

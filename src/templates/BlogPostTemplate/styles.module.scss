@@ -1,7 +1,7 @@
 @use "@/styles/variables";
 
 .container {
-  @include variables.container();
+  @include variables.container(variables.$lg);
 
   display: grid;
   grid-template-columns: variables.$md 1fr;
@@ -36,16 +36,17 @@
 }
 
 .header {
-  padding: 2rem 0;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--cmm-color-neutral-2);
   margin-bottom: 3rem;
   display: grid;
-  row-gap: 1.25rem;
+  row-gap: 1rem;
 
   .title {
-    font-weight: var(--cmm-font-weight-extrabold);
+    font-weight: var(--cmm-font-weight-bold);
     font-size: var(--cmm-font-size-5xl);
-    line-height: 1.2;
+    line-height: 1.1;
 
     @include variables.mq("lg") {
       font-size: var(--cmm-font-size-4xl);
@@ -55,30 +56,38 @@
   .date {
     display: grid;
     row-gap: 0.25rem;
+    font-size: var(--cmm-font-size-sm);
+    font-weight: var(--cmm-font-weight-medium);
 
     &__published {
       display: block;
-      font-size: var(--cmm-font-size-md);
-    }
-
-    &__lastmod {
-      display: block;
-      font-size: var(--cmm-font-size-sm);
     }
   }
 
   .author {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    &__name {
-      font-size: var(--cmm-font-size-md);
-      font-weight: var(--cmm-font-weight-medium);
-    }
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "avatar name"
+      "avatar title";
+    column-gap: 0.5rem;
+    place-items: center start;
+    width: fit-content;
+    font-size: var(--cmm-font-size-sm);
 
     :global(.Avatar) {
-      --cmm-Avatar-size: 1.5rem;
+      grid-area: avatar;
+      --cmm-Avatar-size: 2.5rem;
+    }
+
+    &__name {
+      grid-area: name;
+      font-weight: var(--cmm-font-weight-semibold);
+    }
+
+    &__title {
+      grid-area: title;
+      color: var(--cmm-color-font-subtle);
     }
   }
 }

@@ -37,6 +37,7 @@ const navItems: NavItem[] = [
     id: "blog",
     label: "Blog",
     open: true,
+    type: "collapsible",
     items: [
       {
         id: "blog-posts",
@@ -54,6 +55,7 @@ const navItems: NavItem[] = [
     id: "docs",
     label: "Docs",
     open: true,
+    type: "collapsible",
     items: [
       {
         id: "docs-introduction",
@@ -71,6 +73,7 @@ const navItems: NavItem[] = [
     id: "misc",
     label: "Misc",
     open: true,
+    type: "collapsible",
     items: [
       {
         id: "contact",

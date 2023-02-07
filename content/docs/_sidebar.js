@@ -2,13 +2,12 @@
 const sidebar = {
   items: [
     {
-      id: "introduction",
-    },
-    {
       id: "develop",
       label: "Develop",
       open: true,
+      type: "collapsible",
       items: [
+        { id: "introduction" },
         { id: "get-started" },
         { id: "site-config" },
         { id: "forms" },
@@ -22,6 +21,7 @@ const sidebar = {
       id: "cms",
       label: "CMS",
       open: true,
+      type: "collapsible",
       items: [
         { id: "cms-overview", label: "Overview" },
         {
@@ -39,6 +39,7 @@ const sidebar = {
       id: "support",
       label: "Support",
       open: true,
+      type: "collapsible",
       items: [{ id: "faq" }, { id: "license" }, { id: "contact" }],
     },
   ],

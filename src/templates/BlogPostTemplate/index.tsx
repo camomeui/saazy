@@ -1,6 +1,7 @@
 import { Avatar, Markup, Button } from "@camome/core";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Balancer from "react-wrap-balancer";
 
 import BlogTagList from "@/components/BlogTagList";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -21,7 +22,7 @@ type Props = {
 };
 
 export default function BlogPostTemplate({
-  post: { title, lastmod, date, author, ...post },
+  post: { title, date, author, ...post },
   toc,
 }: Props) {
   const _author = authors[author ?? siteData.defaultAuthor];
@@ -43,22 +44,20 @@ export default function BlogPostTemplate({
         />
         <article>
           <header className={styles.header}>
-            <h1 className={styles.title}>{title}</h1>
+            <h1 className={styles.title}>
+              <Balancer>{title}</Balancer>
+            </h1>
             <div className={styles.date}>
               {date && (
                 <time className={styles.date__published} dateTime={date}>
                   {formatDate(date)}
                 </time>
               )}
-              {lastmod && (
-                <time className={styles.date__lastmod} dateTime={date}>
-                  Updated on {formatDate(lastmod)}
-                </time>
-              )}
             </div>
             <div className={styles.author}>
-              <Avatar src={_author.avatarImg} size="sm" />
+              <Avatar src={_author.avatarImg} size="md" />
               <div className={styles.author__name}>{_author.name}</div>
+              <div className={styles.author__title}>{_author.title}</div>
             </div>
           </header>
           <Markup>

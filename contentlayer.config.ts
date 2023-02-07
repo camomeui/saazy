@@ -19,9 +19,6 @@ export const Blog = defineDocumentType(() => ({
       type: "date",
       required: true,
     },
-    lastmod: {
-      type: "date",
-    },
     tags: {
       type: "list",
       of: {
@@ -61,9 +58,6 @@ export const Docs = defineDocumentType(() => ({
     },
     description: {
       type: "string",
-    },
-    lastmod: {
-      type: "date",
     },
   },
   computedFields: {

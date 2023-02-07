@@ -7,5 +7,10 @@ export default defineConfig({
         bg: "none",
       },
     },
+    dark: {
+      transition: {
+        bg: "none",
+      },
+    },
   },
 });

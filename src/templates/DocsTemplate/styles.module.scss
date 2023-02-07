@@ -33,14 +33,14 @@
 }
 
 .header {
-  padding-top: 2rem;
+  padding-top: 1rem;
   display: grid;
   row-gap: 1.25rem;
 
   .title {
-    font-weight: var(--cmm-font-weight-extrabold);
-    font-size: var(--cmm-font-size-5xl);
-    line-height: 1.2;
+    font-weight: var(--cmm-font-weight-bold);
+    font-size: var(--cmm-font-size-4xl);
+    line-height: 1.1;
     margin-bottom: 2rem;
 
     @include variables.mq("lg") {
@@ -55,11 +55,6 @@
     &__published {
       display: block;
       font-size: var(--cmm-font-size-md);
-    }
-
-    &__lastmod {
-      display: block;
-      font-size: var(--cmm-font-size-sm);
     }
   }
 

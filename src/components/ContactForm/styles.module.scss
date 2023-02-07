@@ -19,7 +19,7 @@
       width: 50%;
     }
 
-    @include variables.mq("sm") {
+    @include variables.mq(variables.$md) {
       flex-direction: column;
     }
   }

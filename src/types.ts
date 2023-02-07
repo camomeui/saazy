@@ -1,4 +1,4 @@
-import type { Optional } from "@camome/utils";
+import type { OptionalField } from "@camome/utils";
 
 export type Toc = {
   value: string;
@@ -30,6 +30,7 @@ export type SiteData = {
 export type Author = {
   name: string;
   avatarImg: string;
+  title: string;
 };
 
 export type Authors = { [Name: string]: Author };
@@ -37,8 +38,11 @@ export type Authors = { [Name: string]: Author };
 export type NavItemCategory = {
   id: string;
   label: string;
+  href?: string;
   open?: boolean;
+  sort?: "asc";
   items: NavItem[];
+  type: "section" | "collapsible";
 };
 
 export type NavItemLink = {
@@ -51,7 +55,7 @@ export type NavItem = NavItemCategory | NavItemLink;
 
 export type DocsSidebarItemConfig =
   | NavItemCategory
-  | Optional<NavItemLink, "href" | "label">;
+  | OptionalField<NavItemLink, "href" | "label">;
 
 export type DocsSidebarConfig = {
   items: DocsSidebarItemConfig[];

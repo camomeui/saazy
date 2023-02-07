@@ -8,10 +8,12 @@
   align-items: center;
   gap: 0.5rem;
   white-space: nowrap;
+  font-size: var(--cmm-font-size-sm);
+  font-weight: var(--cmm-font-weight-semibold);
 
-  svg {
-    width: 1.25rem;
-    height: 1.25rem;
+  > svg {
+    width: 1rem;
+    height: 1rem;
     color: var(--cmm-color-primary-emphasis);
   }
 }
@@ -29,10 +31,8 @@
   padding-left: 1rem;
   font-size: var(--cmm-font-size-sm);
 
-  a {
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover:not(.active) {
+    background: var(--cmm-color-surface-1);
   }
 }
 

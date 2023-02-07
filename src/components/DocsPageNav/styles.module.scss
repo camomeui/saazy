@@ -5,7 +5,6 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
-  background: var(--cmm-color-surface-0);
 
   @include variables.mq("sm") {
     grid-template-columns: 1fr;
@@ -18,7 +17,19 @@
   padding: 1rem;
   display: grid;
   row-gap: 0.25rem;
-  transition: var(--cmm-transition-bg);
+  background: var(--cmm-color-surface-0);
+
+  [data-theme="dark"] & {
+    background: var(--cmm-color-surface-1);
+
+    &:hover {
+      background: var(--cmm-color-surface-2);
+    }
+  }
+
+  &:hover {
+    background: var(--cmm-color-surface-1);
+  }
 
   &__upper {
     font-size: var(--cmm-font-size-sm);
@@ -47,10 +58,6 @@
     &.prev {
       justify-content: flex-start;
     }
-  }
-
-  &:hover {
-    background: var(--cmm-color-surface-1);
   }
 
   @include variables.mq("sm") {

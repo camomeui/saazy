@@ -495,6 +495,7 @@
       0 4px 6px -4px rgb(0 0 0 / 0.075);
     --cmm-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.075),
       0 8px 10px -6px rgb(0 0 0 / 0.075);
+    --cmm-transition-bg: none;
     --cmm-Message-info-border: transparent;
     --cmm-Message-success-border: transparent;
     --cmm-Message-warn-border: transparent;
@@ -608,7 +609,6 @@
     --cmm-color-border-subtle: #edf2f7;
     --cmm-outline-color-primary: #60a5fa;
     --cmm-outline-color-danger: #f87171;
-    --cmm-transition-bg: none;
     --cmm-Input-bg: #ffffff;
     --cmm-Input-border: #e2e8f0;
     --cmm-Kbd-bg: #ffffff;
@@ -745,7 +745,6 @@
     --cmm-color-border-subtle: #1e232c;
     --cmm-outline-color-primary: #2563eb;
     --cmm-outline-color-danger: #dc2626;
-    --cmm-transition-bg: background-color 0.3s;
     --cmm-Input-bg: #1a202c;
     --cmm-Input-border: #252d3a;
     --cmm-Kbd-bg: #1a202c;
