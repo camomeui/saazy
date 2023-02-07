@@ -10,6 +10,7 @@ import Link from "next/link";
 export default function SignUpForm() {
   return (
     <section className={styles.Block}>
+      <h2 className={styles.title}>Create a new account</h2>
       <form>
         <TextInput
           label="Email"

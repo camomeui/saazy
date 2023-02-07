@@ -1,9 +1,10 @@
 @use "@/styles/variables";
 
 .container {
-  padding-top: 2rem;
+  padding-top: 6rem;
   padding-bottom: 5rem;
-  background: var(--cmm-color-surface-2);
+  background: var(--cmm-color-surface-1);
+  min-height: 100dvh;
 
   [data-theme="dark"] & {
     background: var(--cmm-color-surface-1);
@@ -11,26 +12,75 @@
 }
 
 .inner {
-  @include variables.container;
+  @include variables.container(variables.$lg);
 
-  display: grid;
-  place-items: center;
-  row-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.hgroup {
-  text-align: center;
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 22rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: min(100%, 28rem);
+}
+
+.logo {
+  height: auto;
+  width: 6rem;
+}
+
+.title {
+  font-weight: var(--cmm-font-weight-extrabold);
+  font-size: var(--cmm-font-size-3xl);
+  line-height: 1.1;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  li {
+    display: grid;
+    grid-template-areas:
+      "icon title"
+      "null description";
+    place-items: center start;
+    column-gap: 0.5rem;
+  }
+
+  svg {
+    grid-area: icon;
+    font-size: var(--cmm-font-size-xl);
+    width: 1.1em;
+    height: 1.1em;
+    color: var(--cmm-color-primary-emphasis);
+  }
+
+  h2 {
+    grid-area: title;
+    font-weight: var(--cmm-font-weight-bold);
+    font-size: var(--cmm-font-size-lg);
+  }
 
   p {
-    font-weight: var(--cmm-font-weight-extrabold);
-    font-size: var(--cmm-font-size-4xl);
-  }
-
-  h1 {
-    font-size: var(--cmm-font-size-md);
+    grid-area: description;
     color: var(--cmm-color-font-muted);
+    font-size: var(--cmm-font-size-sm);
   }
 }
+
 .sub {
   text-align: center;
   margin-top: 0.5rem;
@@ -47,7 +97,6 @@
 
 .terms {
   font-size: var(--cmm-font-size-xs);
-  margin-top: -1rem;
   text-align: center;
   color: var(--cmm-color-font-base);
 
