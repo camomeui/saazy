@@ -1,4 +1,4 @@
-$borderColor: var(--cmm-color-neutral-2);
+$borderColor: var(--cmm-color-border-base);
 
 .Block {
   width: 100%;
@@ -6,7 +6,7 @@ $borderColor: var(--cmm-color-neutral-2);
 
   :where(th, td) {
     padding: 1.25rem;
-    background-color: var(--cmm-color-white);
+    background: var(--cmm-color-surface-0);
   }
 
   :where(th) {
@@ -24,7 +24,7 @@ $borderColor: var(--cmm-color-neutral-2);
   }
 
   :where(th:nth-child(odd), td:nth-child(odd)) {
-    background-color: var(--cmm-color-neutral-0);
+    background: var(--cmm-color-surface-1);
   }
 }
 
@@ -47,10 +47,10 @@ $borderColor: var(--cmm-color-neutral-2);
 }
 
 .section {
-  background-color: var(--cmm-color-neutral-7);
-  color: var(--cmm-color-white);
+  color: var(--cmm-color-font-on-emphasis);
   font-size: var(--cmm-font-size-xl);
   font-weight: var(--cmm-font-weight-semibold);
+  background: var(--cmm-color-neutral-7);
 }
 
 .planCell {
@@ -69,7 +69,7 @@ $borderColor: var(--cmm-color-neutral-2);
 
   &__pricePeriod {
     font-size: var(--cmm-font-size-lg);
-    color: var(--cmm-color-neutral-5);
+    color: var(--cmm-color-font-subtle);
   }
 }
 
