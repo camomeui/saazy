@@ -31,17 +31,3 @@
   height: auto;
   width: 5rem;
 }
-
-.sub {
-  text-align: center;
-  margin-top: 0.5rem;
-
-  a {
-    color: var(--cmm-color-link);
-    font-weight: var(--cmm-font-weight-semibold);
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
