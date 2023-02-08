@@ -5,11 +5,15 @@
   padding-bottom: 4rem;
   display: grid;
   row-gap: 3rem;
-  background: var(--cmm-color-surface-2);
+  background: var(--cmm-color-surface-1);
 
   [data-theme="dark"] & {
     background: var(--cmm-color-surface-0);
   }
+}
+
+.heading {
+  @include variables.container;
 }
 
 .list {
@@ -37,7 +41,7 @@
   background: var(--cmm-color-surface-0);
 
   [data-theme="dark"] & {
-    background: var(--cmm-color-surface-2);
+    background: var(--cmm-color-surface-1);
   }
 
   &__upper {

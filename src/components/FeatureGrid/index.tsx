@@ -1,5 +1,4 @@
 import { SvgComponent } from "@camome/utils";
-import React from "react";
 
 import styles from "./styles.module.scss";
 
@@ -13,10 +12,10 @@ export type FeatureGridProps = {
 
 export default function FeatureGrid({ items }: FeatureGridProps) {
   return (
-    <ul className={styles.Block}>
+    <ul className={styles.container}>
       {items.map((f) => (
         <li key={f.title} className={styles.item}>
-          <div className={styles.iconWrapper}>
+          <div className={styles.item__icon}>
             <f.Icon />
           </div>
           <h2 className={styles.item__title}>{f.title}</h2>

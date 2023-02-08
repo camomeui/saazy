@@ -1,10 +1,24 @@
+import clsx from "clsx";
 import styles from "./styles.module.scss";
 
-export default function Heading({ main, sub }: { main: string; sub: string }) {
+export default function Heading({
+  title,
+  tagline,
+  icon,
+  className,
+}: {
+  title: string;
+  tagline: string;
+  icon: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className={styles.heading}>
-      <h2 className={styles.heading__main}>{main}</h2>
-      <p className={styles.heading__sub}>{sub}</p>
-    </div>
+    <hgroup className={clsx(styles.heading, className)}>
+      <div className={styles.heading__icon} aria-hidden="true">
+        {icon}
+      </div>
+      <h2 className={styles.heading__tagline}>{tagline}</h2>
+      <p className={styles.heading__title}>{title}</p>
+    </hgroup>
   );
 }

@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import React from "react";
+import { TicketIcon } from "@heroicons/react/24/outline";
 
 import Heading from "@/components/Heading";
 import CheckSvg from "@/public/icons/check.svg";
@@ -14,8 +15,10 @@ export default function PricingSection({ items }: Props) {
   return (
     <section className={styles.Block}>
       <Heading
-        main="Pricing plans"
-        sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        icon={<TicketIcon />}
+        title="Affordable for everyone."
+        tagline="Pricing plans"
+        className={styles.heading}
       />
       <div className={styles.list}>
         {items.map((item) => (

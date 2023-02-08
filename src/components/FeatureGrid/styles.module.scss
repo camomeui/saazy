@@ -1,57 +1,61 @@
 @use "@/styles/variables";
 
-.Block {
-  @include variables.container;
-
+.container {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
-
-  @include variables.mq("lg") {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  @include variables.mq("md") {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1rem;
 }
 
 .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 1rem;
-  border: 1px solid var(--cmm-color-border-base);
-  border-radius: var(--cmm-radius-xl);
+  display: grid;
+  grid-template-areas:
+    "icon title"
+    "description description";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0.75rem;
+  border: 1px solid var(--cmm-color-border-subtle);
+  border-radius: var(--cmm-radius-2xl);
   padding: 1.5rem;
   position: relative;
-  background: var(--cmm-color-surface-1);
   transition: transform 0.3s;
+  background: var(--cmm-color-surface-0);
+
+  [data-theme="dark"] & {
+    background: var(--cmm-color-surface-1);
+  }
+
+  &__icon {
+    grid-area: icon;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--cmm-color-border-base);
+    border-radius: var(--cmm-radius-xl);
+    background: var(--cmm-color-surface-2);
+    color: var(--cmm-color-font-muted);
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      stroke-width: 1.8;
+    }
+  }
 
   &__title {
-    font-size: var(--cmm-font-size-xl);
+    grid-area: title;
+    place-self: center start;
+    font-size: var(--cmm-font-size-md);
     font-weight: var(--cmm-font-weight-bold);
+    line-height: 1.2;
   }
 
   &__description {
-    font-size: var(--cmm-font-size-md);
-    color: var(--cmm-color-font-muted);
+    grid-area: description;
+    font-size: calc(var(--cmm-font-size-md) * 0.9);
+    color: var(--cmm-color-font-subtle);
+    line-height: 1.5;
     flex: 1;
-  }
-}
-
-.iconWrapper {
-  display: grid;
-  place-items: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  background-color: var(--cmm-color-primary-emphasis);
-  border-radius: var(--cmm-radius-lg);
-
-  & svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: var(--cmm-color-font-on-emphasis);
   }
 }

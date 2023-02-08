@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.heading {
+  @include variables.container(38rem);
+}
+
 .list {
   @include variables.container;
 

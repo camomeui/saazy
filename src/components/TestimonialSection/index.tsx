@@ -1,9 +1,8 @@
-import React from "react";
-
 import Image from "@/components/Image";
 import BackgroundDots from "@/components/BackgroundDots";
 import Heading from "@/components/Heading";
 import QuoteDoubleSvg from "@/public/icons/quote-double.svg";
+import { MegaphoneIcon } from "@heroicons/react/24/outline";
 
 import styles from "./styles.module.scss";
 
@@ -15,8 +14,10 @@ export default function TestimonialsSection({ items }: Props) {
   return (
     <section className={styles.container}>
       <Heading
-        main="Loved by the smartest people at the tech giant"
-        sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        icon={<MegaphoneIcon />}
+        title="So many people love it."
+        tagline="Testimonials"
+        className={styles.heading}
       />
       <div className={styles.list}>
         {items.map((item) => (
