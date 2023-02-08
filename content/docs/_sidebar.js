@@ -40,7 +40,12 @@ const sidebar = {
       label: "Support",
       open: true,
       type: "collapsible",
-      items: [{ id: "faq" }, { id: "license" }, { id: "contact" }],
+      items: [
+        {
+          id: "faq",
+        },
+        { id: "license" },
+      ],
     },
   ],
 };

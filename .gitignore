@@ -13,8 +13,9 @@
 
 /dist/
 
-.env
+tsconfig.tsbuildinfo
 
+.env
 .contentlayer/
 node_modules/
 .scss-types
