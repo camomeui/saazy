@@ -146,18 +146,18 @@ export default function Header({ menuContent, classNames }: Props) {
       <div className={clsx(styles.inner, classNames?.inner)}>
         <div className={styles.leftSection}>
           <IconButton
-            className={styles.menuButton}
             aria-label="Toggle menu"
             variant="ghost"
             colorScheme="neutral"
             size="sm"
             onClick={openMenu}
             data-dialog-trigger-for={DIALOG_ID}
+            className={styles.menuButton}
           >
             <Bars3Icon />
           </IconButton>
-          <Link href="/" className={styles.logoWrap}>
-            <Logo />
+          <Link href="/">
+            <Logo className={styles.logo} />
           </Link>
           <Navigation items={navItems} className={styles.desktopOnly} />
         </div>
@@ -235,14 +235,15 @@ function Navigation({ items, onClickLink, className }: NavigationProps) {
       <ul className={styles.list}>
         {items.map((item) =>
           "items" in item ? (
-            <PopoverLinks
-              key={item.id}
-              title={item.label}
-              links={item.items.filter(isLinkItem).map((link) => ({
-                ...link,
-                Icon: linkToIconMap[link.id],
-              }))}
-            />
+            <li key={item.id}>
+              <PopoverLinks
+                title={item.label}
+                links={item.items.filter(isLinkItem).map((link) => ({
+                  ...link,
+                  Icon: linkToIconMap[link.id],
+                }))}
+              />
+            </li>
           ) : (
             <li key={item.href}>
               <Link

@@ -18,7 +18,7 @@
 .leftSection {
   display: flex;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 2rem;
 }
 
 .rightSection {
@@ -27,13 +27,8 @@
   column-gap: 0.5rem;
 }
 
-.logoWrap {
-  margin-bottom: 0.25rem;
-
-  & > svg {
-    height: 2.5rem;
-    width: auto;
-  }
+.logo {
+  margin-bottom: 0.15rem;
 
   @include variables.mq("md") {
     margin-bottom: 0;
@@ -41,25 +36,34 @@
       width: 5rem;
     }
   }
+
+  svg {
+    height: 2.5rem;
+    width: auto;
+  }
 }
 
 .nav {
   display: flex;
   align-items: center;
-  column-gap: 1.25rem;
-  font-size: var(--cmm-font-size-sm);
+  font-size: var(--cmm-font-size-md);
+  height: 100%;
 
   .list {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .link {
-    font-weight: var(--cmm-font-weight-semibold);
+    font-weight: var(--cmm-font-weight-medium);
+    display: inline-block;
+    line-height: 2.5rem;
+    border-radius: var(--cmm-radius-md);
+    padding: 0 0.5rem;
 
     &:hover {
-      text-decoration: underline;
+      background: var(--cmm-color-surface-2);
     }
   }
 }
@@ -67,6 +71,7 @@
 // FIXME
 .menuButton {
   display: none !important;
+  margin-inline-start: -0.5rem;
 
   @include variables.mq("md") {
     display: grid !important;

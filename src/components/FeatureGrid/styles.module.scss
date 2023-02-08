@@ -50,7 +50,7 @@
   &__description {
     grid-area: description;
     font-size: calc(var(--cmm-font-size-md) * 0.9);
-    color: var(--cmm-color-font-subtle);
+    color: var(--cmm-color-font-muted);
     line-height: 1.5;
     flex: 1;
   }

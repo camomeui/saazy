@@ -1,8 +1,11 @@
 .button {
   display: flex;
   align-items: center;
-  font-weight: var(--cmm-font-weight-semibold);
+  font-weight: var(--cmm-font-weight-medium);
   gap: 0.25rem;
+  line-height: 2.5rem;
+  border-radius: var(--cmm-radius-md);
+  padding: 0 0.5rem;
 
   > svg {
     width: 0.75rem;
@@ -13,7 +16,7 @@
   }
 
   &:hover {
-    text-decoration: underline;
+    background: var(--cmm-color-surface-2);
   }
 }
 

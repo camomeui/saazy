@@ -3,13 +3,13 @@ import LogoIcon from "@/public/icons/logo-icon.svg";
 import styles from "./styles.module.scss";
 import clsx from "clsx";
 
-type Props = { className?: string };
+type Props = { iconOnly?: boolean; className?: string };
 
-export default function Logo({ className }: Props) {
+export default function Logo({ iconOnly = false, className }: Props) {
   return (
     <div className={clsx(styles.container, className)}>
       <LogoIcon />
-      <span>Saazy</span>
+      {!iconOnly && <span>Saazy</span>}
     </div>
   );
 }
