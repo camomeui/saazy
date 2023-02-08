@@ -12,10 +12,17 @@ import ScreenshotDark from "@/public/images/camome-screenshot-dark.webp";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import Screenshot from "@/components/Screenshot";
+import Head from "next/head";
 
 export default function HomeTemplate() {
   return (
     <>
+      <Head>
+        {/* Prefetch the hero images because it depends on the
+            current theme which is only available on the browser (server doesn't know). */}
+        <link href={ScreenshotLight.src} rel="prefetch" />
+        <link href={ScreenshotDark.src} rel="prefetch" />
+      </Head>
       <div className={styles.hero}>
         <div className={styles.hero__container}>
           <HeroSection />
