@@ -13,7 +13,7 @@
 }
 
 .heading {
-  @include variables.container(28rem);
+  @include variables.container(fit-content);
 }
 
 .list {

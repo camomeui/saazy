@@ -8,7 +8,7 @@
 }
 
 .heading {
-  @include variables.container(38rem);
+  @include variables.container(fit-content);
 }
 
 .list {
