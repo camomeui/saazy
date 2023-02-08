@@ -2,9 +2,9 @@
 
 .container {
   padding-top: 3rem;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
   display: grid;
-  row-gap: 3rem;
+  row-gap: 4.5rem;
   background: var(--cmm-color-surface-1);
 
   [data-theme="dark"] & {
@@ -113,19 +113,25 @@
     border: 3px solid var(--cmm-color-primary-5);
     position: relative;
 
+    [data-theme="dark"] & {
+      border: 3px solid var(--cmm-color-primary-9);
+    }
+
     &::after {
       position: absolute;
       content: "Most Popular";
-      top: 0;
+      text-transform: uppercase;
+      top: -1rem;
       left: 50%;
-      translate: -50% -50%;
-      background: var(--cmm-color-primary-solid-bg);
-      color: var(--cmm-color-primary-solid-font);
-      font-weight: var(--cmm-font-weight-medium);
+      translate: -50% -100%;
+      background: var(--cmm-color-primary-soft-bg);
+      color: var(--cmm-color-primary-soft-font);
+      font-size: var(--cmm-font-size-xs);
+      font-weight: var(--cmm-font-weight-bold);
       border-radius: var(--cmm-radius-full);
-      padding: 0 1rem;
+      border: 1px solid var(--cmm-color-primary-border);
+      padding: 0 0.75rem;
       line-height: 2;
-      font-size: var(--cmm-font-size-sm);
     }
   }
 }
