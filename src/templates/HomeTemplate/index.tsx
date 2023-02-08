@@ -6,9 +6,12 @@ import FeatureSection from "@/components/FeatureSection";
 import HeroSection from "@/components/HeroSection";
 import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialSection";
+import ScreenshotLight from "@/public/images/camome-screenshot-light.webp";
+import ScreenshotDark from "@/public/images/camome-screenshot-dark.webp";
 
 import styles from "./styles.module.scss";
 import Link from "next/link";
+import Screenshot from "@/components/Screenshot";
 
 export default function HomeTemplate() {
   return (
@@ -17,6 +20,18 @@ export default function HomeTemplate() {
         <div className={styles.hero__container}>
           <HeroSection />
         </div>
+      </div>
+      <div className={styles.screenshot}>
+        <Screenshot
+          lightSrc={ScreenshotLight}
+          darkSrc={ScreenshotDark}
+          alt="Screenshot"
+          skeltonSize={{
+            height: ScreenshotLight.height,
+            width: "100%",
+          }}
+          url="camome.net"
+        />
       </div>
       <FeatureSection className={styles.features} />
       <TestimonialsSection

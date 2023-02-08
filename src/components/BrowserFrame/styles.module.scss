@@ -1,0 +1,48 @@
+.container {
+  border-radius: var(--cmm-radius-xl);
+  border: 1px solid var(--cmm-color-border-base);
+  overflow: hidden;
+  box-shadow: var(--cmm-shadow-xl);
+}
+
+.header {
+  display: flex;
+  background: var(--cmm-color-surface-1);
+  position: relative;
+  height: 2rem;
+  padding: 0 0.75rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button {
+  $size: 0.7rem;
+  width: $size;
+  height: $size;
+  border-radius: var(--cmm-radius-full);
+  background: var(--cmm-color-surface-3);
+}
+
+.searchBar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  line-height: 1.7;
+  background: var(--cmm-color-surface-2);
+  border-radius: var(--cmm-radius-sm);
+  color: var(--cmm-color-font-muted);
+  font-size: var(--cmm-font-size-xs);
+  min-width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  min-height: 8rem;
+}

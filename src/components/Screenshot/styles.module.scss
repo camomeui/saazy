@@ -1,0 +1,19 @@
+.skelton {
+  // noop
+  background: transparent;
+}
+
+.browser {
+  animation: show 1s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(0.3rem);
+  }
+  to {
+    translate: 1;
+    transform: translateY(0);
+  }
+}

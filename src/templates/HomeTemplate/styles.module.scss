@@ -18,6 +18,11 @@
   }
 }
 
+.screenshot {
+  @include variables.container(variables.$lg);
+  margin-top: 2rem;
+}
+
 .steps {
   display: grid;
   margin-top: 3.5rem;
