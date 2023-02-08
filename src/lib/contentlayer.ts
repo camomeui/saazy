@@ -6,7 +6,6 @@ export type ExtractContentMeta<T extends Content> = Omit<
 >;
 
 export function extractContentMeta(content: Content) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { _id, _raw, type, body, ...rest } = content;
   return rest;
 }

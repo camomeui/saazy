@@ -15,7 +15,6 @@ type Props = {
 };
 
 const components: MDXComponents = {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   a: ({ href, ref, ...props }) =>
     href ? <NextLink href={href} {...props} /> : null,
   pre: ({ className, ...props }) => (
