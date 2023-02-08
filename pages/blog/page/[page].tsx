@@ -27,7 +27,7 @@ export default function BlogPostPaginationPage({ posts, pagination }: Props) {
 }
 
 BlogPostPaginationPage.getLayout = createGetLayout({
-  title: "Blog",
+  title: "Saazy Blog",
   description: "Our latest news, updates, and stories.",
 });
 

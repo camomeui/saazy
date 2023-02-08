@@ -13,9 +13,7 @@
 }
 
 .titleSection {
-  background: var(--cmm-color-surface-2);
-  text-align: center;
-  border-bottom: 1px solid var(--cmm-color-border-base);
+  background: linear-gradient(to right, hsla(220 100% 80% / 0.25), transparent);
 
   [data-theme="dark"] & {
     background: var(--cmm-color-surface-1);
@@ -23,7 +21,7 @@
 
   .title {
     font-weight: var(--cmm-font-weight-extrabold);
-    font-size: var(--cmm-font-size-6xl);
+    font-size: var(--cmm-font-size-5xl);
 
     @include variables.mq("md") {
       font-size: var(--cmm-font-size-3xl);
@@ -36,9 +34,7 @@
   }
 
   .description {
-    max-width: 30rem;
-    margin: 0 auto;
-    margin-top: 0.75rem;
+    margin-top: 0.25rem;
     font-size: var(--cmm-font-size-lg);
     color: var(--cmm-color-font-muted);
 
