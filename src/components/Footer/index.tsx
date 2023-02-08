@@ -8,9 +8,9 @@ import {
 } from "react-icons/tb";
 
 import IconLink from "@/components/IconLink";
-import LogoSvg from "@/public/icons/logo.svg";
 
 import styles from "./styles.module.scss";
+import Logo from "@/components/Logo";
 
 type Props = {
   navItems: {
@@ -37,7 +37,7 @@ export default function Footer() {
       <div className={styles.inner}>
         <div className={styles.description}>
           <div className={styles.description__logo}>
-            <LogoSvg />
+            <Logo />
           </div>
         </div>
         <nav className={styles.navGrid}>

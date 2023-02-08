@@ -1,9 +1,9 @@
 import SignUpForm from "@/components/SignUpForm";
 import Link from "next/link";
-import LogoSvg from "@/public/icons/logo.svg";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
 import styles from "./styles.module.scss";
+import Logo from "@/components/Logo";
 
 export default function SignUpTemplate() {
   return (
@@ -11,7 +11,7 @@ export default function SignUpTemplate() {
       <div className={styles.inner}>
         <div className={styles.left}>
           <Link href="/" className={styles.link}>
-            <LogoSvg className={styles.logo} />
+            <Logo />
           </Link>
           <p className={styles.title}>Nice words to attract customers.</p>
           <ul className={styles.features}>

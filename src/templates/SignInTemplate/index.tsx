@@ -1,5 +1,5 @@
 import SignInForm from "@/components/SignInForm";
-import LogoSvg from "@/public/icons/logo.svg";
+import LogoSvg from "@/public/icons/logo-icon.svg";
 import Link from "next/link";
 
 import styles from "./styles.module.scss";

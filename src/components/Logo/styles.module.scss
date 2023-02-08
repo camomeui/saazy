@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: var(--cmm-font-weight-bold);
+  font-size: var(--cmm-font-size-lg);
+
+  svg {
+    height: 2.3rem;
+    width: auto;
+  }
+}

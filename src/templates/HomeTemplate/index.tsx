@@ -102,7 +102,7 @@ export default function HomeTemplate() {
         ]}
       />
       <FaqSection />
-      <Cta className={styles.cta} />
+      <Cta />
     </>
   );
 }

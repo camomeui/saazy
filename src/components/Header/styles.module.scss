@@ -29,8 +29,10 @@
 
 .logoWrap {
   margin-bottom: 0.25rem;
+
   & > svg {
-    width: 6rem;
+    height: 2.5rem;
+    width: auto;
   }
 
   @include variables.mq("md") {

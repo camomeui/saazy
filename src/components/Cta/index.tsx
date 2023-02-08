@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
+import LogoSvg from "@/public/icons/logo-icon.svg";
 import { Button } from "@camome/core/Button";
-import NewsletterForm from "@/components/NewsletterForm";
 
 import styles from "./styles.module.scss";
 import Link from "next/link";
@@ -13,18 +13,23 @@ type Props = {
 export default function Cta({ className }: Props) {
   return (
     <section className={clsx(styles.container, className)}>
-      <div className={styles.card}>
-        <div className={styles.card__title}>Ready to try Saazy?</div>
-        <div className={styles.card__sub}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing
-        </div>
-        <div>
-          <Button component={Link} href="/signup">
-            Get started for free
-          </Button>
-        </div>
+      <LogoSvg className={styles.logo} />
+      <div className={styles.text}>
+        <p className={styles.title}>Ready to get started?</p>
+        <p className={styles.description}>
+          Labore do amet commodo id ex reprehenderit sint duis officia et. Qui
+          occaecat ipsum exercitation officia cupidatat ex ad ipsum laboris
+          veniam amet dolor anim.
+        </p>
       </div>
-      <NewsletterForm className={styles.newsletter} />
+      <div className={styles.buttons}>
+        <Button component={Link} href="/signup" size="lg">
+          Get started for free
+        </Button>
+        <Button component={Link} href="/contact" size="lg" variant="soft">
+          Request demo
+        </Button>
+      </div>
     </section>
   );
 }

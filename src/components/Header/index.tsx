@@ -19,11 +19,11 @@ import React from "react";
 
 import CollapsibleNav from "@/components/CollapsibleNav";
 import PopoverLinks from "@/components/PopoverLinks";
-import LogoSvg from "@/public/icons/logo.svg";
 import { NavItem, NavItemLink } from "@/types";
 
 import styles from "./styles.module.scss";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import Logo from "@/components/Logo";
 
 const DIALOG_ID = "header-menu";
 
@@ -157,7 +157,7 @@ export default function Header({ menuContent, classNames }: Props) {
             <Bars3Icon />
           </IconButton>
           <Link href="/" className={styles.logoWrap}>
-            <LogoSvg />
+            <Logo />
           </Link>
           <Navigation items={navItems} className={styles.desktopOnly} />
         </div>
