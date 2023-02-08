@@ -12,8 +12,10 @@ type Props = {
 export default function BlogGrid({ posts, className }: Props) {
   return (
     <div className={clsx(styles.grid, className)}>
-      {posts.map((post) => (
-        <BlogCard key={post.slug} {...post} />
+      {posts.map((post, i) => (
+        <div key={post.slug} className={i === 0 ? styles.featured : undefined}>
+          <BlogCard {...post} />
+        </div>
       ))}
     </div>
   );

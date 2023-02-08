@@ -13,11 +13,7 @@
 }
 
 .titleSection {
-  background: linear-gradient(to right, hsla(220 100% 80% / 0.25), transparent);
-
-  [data-theme="dark"] & {
-    background: var(--cmm-color-surface-1);
-  }
+  background: linear-gradient(to right, hsla(220 100% 60% / 0.15), transparent);
 
   .title {
     font-weight: var(--cmm-font-weight-extrabold);
