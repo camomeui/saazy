@@ -51,9 +51,9 @@ export default function HomeTemplate() {
             price: "$8",
             period: "month",
             description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-            features: ["Lorem ipsum", "dolor sit amet"],
-            renderButton: () => (
+              "Amet laborum sint ut magna qui sit esse elit ex sunt velit labore occaecat dolore.",
+            features: ["Lorem ipsum", "Dolor sit amet"],
+            button: (
               <Button component={Link} href="/signup">
                 Start free trial
               </Button>
@@ -64,14 +64,14 @@ export default function HomeTemplate() {
             price: "$99",
             period: "month",
             description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+              "Incididunt proident enim eu culpa qui cillum dolore consectetur esse ea.",
             features: [
               "Lorem ipsum",
-              "dolor sit amet",
-              "consectetur",
-              "adipiscing elit, sed do eiusmod",
+              "Dolor sit amet",
+              "Consectetur",
+              "Adipiscing elit, sed do eiusmod",
             ],
-            renderButton: () => (
+            button: (
               <Button component={Link} href="/signup">
                 Start free trial
               </Button>
@@ -83,16 +83,16 @@ export default function HomeTemplate() {
             price: "Custom",
             period: "",
             description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+              "Amet Lorem reprehenderit qui culpa veniam ad culpa mollit do.",
             features: [
               "Lorem ipsum",
-              "dolor sit amet",
-              "consectetur",
-              "adipiscing elit, sed do eiusmod",
+              "Dolor sit amet",
+              "Consectetur",
+              "Adipiscing elit, sed do eiusmod",
               "Ut enim ad minim",
-              "incididunt ut labore",
+              "Incididunt ut labore",
             ],
-            renderButton: () => (
+            button: (
               <Button component={Link} href="/contact" variant="soft">
                 Contact sales
               </Button>

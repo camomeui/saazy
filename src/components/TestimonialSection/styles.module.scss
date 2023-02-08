@@ -27,8 +27,7 @@
     "content content"
     "avatar meta";
   grid-template-columns: auto 1fr;
-  column-gap: 1.5rem;
-  row-gap: 1rem;
+  gap: 1rem;
   border: solid 1px var(--cmm-color-border-subtle);
   border-radius: var(--cmm-radius-xl);
   padding: 1.5rem;

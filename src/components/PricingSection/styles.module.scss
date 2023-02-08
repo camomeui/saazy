@@ -1,6 +1,6 @@
 @use "@/styles/variables";
 
-.Block {
+.container {
   padding-top: 3rem;
   padding-bottom: 4rem;
   display: grid;
@@ -13,7 +13,7 @@
 }
 
 .heading {
-  @include variables.container;
+  @include variables.container(28rem);
 }
 
 .list {
@@ -29,11 +29,11 @@
 }
 
 .item {
-  border: 1px solid var(--cmm-color-border-base);
-  border-radius: var(--cmm-radius-xl);
-  padding: 1.5rem;
+  border: 1px solid var(--cmm-color-border-subtle);
+  border-radius: var(--cmm-radius-3xl);
+  padding: 1.75rem;
   display: grid;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
   place-content: start;
   row-gap: 1.5rem;
   max-width: 30rem;
@@ -51,18 +51,30 @@
 
   &__name {
     font-weight: var(--cmm-font-weight-bold);
-    font-size: var(--cmm-font-size-xl);
+    font-size: var(--cmm-font-size-sm);
     line-height: 1;
+    width: fit-content;
+    border: 1px solid var(--cmm-color-border-subtle);
+    border-radius: var(--cmm-radius-full);
+    line-height: 1.4;
+    padding: 0 0.6em;
+    background: linear-gradient(
+      180deg,
+      transparent 0 40%,
+      var(--cmm-color-surface-3)
+    );
   }
 
   &__price {
     font-weight: var(--cmm-font-weight-bold);
-    font-size: var(--cmm-font-size-5xl);
+    font-size: var(--cmm-font-size-4xl);
   }
 
   &__priceUnit {
     font-weight: var(--cmm-font-weight-medium);
-    font-size: var(--cmm-font-size-xl);
+    font-size: var(--cmm-font-size-lg);
+    color: var(--cmm-color-font-subtle);
+    margin-inline-start: 0.5rem;
   }
 
   &__description {
@@ -72,33 +84,29 @@
   &__featureList {
     display: grid;
     row-gap: 0.5rem;
-    place-content: start;
+    place-content: start stretch;
   }
 
   &__feature {
     display: flex;
     align-items: center;
-    column-gap: 0.5rem;
-    color: var(--cmm-color-font-muted);
+    column-gap: 0.75rem;
+    font-size: var(--cmm-font-size-md);
   }
 
   &__check {
-    display: grid;
-    place-items: center;
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--cmm-color-primary-5);
-    color: var(--cmm-color-white);
-    border-radius: var(--cmm-radius-full);
-
-    & > svg {
-      width: 0.6rem;
-      height: 0.6rem;
-    }
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--cmm-color-primary-5);
+    stroke-width: 2;
   }
 
   &__button {
     margin: 0 auto;
+
+    :global(.Button) {
+      font-weight: var(--cmm-font-weight-bold);
+    }
   }
 
   &.mostPopular {
@@ -111,8 +119,8 @@
       top: 0;
       left: 50%;
       translate: -50% -50%;
-      background-color: var(--cmm-color-primary-5);
-      color: var(--cmm-color-white);
+      background: var(--cmm-color-primary-solid-bg);
+      color: var(--cmm-color-primary-solid-font);
       font-weight: var(--cmm-font-weight-medium);
       border-radius: var(--cmm-radius-full);
       padding: 0 1rem;
