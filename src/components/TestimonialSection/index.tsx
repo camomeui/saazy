@@ -1,10 +1,9 @@
-import Image from "@/components/Image";
 import BackgroundDots from "@/components/BackgroundDots";
 import Heading from "@/components/Heading";
-import QuoteDoubleSvg from "@/public/icons/quote-double.svg";
 import { MegaphoneIcon } from "@heroicons/react/24/outline";
 
 import styles from "./styles.module.scss";
+import { Avatar } from "@camome/core/Avatar";
 
 type Props = {
   items: TestimonialProps[];
@@ -20,9 +19,11 @@ export default function TestimonialsSection({ items }: Props) {
         className={styles.heading}
       />
       <div className={styles.list}>
-        {items.map((item) => (
-          <Testimonial key={item.name} {...item} />
-        ))}
+        <div className={styles.list__inner}>
+          {items.map((item) => (
+            <Testimonial key={item.name} {...item} />
+          ))}
+        </div>
       </div>
       <BackgroundDots className={styles.dotsUpperLeft} />
       <BackgroundDots className={styles.dotsBottomRight} />
@@ -45,17 +46,12 @@ function Testimonial({
 }: TestimonialProps) {
   return (
     <figure className={styles.item}>
-      <div className={styles.item__avatar}>
-        <Image src={avatarSrc} fill alt={`Image of ${name}`} />
-      </div>
-      <div>
-        <QuoteDoubleSvg className={styles.item__quoteIcon} />
-        <blockquote className={styles.item__content}>{content}</blockquote>
-        <figcaption>
-          <cite className={styles.item__name}>{name}</cite>
-          <cite className={styles.item__belonging}>{belonging}</cite>
-        </figcaption>
-      </div>
+      <blockquote className={styles.item__content}>{content}</blockquote>
+      <Avatar src={avatarSrc} />
+      <figcaption>
+        <div className={styles.item__name}>{name}</div>
+        <div className={styles.item__belonging}>{belonging}</div>
+      </figcaption>
     </figure>
   );
 }

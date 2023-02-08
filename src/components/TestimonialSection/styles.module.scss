@@ -14,65 +14,50 @@
 .list {
   @include variables.container;
 
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-
-  @include variables.mq("lg") {
-    grid-template-columns: repeat(1, 1fr);
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1.5rem;
   }
 }
 
 .item {
   display: grid;
-  grid-template-columns: min(20%, 9rem) 1fr;
+  grid-template-areas:
+    "content content"
+    "avatar meta";
+  grid-template-columns: auto 1fr;
   column-gap: 1.5rem;
   row-gap: 1rem;
-  place-items: center;
-  border: solid 1px var(--cmm-color-border-base);
+  border: solid 1px var(--cmm-color-border-subtle);
   border-radius: var(--cmm-radius-xl);
-  padding: 1rem;
+  padding: 1.5rem;
   background: var(--cmm-color-surface-0);
+  box-shadow: var(--cmm-shadow-lg);
 
-  &__avatar {
-    width: 100%;
-    height: 100%;
-    position: relative;
-
-    img {
-      object-fit: contain;
-    }
-
-    @include variables.mq("sm") {
-      width: max(30%, 10rem);
-    }
+  [data-theme="dark"] & {
+    background: var(--cmm-color-surface-1);
   }
 
-  &__quoteIcon {
-    color: var(--cmm-color-font-base);
+  &__avatar {
+    grid-area: avatar;
   }
 
   &__content {
-    margin: 1rem 0;
+    grid-area: content;
+    border-bottom: 1px solid var(--cmm-color-border-subtle);
+    padding-bottom: 1rem;
   }
 
   &__name {
+    grid-area: meta;
     font-weight: var(--cmm-font-weight-bold);
   }
 
   &__belonging {
+    grid-area: meta;
     color: var(--cmm-color-font-subtle);
-    font-size: var(--cmm-font-size-sm);
-  }
-
-  & cite {
-    font-style: normal;
-    display: block;
-  }
-
-  @include variables.mq("sm") {
-    grid-template-columns: 1fr;
-    grid-template-rows: 9rem auto;
+    font-size: var(--cmm-font-size-xs);
   }
 }
 

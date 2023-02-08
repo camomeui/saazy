@@ -21,10 +21,6 @@
   transition: transform 0.3s;
   background: var(--cmm-color-surface-0);
 
-  [data-theme="dark"] & {
-    background: var(--cmm-color-surface-1);
-  }
-
   &__icon {
     grid-area: icon;
     display: grid;

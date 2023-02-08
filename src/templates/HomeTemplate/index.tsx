@@ -22,16 +22,23 @@ export default function HomeTemplate() {
       <TestimonialsSection
         items={[
           {
-            avatarSrc: "/images/avatar-1.webp",
+            avatarSrc: "/images/avatar-1.jpg",
             name: "Anna Smith",
-            belonging: "CEO at Somewhere",
+            belonging: "CEO at Somewhere, LLC.",
             content:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
           },
           {
-            avatarSrc: "/images/avatar-2.webp",
+            avatarSrc: "/images/avatar-2.jpg",
             name: "Huguta Masuo",
-            belonging: "CEO at Nowhere",
+            belonging: "CEO at Nowhere, Inc.",
+            content:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+          },
+          {
+            avatarSrc: "/images/avatar-3.jpg",
+            name: "John Doe",
+            belonging: "CTO at Anywhere, Inc.",
             content:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
           },
