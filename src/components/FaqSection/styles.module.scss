@@ -1,52 +1,29 @@
 @use "@/styles/variables";
 
 .container {
-  background: var(--cmm-color-surface-0);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(180deg, hsl(220 100% 80% / 0.2), transparent);
 
-  @include variables.mq("md") {
-    background: linear-gradient(
-        130deg,
-        rgba(230, 237, 255, 0.6) 0%,
-        #ffffff 50%
-      ),
-      #ffffff;
+  [data-theme="dark"] & {
+    background: linear-gradient(180deg, hsl(220 100% 60% / 0.1), transparent);
   }
 }
 
 .inner {
   @include variables.container;
 
-  padding: 3rem 0 3rem 0;
   display: grid;
-  grid-template-columns: 38% 1fr;
-  gap: 2rem;
-
-  @include variables.mq("lg") {
-    grid-template-columns: 1fr;
-  }
+  gap: 3rem;
 }
 
-.heading {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-
-  &__main {
-    font-weight: var(--cmm-font-weight-extrabold);
-    font-size: var(--cmm-font-size-3xl);
-
-    @include variables.mq("lg") {
-      font-size: var(--cmm-font-size-2xl);
-    }
-  }
-
-  &__sub {
-    color: var(--cmm-color-font-subtle);
-  }
+.sub {
+  margin-top: 1.5rem;
+  color: var(--cmm-color-font-muted);
 
   a {
-    font-weight: var(--cmm-font-weight-semibold);
     color: var(--cmm-color-link);
+    font-weight: var(--cmm-font-weight-semibold);
 
     &:hover {
       text-decoration: underline;
@@ -54,14 +31,18 @@
   }
 }
 
-.summary {
-  @include variables.mq("lg") {
-    padding: 0.75rem 0 !important;
-  }
-}
+.dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 3rem;
 
-.contents {
-  @include variables.mq("lg") {
-    padding: 0 0 0.75rem 0 !important;
+  dt {
+    font-weight: var(--cmm-font-weight-bold);
+    font-size: var(--cmm-font-size-lg);
+  }
+
+  dd {
+    margin-top: 1rem;
+    color: var(--cmm-color-font-muted);
   }
 }
