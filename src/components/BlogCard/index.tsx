@@ -1,24 +1,19 @@
-import { Avatar } from "@camome/core";
 import Link from "next/link";
 
 import BlogTagList from "@/components/BlogTagList";
 import Image from "@/components/Image";
 import { ExtractContentMeta } from "@/lib/contentlayer";
-import { formatDate } from "@/lib/formatDate";
 import { type Blog } from "contentlayer/generated";
 
 import styles from "./styles.module.scss";
 import clsx from "clsx";
 
 export type BlogCardProps = Omit<ExtractContentMeta<Blog>, "thumbImg"> & {
-  authorAvatar: string;
   thumbImg: string;
   className?: string;
 };
 
 export default function BlogCard({
-  author,
-  authorAvatar,
   description,
   tags,
   title,

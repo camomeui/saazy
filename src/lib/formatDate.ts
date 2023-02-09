@@ -1,6 +1,6 @@
 const intl = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
-  month: "short",
+  month: "long",
   day: "numeric",
 });
 
