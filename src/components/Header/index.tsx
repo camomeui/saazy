@@ -152,7 +152,7 @@ export default function Header({ menuContent, classNames }: Props) {
             size="sm"
             onClick={openMenu}
             data-dialog-trigger-for={DIALOG_ID}
-            className={styles.menuButton}
+            className={styles.menuOpenBtn}
           >
             <Bars3Icon />
           </IconButton>
@@ -186,6 +186,7 @@ export default function Header({ menuContent, classNames }: Props) {
             colorScheme="neutral"
             size="sm"
             data-dialog-trigger-for={DIALOG_ID}
+            className={styles.menuCloseBtn}
           >
             <XMarkIcon />
           </IconButton>
