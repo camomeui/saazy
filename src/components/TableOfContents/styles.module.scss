@@ -13,6 +13,7 @@
 .title {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   white-space: nowrap;
   font-size: var(--cmm-font-size-xs);
   text-transform: uppercase;
@@ -22,7 +23,7 @@
   svg {
     width: 1.25rem;
     height: 1.25rem;
-    color: var(--cmm-color-primary-font);
+    color: var(--cmm-color-primary-emphasis);
   }
 }
 

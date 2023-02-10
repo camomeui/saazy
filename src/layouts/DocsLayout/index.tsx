@@ -32,7 +32,6 @@ export default function DocsLayout({ sidebarItems, children }: Props) {
         <Sidebar items={sidebarItems} className={styles.sidebarDesktop} />
         {children}
       </main>
-      <Footer />
     </div>
   );
 }
