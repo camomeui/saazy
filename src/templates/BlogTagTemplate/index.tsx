@@ -9,26 +9,5 @@ type Props = {
 };
 
 export default function BlogTagTemplate({ posts }: Props) {
-  return (
-    <>
-      <Breadcrumbs
-        paths={[
-          {
-            href: "/",
-            label: "Home",
-          },
-          {
-            href: "/blog",
-            label: "Blog",
-          },
-          {
-            href: "/blog/tags",
-            label: "Tags",
-          },
-        ]}
-        className={styles.breadcrumbs}
-      />
-      <BlogPostListTemplate posts={posts} />
-    </>
-  );
+  return <BlogPostListTemplate posts={posts} />;
 }

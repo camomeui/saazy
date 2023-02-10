@@ -9,8 +9,8 @@ import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialSection";
 import ScreenshotLightImg from "@/public/images/camome-screenshot-light.webp";
 import ScreenshotDarkImg from "@/public/images/camome-screenshot-dark.webp";
-import WallpaperImg from "@/public/images/wallpaper.webp";
-import CounterCodeImg from "@/public/images/counter-code.webp";
+import WallpaperImg from "@/public/images/wallpaper.jpg";
+import CounterCodeImg from "@/public/images/counter-code.png";
 
 import styles from "./styles.module.scss";
 import Link from "next/link";

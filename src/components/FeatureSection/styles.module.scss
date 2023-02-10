@@ -15,6 +15,8 @@
 
 .left {
   flex: 1;
+  min-width: min(30rem, 100%);
+  max-width: 40rem;
 
   > * + * {
     margin-top: 2rem;

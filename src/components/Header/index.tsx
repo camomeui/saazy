@@ -36,38 +36,12 @@ const navItems: NavItem[] = [
   {
     id: "blog",
     label: "Blog",
-    open: true,
-    type: "collapsible",
-    items: [
-      {
-        id: "blog-posts",
-        href: "/blog",
-        label: "Posts",
-      },
-      {
-        id: "blog-tags",
-        href: "/blog/tags",
-        label: "Tags",
-      },
-    ],
+    href: "/blog",
   },
   {
     id: "docs",
     label: "Docs",
-    open: true,
-    type: "collapsible",
-    items: [
-      {
-        id: "docs-introduction",
-        href: "/docs/introduction",
-        label: "Introduction",
-      },
-      {
-        id: "docs-cms-markdown",
-        href: "/docs/cms/markdown",
-        label: "Markdown",
-      },
-    ],
+    href: "/docs/introduction",
   },
   {
     id: "misc",
