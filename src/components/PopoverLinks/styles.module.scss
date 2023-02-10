@@ -1,16 +1,17 @@
 .button {
   display: flex;
   align-items: center;
-  font-weight: var(--cmm-font-weight-medium);
+  font-weight: var(--cmm-font-weight-bold);
+  font-size: var(--cmm-font-size-sm);
   gap: 0.25rem;
-  line-height: 2.5rem;
+  line-height: 2rem;
   border-radius: var(--cmm-radius-md);
   padding: 0 0.5rem;
 
   > svg {
     width: 0.75rem;
     height: 0.75rem;
-    stroke-width: 2.8;
+    stroke-width: 3.2;
     color: var(--cmm-color-font-base);
     margin-top: 0.1rem;
   }
