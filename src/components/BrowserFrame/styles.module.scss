@@ -37,7 +37,8 @@
   border-radius: var(--cmm-radius-sm);
   color: var(--cmm-color-font-muted);
   font-size: var(--cmm-font-size-xs);
-  min-width: 20rem;
+  min-width: min(20%, 20rem);
+  padding: 0 1em;
   display: flex;
   justify-content: center;
   align-items: center;

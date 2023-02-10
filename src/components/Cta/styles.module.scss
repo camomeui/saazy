@@ -43,6 +43,13 @@
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 3rem;
+
+  @include variables.mq(sm) {
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    place-self: stretch;
+  }
 }
 
 .logoCloud {

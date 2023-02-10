@@ -43,7 +43,7 @@
 
   &__title {
     font-weight: var(--cmm-font-weight-extrabold);
-    font-size: var(--cmm-font-size-4xl);
+    font-size: clamp(2rem, 1.537rem + 1.951vw, var(--cmm-font-size-4xl));
     line-height: 1;
   }
 

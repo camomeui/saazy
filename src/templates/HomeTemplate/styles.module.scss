@@ -10,8 +10,6 @@
   );
 
   &__container {
-    @include variables.container;
-
     padding-top: 2rem;
     display: grid;
     row-gap: 1rem;
@@ -40,7 +38,7 @@
 }
 
 .feature2 {
-  padding-top: 4rem;
+  padding-top: 6rem;
   padding-bottom: 3rem;
 
   img {

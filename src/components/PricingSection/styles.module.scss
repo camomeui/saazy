@@ -24,7 +24,7 @@
   column-gap: 2rem;
   row-gap: 4rem; // make sure "MOST POPULAR" tag doesn't overlap
 
-  @include variables.mq("lg") {
+  @include variables.mq(lg) {
     grid-template-columns: repeat((1, 1fr));
   }
 }
@@ -107,6 +107,15 @@
 
     :global(.Button) {
       font-weight: var(--cmm-font-weight-bold);
+    }
+
+    @include variables.mq(sm) {
+      align-self: stretch;
+      width: 100%;
+
+      > * {
+        width: 100%;
+      }
     }
   }
 
