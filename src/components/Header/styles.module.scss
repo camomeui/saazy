@@ -1,9 +1,20 @@
 @use "@/styles/variables";
 
-.Block {
-  border-bottom: 1px solid var(--cmm-color-border-base);
+.container {
+  border-bottom: 1px solid var(--cmm-color-border-subtle);
   height: variables.$headerHeight;
   z-index: 50;
+  backdrop-filter: blur(4px);
+  background: hsl(0 0 100% / 0.9);
+
+  [data-theme="dark"] & {
+    background: hsl(0 0 0 / 0.8);
+  }
+
+  &.sticky {
+    position: sticky;
+    top: 0;
+  }
 }
 
 .inner {

@@ -86,6 +86,7 @@ const linkToIconMap: { [id: string]: SvgComponent } = {
 };
 
 type Props = {
+  isSticky?: boolean;
   menuContent?: ({ close }: { close: () => void }) => React.ReactNode;
   classNames?: {
     block?: string;
@@ -93,7 +94,11 @@ type Props = {
   };
 };
 
-export default function Header({ menuContent, classNames }: Props) {
+export default function Header({
+  isSticky = false,
+  menuContent,
+  classNames,
+}: Props) {
   const dialogRef = React.useRef<HTMLDialogElement>(null!);
   // const { enableBodyScroll, disableBodyScroll, clearAllBodyScrollLocks } =
   //   useScrollLock(dialogRef);
@@ -116,7 +121,13 @@ export default function Header({ menuContent, classNames }: Props) {
   }, []);
 
   return (
-    <header className={clsx(styles.Block, classNames?.block)}>
+    <header
+      className={clsx(
+        styles.container,
+        classNames?.block,
+        isSticky && styles.sticky
+      )}
+    >
       <div className={clsx(styles.inner, classNames?.inner)}>
         <div className={styles.leftSection}>
           <IconButton

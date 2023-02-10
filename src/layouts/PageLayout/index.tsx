@@ -8,18 +8,20 @@ import styles from "./styles.module.scss";
 export type PageLayoutProps = {
   title?: string;
   description?: string;
+  stickyHeader?: boolean;
   children?: React.ReactNode;
 };
 
 export default function PageLayout({
   title,
   description,
+  stickyHeader = false,
   children,
 }: PageLayoutProps) {
   return (
     <>
       <div className={styles.background}>
-        <Header />
+        <Header isSticky={stickyHeader} />
         <main>
           {title && (
             <div className={styles.titleSection}>

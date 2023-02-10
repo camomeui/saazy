@@ -7,4 +7,4 @@ export default function HomePage() {
   return <HomeTemplate />;
 }
 
-HomePage.getLayout = createGetLayout();
+HomePage.getLayout = createGetLayout({ stickyHeader: true });
