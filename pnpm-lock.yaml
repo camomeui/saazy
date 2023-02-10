@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@camome/core': ^0.0.22
+  '@camome/core': ^0.0.23
   '@camome/system': ^0.1.22
   '@camome/utils': ^0.1.10
   '@headlessui/react': ^1.7.9
@@ -62,7 +62,7 @@ specifiers:
   unist-util-visit: ^4.1.1
 
 dependencies:
-  '@camome/core': 0.0.22_react@18.2.0
+  '@camome/core': 0.0.23_react@18.2.0
   '@camome/system': 0.1.22
   '@headlessui/react': 1.7.9_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.14_react@18.2.0
@@ -1392,8 +1392,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@camome/core/0.0.22_react@18.2.0:
-    resolution: {integrity: sha512-qb4co5t45LXhLYTF6dde/YC/JOMDfQRmYf52aUqTumOXk8Ya44yLUsfBhIi4wKgK4Euh2u2wqU1jS7tJbZGkUg==}
+  /@camome/core/0.0.23_react@18.2.0:
+    resolution: {integrity: sha512-fNScqYd3PGk2UZ+666tJSfR/9xqk8W/61mDuflJWV3RPrO63QBcPJ1f/WIq0AEWttatAfxTjCKIzKzeH1xyWwQ==}
     peerDependencies:
       react: '>=18'
     dependencies:

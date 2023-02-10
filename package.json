@@ -15,7 +15,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@camome/core": "^0.0.22",
+    "@camome/core": "^0.0.23",
     "@camome/system": "^0.1.22",
     "@headlessui/react": "^1.7.9",
     "@heroicons/react": "^2.0.10",
