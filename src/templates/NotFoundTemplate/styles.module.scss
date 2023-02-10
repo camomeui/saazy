@@ -27,7 +27,7 @@
   line-height: 1;
 
   @include variables.mq("md") {
-    font-size: var(--cmm-font-size-8xl);
+    font-size: 4rem;
   }
 }
 
