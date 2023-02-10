@@ -12,7 +12,4 @@ export default function ContactPage() {
   );
 }
 
-ContactPage.getLayout = createGetLayout({
-  title: "Contact sales",
-  description: "Lorem ipsum dolor sit amet.",
-});
+ContactPage.getLayout = createGetLayout();

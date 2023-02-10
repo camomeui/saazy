@@ -1,27 +1,15 @@
 @use "@/styles/variables";
 
-.Block {
+.container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
   grid-auto-rows: 2rem;
   gap: 1rem;
-  color: var(--cmm-color-neutral-4);
+  color: var(--cmm-color-font-muted);
 
-  & svg {
+  svg {
     width: 100%;
     height: 100%;
-  }
-
-  @include variables.mq("lg") {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  @include variables.mq("md") {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include variables.mq("sm") {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 

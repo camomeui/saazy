@@ -15,7 +15,7 @@ type Props = {
 
 export default function LogoCloud({ className }: Props) {
   return (
-    <div className={clsx(styles.Block, className)}>
+    <div className={clsx(styles.container, className)}>
       <div className={styles.item}>
         <Logo1Svg />
       </div>

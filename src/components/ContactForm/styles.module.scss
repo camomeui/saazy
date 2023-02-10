@@ -1,11 +1,10 @@
 @use "@/styles/variables";
 
-.Block {
+.container {
   display: grid;
   width: 100%;
-  max-width: 36rem;
   margin: 0 auto;
-  gap: 1.5rem;
+  gap: 1rem;
 
   a {
     text-decoration: underline;
@@ -13,14 +12,24 @@
 
   .column2 {
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 
     > * {
-      width: 50%;
+      width: calc(50% - 0.5rem);
     }
 
     @include variables.mq(variables.$md) {
       flex-direction: column;
     }
+  }
+}
+
+.terms {
+  font-size: var(--cmm-font-size-xs);
+  color: var(--cmm-color-font-base);
+
+  a {
+    text-decoration: underline;
   }
 }

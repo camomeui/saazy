@@ -20,7 +20,7 @@
   @include variables.container(variables.$lg);
 
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: center;
   gap: 2rem;
 }

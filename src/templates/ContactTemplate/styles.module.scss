@@ -1,18 +1,77 @@
 @use "@/styles/variables";
 
-.Block {
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
+.container {
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+  background: var(--cmm-color-surface-1);
+}
 
-  @include variables.mq("md") {
-    padding-left: 1rem;
-    padding-right: 1rem;
+.inner {
+  @include variables.container(56rem);
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.left {
+  min-width: 20rem;
+  max-width: 24rem;
+  flex: 1;
+
+  > * + * {
+    margin-top: 2rem;
   }
+}
 
-  :global {
-    .TextInput,
-    .Textarea {
-      background: var(--cmm-color-surface-1);
+.right {
+  width: min(100%, 28rem);
+}
+
+.title {
+  font-size: var(--cmm-font-size-4xl);
+  font-weight: var(--cmm-font-weight-extrabold);
+  line-height: 1;
+}
+
+.description {
+  margin-top: 1rem;
+  color: var(--cmm-color-font-muted);
+}
+
+.section {
+  h2 {
+    font-weight: var(--cmm-font-weight-bold);
+    margin-block-end: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &::after {
+      content: "";
+      border-top: 1px solid var(--cmm-color-border-base);
+      flex: 1;
     }
   }
+}
+
+.list {
+  list-style: disc;
+
+  li {
+    margin-left: 1em;
+
+    &:not(:first-of-type) {
+      margin-top: 0.5em;
+    }
+
+    &::marker {
+      color: var(--cmm-color-neutral-5);
+    }
+  }
+}
+
+.logoCloud {
+  margin-block-start: 1.25rem;
 }

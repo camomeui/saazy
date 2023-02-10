@@ -3,10 +3,9 @@ import { Checkbox } from "@camome/core/Checkbox";
 import { TextInput } from "@camome/core/TextInput";
 import { Textarea } from "@camome/core/Textarea";
 import clsx from "clsx";
-import Link from "next/link";
-import React from "react";
 
 import styles from "./styles.module.scss";
+import Link from "next/link";
 
 type Props = {
   className?: string;
@@ -17,22 +16,26 @@ export default function ContactForm({ className }: Props) {
     <form
       action="/api/contact"
       method="POST"
-      className={clsx(styles.Block, className)}
+      className={clsx(styles.container, className)}
     >
       <div className={styles.column2}>
         <TextInput label="First name" name="firstName" required />
         <TextInput label="Last name" name="lastName" required />
       </div>
-      <TextInput label="Company" name="company" required />
-      <TextInput label="Email" type="email" name="email" required />
+      <TextInput label="Company name" name="company" required />
+      <TextInput label="Work email" type="email" name="email" required />
       <Textarea label="Message" rows={5} name="message" required />
       <Checkbox
-        label="Agree to our privacy policy"
+        label="Subscribe to our newsletter"
         name="accept-terms"
         value="true"
         required
       />
       <Button>Submit</Button>
+      <p className={styles.terms}>
+        By continuing, you agree to Saazy&apos;s{" "}
+        <Link href="#">Privacy Policy</Link>.
+      </p>
     </form>
   );
 }
