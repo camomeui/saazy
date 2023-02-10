@@ -33,7 +33,7 @@ export default function ContactForm({ className }: Props) {
       />
       <Button>Submit</Button>
       <p className={styles.terms}>
-        By continuing, you agree to Saazy&apos;s{" "}
+        By submitting, you agree to Saazy&apos;s{" "}
         <Link href="#">Privacy Policy</Link>.
       </p>
     </form>

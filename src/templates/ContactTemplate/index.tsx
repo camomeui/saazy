@@ -17,7 +17,7 @@ export default function ContactTemplate() {
             </p>
           </div>
           <section className={styles.section}>
-            <h2>Talk to Saazy expert to</h2>
+            <h2>Talk to a Saazy expert to</h2>
             <ul className={styles.list}>
               {listItems.map((item) => (
                 <li key={item}>{item}</li>
