@@ -1,9 +1,11 @@
 @use "@/styles/variables";
 
-.Block {
-  @include variables.container(variables.$xl);
-
+.container {
   padding-top: 3rem;
+}
+
+.table {
+  @include variables.container(variables.$xl);
 }
 
 .large {

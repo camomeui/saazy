@@ -8,9 +8,11 @@ import Link from "next/link";
 
 export default function PricingTemplate() {
   return (
-    <div className={styles.Block}>
-      <PricingTableLarge {...props} className={styles.large} />
-      <PricingTableSmall {...props} className={styles.small} />
+    <div className={styles.container}>
+      <div className={styles.table}>
+        <PricingTableLarge {...props} className={styles.large} />
+        <PricingTableSmall {...props} className={styles.small} />
+      </div>
       <Cta />
     </div>
   );
