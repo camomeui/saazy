@@ -1,18 +1,24 @@
 import { Button } from "@camome/core/Button";
 
+import { CalculatorIcon, WindowIcon } from "@heroicons/react/24/outline";
 import Cta from "@/components/Cta";
 import FaqSection from "@/components/FaqSection";
-import FeatureSection from "@/components/FeatureSection";
+import FeatureMoreSection from "@/components/FeatureMoreSection";
 import HeroSection from "@/components/HeroSection";
 import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialSection";
-import ScreenshotLight from "@/public/images/camome-screenshot-light.webp";
-import ScreenshotDark from "@/public/images/camome-screenshot-dark.webp";
+import ScreenshotLightImg from "@/public/images/camome-screenshot-light.webp";
+import ScreenshotDarkImg from "@/public/images/camome-screenshot-dark.webp";
+import WallpaperImg from "@/public/images/wallpaper.webp";
+import CounterCodeImg from "@/public/images/counter-code.webp";
 
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import Screenshot from "@/components/Screenshot";
 import Head from "next/head";
+import FeatureSection from "@/components/FeatureSection";
+import BrowserFrame from "@/components/BrowserFrame";
+import Image from "next/image";
 
 export default function HomeTemplate() {
   return (
@@ -20,8 +26,8 @@ export default function HomeTemplate() {
       <Head>
         {/* Prefetch the hero images because it depends on the
             current theme which is only available on the browser (server doesn't know). */}
-        <link href={ScreenshotLight.src} rel="prefetch" />
-        <link href={ScreenshotDark.src} rel="prefetch" />
+        <link href={ScreenshotLightImg.src} rel="prefetch" />
+        <link href={ScreenshotDarkImg.src} rel="prefetch" />
       </Head>
       <div className={styles.hero}>
         <div className={styles.hero__container}>
@@ -30,17 +36,55 @@ export default function HomeTemplate() {
       </div>
       <div className={styles.screenshot}>
         <Screenshot
-          lightSrc={ScreenshotLight}
-          darkSrc={ScreenshotDark}
+          lightSrc={ScreenshotLightImg}
+          darkSrc={ScreenshotDarkImg}
           alt="Screenshot"
           skeltonSize={{
-            height: ScreenshotLight.height,
+            height: ScreenshotLightImg.height,
             width: "100%",
           }}
           url="camome.net"
         />
       </div>
-      <FeatureSection className={styles.features} />
+      <FeatureSection
+        heading={{
+          icon: <CalculatorIcon />,
+          title: "It will never miss your click.",
+          tagline: "Counter",
+        }}
+        listItems={[
+          "Do ea laborum sint et deserunt cupidatat eu incididunt eu labore occaecat laboris reprehenderit exercitation.",
+          "Nulla commodo Lorem est id culpa consequat aliqua qui voluptate ea adipisicing quis ad.",
+          "Ea magna fugiat nostrud eiusmod deserunt labore velit laborum non esse labore sunt.",
+        ]}
+        buttonText="Learn more about counter"
+        visual={<Image src={CounterCodeImg} alt="React code of counter" />}
+        className={styles.feature1}
+      />
+      <FeatureSection
+        heading={{
+          icon: <WindowIcon />,
+          title: "Like the windows.",
+          tagline: "Wallpaper",
+        }}
+        listItems={[
+          "Do ea laborum sint et deserunt cupidatat eu incididunt eu labore occaecat laboris reprehenderit exercitation.",
+          "Nulla commodo Lorem est id culpa consequat aliqua qui voluptate ea adipisicing quis ad.",
+          "Ea magna fugiat nostrud eiusmod deserunt labore velit laborum non esse labore sunt.",
+        ]}
+        buttonText="Learn more about wallpaper"
+        visual={
+          <BrowserFrame>
+            <Image
+              src={WallpaperImg}
+              alt="Beautiful abstract wallpaper like the default of Windows 11"
+            />
+          </BrowserFrame>
+        }
+        reversed
+        className={styles.feature2}
+      />
+      <FeatureMoreSection className={styles.moreFeatures} />
       <TestimonialsSection
         items={[
           {

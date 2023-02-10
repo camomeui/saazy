@@ -13,7 +13,7 @@ export default function SignInForm() {
       <form>
         <TextInput
           label="Email"
-          type="text"
+          type="email"
           placeholder="you@example.com"
           required
           fill

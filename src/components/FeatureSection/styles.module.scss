@@ -1,31 +1,28 @@
 @use "@/styles/variables";
 
-.container {
-  display: grid;
-  row-gap: 2rem;
-  padding-top: 2.5rem;
-  padding-bottom: 5rem;
-  background: var(--cmm-color-surface-1);
-}
-
 .inner {
-  @include variables.container();
+  @include variables.container;
 
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
 
-  @include variables.mq(lg) {
-    grid-template-columns: 1fr;
+  &.reversed {
+    flex-direction: row-reverse;
   }
 }
 
 .left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  max-width: 30rem;
+  flex: 1;
+
+  > * + * {
+    margin-top: 2rem;
+  }
+}
+
+.right {
+  width: min(100%, 38rem);
 }
 
 .description {
@@ -33,11 +30,41 @@
   color: var(--cmm-color-font-muted);
 }
 
+.list {
+  > * + * {
+    margin-top: 0.5rem;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.5rem;
+    font-size: var(--cmm-font-size-md);
+  }
+}
+
+.icon {
+  display: grid;
+  place-content: center;
+  height: 1.5em; // assume text content's line height is 1.5
+
+  svg {
+    width: 1.2em;
+    height: 1.2em;
+    color: var(--cmm-color-primary-emphasis);
+  }
+}
+
 .button {
   --cmm-Button-icon-margin: 0.2rem;
-  margin-inline-start: -0.7rem;
-  margin-block-start: -0.25rem;
+  margin-inline-start: -0.5rem;
+  margin-block-start: 1rem;
   font-weight: var(--cmm-font-weight-bold);
+  color: var(--cmm-color-link);
+
+  &:hover {
+    background: var(--cmm-color-primary-subtle);
+  }
 
   svg {
     height: 0.75rem;

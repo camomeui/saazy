@@ -1,88 +1,58 @@
-import clsx from "clsx";
-import FeatureGrid from "@/components/FeatureGrid";
-import Heading from "@/components/Heading";
-import {
-  RocketLaunchIcon,
-  ChartBarIcon,
-  CurrencyDollarIcon,
-  BoltIcon,
-  BuildingOfficeIcon,
-  ChatBubbleLeftRightIcon,
-  CodeBracketIcon,
-  ChevronRightIcon,
-} from "@heroicons/react/24/outline";
-
-import styles from "./styles.module.scss";
+import Heading, { type HeadingProps } from "@/components/Heading";
 import { Button } from "@camome/core/Button";
+import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import clsx from "clsx";
+import styles from "./styles.module.scss";
+import Link from "next/link";
 
 type Props = {
+  heading: HeadingProps;
+  description?: React.ReactNode;
+  listItems?: string[];
+  buttonText?: string;
+  visual: React.ReactNode;
+  reversed?: boolean;
   className?: string;
 };
 
-export default function FeatureSection({ className }: Props) {
+export default function FeatureSection({
+  heading,
+  description,
+  listItems,
+  buttonText,
+  visual,
+  reversed = false,
+  className,
+}: Props) {
   return (
-    <section className={clsx(styles.container, className)}>
-      <div className={styles.inner}>
+    <section className={clsx(className)}>
+      <div className={clsx(styles.inner, reversed && styles.reversed)}>
         <div className={styles.left}>
-          <Heading
-            icon={<RocketLaunchIcon />}
-            title="You may like these too."
-            tagline="More features"
-          />
-          <p className={styles.description}>
-            Dolor exercitation est ipsum quis pariatur proident qui proident
-            paria laboris irure esse consequat laborum esse nisi nulla culpa
-            dolore dolore citation est ipsum.
-          </p>
+          <Heading {...heading} />
+          <p className={styles.description}>{description}</p>
+          {listItems?.length && (
+            <ul className={styles.list}>
+              {listItems.map((item) => (
+                <li key={item}>
+                  <span className={styles.icon}>
+                    <CheckCircleIcon />
+                  </span>
+                  <p>{item}</p>
+                </li>
+              ))}
+            </ul>
+          )}
           <Button
-            endDecorator={<ChevronRightIcon />}
             size="sm"
             variant="ghost"
+            endDecorator={<ChevronRightIcon />}
             className={styles.button}
           >
-            Learn more
+            {buttonText || "Learn more"}
           </Button>
         </div>
-        <FeatureGrid
-          items={[
-            {
-              title: "Affordable cost",
-              description:
-                "Reprehenderit adipisicing veniam nulla cillum. Cillum pariatur Lorem consequat.",
-              Icon: CurrencyDollarIcon,
-            },
-            {
-              title: "Lightning fast",
-              description:
-                "Eu sint exercitation deserunt et nostrud exercitation cillum veniam nostrud.",
-              Icon: BoltIcon,
-            },
-            {
-              title: "Code editor",
-              description:
-                "Aute nostrud minim tempor quis ea non cillum do anim minim nisi in tempor quis.",
-              Icon: CodeBracketIcon,
-            },
-            {
-              title: "Dashboard",
-              description:
-                "Nisi velit sunt ad non do cillum. Occaecat officia eu esse sit excepteur nostrud.",
-              Icon: ChartBarIcon,
-            },
-            {
-              title: "Kind support",
-              description:
-                "Proident eiusmod excepteur eiusmod. Sint anim id enim qui proident id enim qui.",
-              Icon: ChatBubbleLeftRightIcon,
-            },
-            {
-              title: "Trusted by people",
-              description:
-                "Non labore in laborum excepteur officia irure eiusmod et labore id veniam enim.",
-              Icon: BuildingOfficeIcon,
-            },
-          ]}
-        />
+        <div className={styles.right}>{visual}</div>
       </div>
     </section>
   );

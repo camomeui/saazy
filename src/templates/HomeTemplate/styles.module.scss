@@ -29,7 +29,21 @@
   row-gap: 3.5rem;
 }
 
-.features {
+.feature1 {
+  padding-top: 6rem;
+}
+
+.feature2 {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+
+  img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
+
+.moreFeatures {
   margin-top: 3rem;
 }
 
