@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import React from "react";
 
 import CollapsibleNavigation from "@/components/CollapsibleNav";
 import { NavItem } from "@/types";
@@ -14,7 +13,7 @@ type Props = {
 
 export default function Sidebar({ items, onClickLink, className }: Props) {
   return (
-    <aside className={clsx(styles.Block, className)}>
+    <aside className={clsx(styles.container, className, "scrollbar")}>
       <CollapsibleNavigation items={items} onClickLink={onClickLink} />
     </aside>
   );

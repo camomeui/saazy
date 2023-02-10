@@ -1,6 +1,6 @@
 @use "@/styles/variables";
 
-.Block {
+.container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
@@ -23,7 +23,7 @@
 .main {
   display: grid;
   grid-template-columns: 18rem 1fr;
-  column-gap: 1rem;
+  column-gap: 3rem;
 
   @include variables.mq("md") {
     grid-template-columns: 1fr;

@@ -14,7 +14,7 @@ type Props = {
 
 export default function DocsLayout({ sidebarItems, children }: Props) {
   return (
-    <div className={styles.Block}>
+    <div className={styles.container}>
       <Header
         menuContent={({ close }) => (
           <Sidebar

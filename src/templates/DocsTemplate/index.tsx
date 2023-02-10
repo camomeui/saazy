@@ -1,6 +1,5 @@
 import { Markup } from "@camome/core";
 
-import Breadcrumbs from "@/components/Breadcrumbs";
 import DocsPageNav from "@/components/DocsPageNav";
 import MdxRenderer from "@/components/MdxRenderer";
 import TableOfContents from "@/components/TableOfContents";
@@ -25,18 +24,6 @@ export default function DocsTemplate({
   return (
     <div className={styles.container}>
       <div className={styles.main}>
-        <Breadcrumbs
-          paths={[
-            {
-              href: "/",
-              label: "Home",
-            },
-            {
-              href: "/docs/introduction",
-              label: "Docs",
-            },
-          ]}
-        />
         <article>
           <header className={styles.header}>
             <h1 className={styles.title}>{title}</h1>

@@ -44,7 +44,7 @@ export default function TableOfContents({
   });
 
   return (
-    <nav id="toc" className={clsx(styles.Block, className)}>
+    <nav id="toc" className={clsx(styles.container, className, "scrollbar")}>
       <div className={styles.title}>
         <BookmarkIcon />
         Table of contents

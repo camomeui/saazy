@@ -127,4 +127,18 @@
 
 .prose {
   font-size: var(--cmm-font-size-lg);
+
+  img {
+    border-radius: var(--cmm-radius-lg);
+  }
+
+  table {
+    font-size: var(--cmm-font-size-md);
+  }
+
+  :global {
+    .Message {
+      font-size: var(--cmm-font-size-md);
+    }
+  }
 }

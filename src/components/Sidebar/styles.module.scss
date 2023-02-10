@@ -2,11 +2,12 @@
 
 $rowGap: 0.25rem;
 
-.Block {
+.container {
   padding: 0.5rem;
   border-right: 1px solid var(--cmm-color-border-base);
   overflow-y: auto;
   position: sticky;
   top: variables.$headerHeight;
   height: calc(100vh - variables.$headerHeight);
+  scrollbar-gutter: stable;
 }

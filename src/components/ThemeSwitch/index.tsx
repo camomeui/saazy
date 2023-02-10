@@ -27,7 +27,7 @@ export default function ThemeSwitch() {
         aria-label="Switch to light theme"
         onClick={() => setTheme("light")}
         size="sm"
-        variant="outline"
+        variant="ghost"
         colorScheme="neutral"
       >
         <SunIcon />
@@ -37,7 +37,7 @@ export default function ThemeSwitch() {
         aria-label="Switch to dark theme"
         onClick={() => setTheme("dark")}
         size="sm"
-        variant="outline"
+        variant="ghost"
         colorScheme="neutral"
       >
         <MoonIcon />
