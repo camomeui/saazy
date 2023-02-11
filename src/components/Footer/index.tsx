@@ -36,9 +36,9 @@ export default function Footer() {
     <footer className={styles.container}>
       <div className={styles.inner}>
         <div className={styles.description}>
-          <div className={styles.description__logo}>
+          <Link href="/" className={styles.description__logo}>
             <Logo />
-          </div>
+          </Link>
         </div>
         <nav className={styles.navGrid}>
           {navItems.map((navItem) => (
@@ -85,16 +85,16 @@ const navItems: Props["navItems"] = [
     section: "Products",
     links: [
       {
-        href: "#cloud",
-        label: "Cloud",
+        href: "#lorem",
+        label: "Lorem",
       },
       {
-        href: "#mobile",
-        label: "Mobile Apps",
+        href: "#ipsum",
+        label: "Ipsum",
       },
       {
-        href: "#apis",
-        label: "Public APIs",
+        href: "#dolor-sit",
+        label: "Dolor sit",
       },
     ],
   },
@@ -102,16 +102,16 @@ const navItems: Props["navItems"] = [
     section: "Support",
     links: [
       {
-        href: "#pricing",
-        label: "Pricing",
+        href: "#lorem",
+        label: "Lorem",
       },
       {
-        href: "#contact",
-        label: "Contact us",
+        href: "#ipsum",
+        label: "Ipsum",
       },
       {
-        href: "#faq",
-        label: "FAQ",
+        href: "#dolor-sit",
+        label: "Dolor sit",
       },
     ],
   },
@@ -119,20 +119,16 @@ const navItems: Props["navItems"] = [
     section: "Company",
     links: [
       {
-        href: "#about",
-        label: "About",
+        href: "#lorem",
+        label: "Lorem",
       },
       {
-        href: "#blog",
-        label: "Blog",
+        href: "#ipsum",
+        label: "Ipsum",
       },
       {
-        href: "#carriers",
-        label: "Carriers",
-      },
-      {
-        href: "#press",
-        label: "Press",
+        href: "#dolor-sit",
+        label: "Dolor sit",
       },
     ],
   },
@@ -140,16 +136,16 @@ const navItems: Props["navItems"] = [
     section: "Developers",
     links: [
       {
-        href: "#docs",
-        label: "Docs",
+        href: "#lorem",
+        label: "Lorem",
       },
       {
-        href: "#portal",
-        label: "Portal",
+        href: "#ipsum",
+        label: "Ipsum",
       },
       {
-        href: "#status",
-        label: "Status",
+        href: "#dolor-sit",
+        label: "Dolor sit",
       },
     ],
   },
