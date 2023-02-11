@@ -1,20 +1,18 @@
 import { Accordion, Message, Button } from "@camome/core";
+import clsx from "clsx";
 import { type MDXComponents } from "mdx/types";
-import { useMDXComponent } from "next-contentlayer/hooks";
 import NextLink from "next/link";
-import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { useMDXComponent } from "next-contentlayer/hooks";
 
-import Breadcrumbs from "@/components/Breadcrumbs";
 import ComponentPreview from "@/components/ComponentPreview";
 import Image from "@/components/Image";
-import clsx from "clsx";
 
 type Props = {
   code: string;
 };
 
 const components: MDXComponents = {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   a: ({ href, ref, ...props }) =>
     href ? <NextLink href={href} {...props} /> : null,
   pre: ({ className, ...props }) => (

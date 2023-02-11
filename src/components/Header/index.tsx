@@ -1,5 +1,5 @@
-import { IconButton } from "@camome/core/IconButton";
 import { Button } from "@camome/core/Button";
+import { IconButton } from "@camome/core/IconButton";
 import { SvgComponent } from "@camome/utils";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import {
@@ -18,12 +18,12 @@ import Link from "next/link";
 import React from "react";
 
 import CollapsibleNav from "@/components/CollapsibleNav";
+import Logo from "@/components/Logo";
 import PopoverLinks from "@/components/PopoverLinks";
+import ThemeSwitch from "@/components/ThemeSwitch";
 import { NavItem, NavItemLink } from "@/types";
 
 import styles from "./styles.module.scss";
-import ThemeSwitch from "@/components/ThemeSwitch";
-import Logo from "@/components/Logo";
 
 const DIALOG_ID = "header-menu";
 

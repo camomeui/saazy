@@ -1,9 +1,11 @@
-import BackgroundDots from "@/components/BackgroundDots";
-import Heading from "@/components/Heading";
+import { Avatar } from "@camome/core/Avatar";
 import { MegaphoneIcon } from "@heroicons/react/24/outline";
 
+import BackgroundDots from "@/components/BackgroundDots";
+import Heading from "@/components/Heading";
+
 import styles from "./styles.module.scss";
-import { Avatar } from "@camome/core/Avatar";
+
 
 type Props = {
   items: TestimonialProps[];

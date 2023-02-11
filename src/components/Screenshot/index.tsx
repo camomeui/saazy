@@ -1,8 +1,9 @@
 import Image, { type ImageProps } from "next/image";
+import { useTheme } from "next-themes";
+import React from "react";
+
 import BrowserFrame from "@/components/BrowserFrame";
 
-import React from "react";
-import { useTheme } from "next-themes";
 
 import styles from "./styles.module.scss";
 

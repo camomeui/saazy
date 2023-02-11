@@ -1,10 +1,11 @@
-import Heading, { type HeadingProps } from "@/components/Heading";
 import { Button } from "@camome/core/Button";
-import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
+
+import Heading, { type HeadingProps } from "@/components/Heading";
+
 import styles from "./styles.module.scss";
-import Link from "next/link";
 
 type Props = {
   heading: HeadingProps;

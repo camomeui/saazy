@@ -1,12 +1,11 @@
 import { Avatar, Markup, Button } from "@camome/core";
-import Image from "next/image";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import Link from "next/link";
 
 import BlogTagList from "@/components/BlogTagList";
 import MdxRenderer from "@/components/MdxRenderer";
 import { formatDate } from "@/lib/formatDate";
-import { type Toc } from "@/types";
 import authors from "content/authors";
 import siteData from "content/siteData";
 import { type Blog } from "contentlayer/generated";
@@ -15,12 +14,10 @@ import styles from "./styles.module.scss";
 
 type Props = {
   post: Blog;
-  toc?: Toc;
 };
 
 export default function BlogPostTemplate({
   post: { title, date, author, ...post },
-  toc,
 }: Props) {
   const _author = authors[author ?? siteData.defaultAuthor];
 

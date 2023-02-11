@@ -1,9 +1,9 @@
 import React from "react";
 
-import Footer from "@/components/Footer";
+import type { NavItem } from "@/types";
+
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
-import type { NavItem } from "@/types";
 
 import styles from "./styles.module.scss";
 

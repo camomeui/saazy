@@ -1,9 +1,10 @@
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { Button } from "@camome/core/Button";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
 import styles from "./styles.module.scss";
-import Link from "next/link";
+
 
 export default function HeroSection() {
   return (

@@ -13,7 +13,7 @@ export default function BlogPostPage({ post }: Props) {
   return (
     <>
       <NextSeo title={post.title} description={post.description} />
-      <BlogPostTemplate post={post} toc={post.toc} />
+      <BlogPostTemplate post={post} />
     </>
   );
 }

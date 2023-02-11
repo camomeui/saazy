@@ -1,10 +1,11 @@
+import { Button } from "@camome/core/Button";
 import clsx from "clsx";
+import Link from "next/link";
 
 import LogoSvg from "@/public/icons/logo-icon.svg";
-import { Button } from "@camome/core/Button";
 
 import styles from "./styles.module.scss";
-import Link from "next/link";
+
 
 type Props = {
   className?: string;

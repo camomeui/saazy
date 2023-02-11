@@ -1,6 +1,4 @@
-import clsx from "clsx";
-import FeatureGrid from "@/components/FeatureGrid";
-import Heading from "@/components/Heading";
+import { Button } from "@camome/core/Button";
 import {
   RocketLaunchIcon,
   ChartBarIcon,
@@ -11,9 +9,13 @@ import {
   CodeBracketIcon,
   ChevronRightIcon,
 } from "@heroicons/react/24/outline";
+import clsx from "clsx";
+
+import FeatureGrid from "@/components/FeatureGrid";
+import Heading from "@/components/Heading";
 
 import styles from "./styles.module.scss";
-import { Button } from "@camome/core/Button";
+
 
 type Props = {
   className?: string;

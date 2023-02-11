@@ -1,9 +1,11 @@
-import SignUpForm from "@/components/SignUpForm";
-import Link from "next/link";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
+
+import Logo from "@/components/Logo";
+import SignUpForm from "@/components/SignUpForm";
 
 import styles from "./styles.module.scss";
-import Logo from "@/components/Logo";
+
 
 export default function SignUpTemplate() {
   return (

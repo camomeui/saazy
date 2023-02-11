@@ -1,10 +1,12 @@
-import Cta from "@/components/Cta";
 import { Button } from "@camome/core/Button";
+import Link from "next/link";
+
+import Cta from "@/components/Cta";
 import PricingTableLarge from "@/components/pricing-tables/PricingTableLarge";
 import PricingTableSmall from "@/components/pricing-tables/PricingTableSmall";
 
 import styles from "./styles.module.scss";
-import Link from "next/link";
+
 
 export default function PricingTemplate() {
   return (

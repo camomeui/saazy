@@ -1,11 +1,11 @@
 import { Button } from "@camome/core/Button";
 import { TextInput } from "@camome/core/TextInput";
+import Link from "next/link";
 import { FaGithub, FaGoogle, FaFacebook } from "react-icons/fa";
 
 import ButtonSocialSignIn from "@/components/ButtonSocialSignIn";
 
 import styles from "./styles.module.scss";
-import Link from "next/link";
 
 export default function SignUpForm() {
   return (

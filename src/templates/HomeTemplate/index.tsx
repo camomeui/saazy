@@ -1,24 +1,27 @@
 import { Button } from "@camome/core/Button";
-
 import { CalculatorIcon, WindowIcon } from "@heroicons/react/24/outline";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+
+import BrowserFrame from "@/components/BrowserFrame";
 import Cta from "@/components/Cta";
 import FaqSection from "@/components/FaqSection";
 import FeatureMoreSection from "@/components/FeatureMoreSection";
+import FeatureSection from "@/components/FeatureSection";
 import HeroSection from "@/components/HeroSection";
 import PricingSection from "@/components/PricingSection";
+import Screenshot from "@/components/Screenshot";
 import TestimonialsSection from "@/components/TestimonialSection";
-import ScreenshotLightImg from "@/public/images/camome-screenshot-light.webp";
 import ScreenshotDarkImg from "@/public/images/camome-screenshot-dark.webp";
-import WallpaperImg from "@/public/images/wallpaper.jpg";
+import ScreenshotLightImg from "@/public/images/camome-screenshot-light.webp";
 import CounterCodeImg from "@/public/images/counter-code.png";
+import WallpaperImg from "@/public/images/wallpaper.jpg";
 
 import styles from "./styles.module.scss";
-import Link from "next/link";
-import Screenshot from "@/components/Screenshot";
-import Head from "next/head";
-import FeatureSection from "@/components/FeatureSection";
-import BrowserFrame from "@/components/BrowserFrame";
-import Image from "next/image";
+
+
+
 
 export default function HomeTemplate() {
   return (

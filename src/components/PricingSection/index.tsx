@@ -1,11 +1,10 @@
+import { TicketIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import React from "react";
-import { TicketIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
 
 import Heading from "@/components/Heading";
 
 import styles from "./styles.module.scss";
-import { Tag } from "@camome/core/Tag";
 
 type Props = {
   items: ItemProps[];

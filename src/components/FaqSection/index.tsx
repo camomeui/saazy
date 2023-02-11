@@ -1,6 +1,7 @@
-import Heading from "@/components/Heading";
 import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+
+import Heading from "@/components/Heading";
 
 import styles from "./styles.module.scss";
 

@@ -1,9 +1,9 @@
+import { IconButton } from "@camome/core/IconButton";
 import MoonIcon from "@heroicons/react/24/outline/MoonIcon";
 import SunIcon from "@heroicons/react/24/outline/SunIcon";
 import { useTheme } from "next-themes";
 import React from "react";
 
-import { IconButton } from "@camome/core/IconButton";
 
 import styles from "./styles.module.scss";
 

@@ -3,9 +3,9 @@ import { Checkbox } from "@camome/core/Checkbox";
 import { TextInput } from "@camome/core/TextInput";
 import { Textarea } from "@camome/core/Textarea";
 import clsx from "clsx";
+import Link from "next/link";
 
 import styles from "./styles.module.scss";
-import Link from "next/link";
 
 type Props = {
   className?: string;

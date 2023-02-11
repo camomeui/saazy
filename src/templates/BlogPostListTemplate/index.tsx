@@ -7,7 +7,7 @@ import { type Blog } from "contentlayer/generated";
 
 import styles from "./styles.module.scss";
 
-const { defaultAuthor, defaultBlogThumbImg } = siteData;
+const { defaultBlogThumbImg } = siteData;
 
 type Props = {
   posts: ExtractContentMeta<Blog>[];

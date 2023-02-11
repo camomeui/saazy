@@ -12,9 +12,6 @@ export default function remarkAdmonitions() {
         // Store node.name before overwrite with "Alert".
         const status = node.name;
 
-        const data = node.data || (node.data = {});
-        const tagName = node.type === "textDirective" ? "span" : "div";
-
         node.type = "mdxJsxFlowElement";
         node.name = "Message";
         node.attributes = [

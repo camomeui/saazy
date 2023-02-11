@@ -1,8 +1,10 @@
 import Script from "next/script";
 import { NextPage } from "next/types";
-import type { AppProps } from "next/app";
-import DefaultSeo from "@/components/DefaultSeo";
 import { ThemeProvider } from "next-themes";
+
+import type { AppProps } from "next/app";
+
+import DefaultSeo from "@/components/DefaultSeo";
 
 import "@/styles/theme.css";
 import "@/styles/globals.scss";

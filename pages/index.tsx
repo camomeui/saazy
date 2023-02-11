@@ -1,7 +1,7 @@
 import React from "react";
 
-import HomeTemplate from "@/templates/HomeTemplate";
 import createGetLayout from "@/layouts/PageLayout/createGetLayout";
+import HomeTemplate from "@/templates/HomeTemplate";
 
 export default function HomePage() {
   return <HomeTemplate />;

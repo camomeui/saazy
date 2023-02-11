@@ -2,10 +2,11 @@ import { GetStaticPathsResult, GetStaticPropsContext } from "next";
 import { NextSeo } from "next-seo";
 import React from "react";
 
+import type { NavItem, LabeledLink } from "@/types";
+
 import DocsLayout from "@/layouts/DocsLayout";
 import { flattenSidebarLinks, getSidebarItems } from "@/lib/docs";
 import DocsTemplate from "@/templates/DocsTemplate";
-import type { NavItem, LabeledLink } from "@/types";
 import { allDocs, type Docs } from "contentlayer/generated";
 
 type Props = {

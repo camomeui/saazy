@@ -1,6 +1,3 @@
-import fs from "fs";
-import path from "path";
-
 export const options = {
   theme: "github-dark",
   keepBackground: false,

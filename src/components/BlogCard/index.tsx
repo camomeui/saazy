@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 
 import BlogTagList from "@/components/BlogTagList";
@@ -6,7 +7,6 @@ import { ExtractContentMeta } from "@/lib/contentlayer";
 import { type Blog } from "contentlayer/generated";
 
 import styles from "./styles.module.scss";
-import clsx from "clsx";
 
 export type BlogCardProps = Omit<ExtractContentMeta<Blog>, "thumbImg"> & {
   thumbImg: string;
@@ -18,7 +18,6 @@ export default function BlogCard({
   tags,
   title,
   thumbImg,
-  date,
   slug,
   className,
 }: BlogCardProps) {

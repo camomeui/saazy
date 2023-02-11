@@ -8,9 +8,9 @@ import {
 } from "react-icons/tb";
 
 import IconLink from "@/components/IconLink";
+import Logo from "@/components/Logo";
 
 import styles from "./styles.module.scss";
-import Logo from "@/components/Logo";
 
 type Props = {
   navItems: {
