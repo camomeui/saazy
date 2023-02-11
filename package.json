@@ -18,8 +18,8 @@
     "ci:check": "concurrently \"pnpm typecheck\" \"pnpm lint\" \"pnpm format\""
   },
   "dependencies": {
-    "@camome/core": "^0.0.23",
-    "@camome/system": "^0.1.22",
+    "@camome/core": "^0.0.24",
+    "@camome/system": "^0.1.23",
     "@headlessui/react": "^1.7.9",
     "@heroicons/react": "^2.0.10",
     "@mdx-js/loader": "^2.2.1",
@@ -71,7 +71,7 @@
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
-    "camome": "^0.1.19",
+    "camome": "^0.1.20",
     "concurrently": "^7.6.0",
     "cross-env": "^7.0.3",
     "eslint": "8.33.0",
