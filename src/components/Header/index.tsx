@@ -21,6 +21,7 @@ import CollapsibleNav from "@/components/CollapsibleNav";
 import Logo from "@/components/Logo";
 import PopoverLinks from "@/components/PopoverLinks";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import useScrollLock from "@/hooks/useScrollLock";
 import { NavItem, NavItemLink } from "@/types";
 
 import styles from "./styles.module.scss";
@@ -100,11 +101,11 @@ export default function Header({
   classNames,
 }: Props) {
   const dialogRef = React.useRef<HTMLDialogElement>(null!);
-  // const { enableBodyScroll, disableBodyScroll, clearAllBodyScrollLocks } =
-  //   useScrollLock(dialogRef);
+  const { enableBodyScroll, disableBodyScroll, clearAllBodyScrollLocks } =
+    useScrollLock(dialogRef);
 
   const openMenu = () => {
-    // disableBodyScroll();
+    disableBodyScroll();
     dialogRef.current?.showModal();
   };
   const closeMenu = () => {
@@ -113,12 +114,12 @@ export default function Header({
 
   React.useEffect(() => {
     dialogRef.current.addEventListener("close", () => {
-      // enableBodyScroll();
+      enableBodyScroll();
     });
     return () => {
-      // clearAllBodyScrollLocks();
+      clearAllBodyScrollLocks();
     };
-  }, []);
+  }, [clearAllBodyScrollLocks, enableBodyScroll]);
 
   return (
     <header
