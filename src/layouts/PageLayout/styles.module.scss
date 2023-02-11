@@ -13,24 +13,34 @@
 }
 
 .titleSection {
-  background: linear-gradient(to right, hsla(220 100% 60% / 0.15), transparent);
-
   .title {
     font-weight: var(--cmm-font-weight-extrabold);
     font-size: var(--cmm-font-size-5xl);
+    line-height: 1;
+    display: flex;
+    align-items: stretch;
+    border-color: var(--cmm-color-primary-emphasis);
+    border-style: solid;
+    border-left-width: 6px;
 
-    @include variables.mq("md") {
-      font-size: var(--cmm-font-size-3xl);
+    padding-left: 0.25em;
+
+    @include variables.mq(md) {
+      font-size: var(--cmm-font-size-4xl);
+      border-left-width: 5px;
     }
   }
 
   .titleSectionInner {
     @include variables.container(variables.$xl);
-    padding: 1.5rem 1rem 3rem 1rem;
+
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--cmm-color-border-subtle);
   }
 
   .description {
-    margin-top: 0.25rem;
+    margin-top: 1rem;
     font-size: var(--cmm-font-size-lg);
     color: var(--cmm-color-font-muted);
 
