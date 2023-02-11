@@ -3,12 +3,11 @@ import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 
-import BlogTagList from "@/components/BlogTagList";
 import { formatDate } from "@/lib/formatDate";
 
 import styles from "./styles.module.scss";
 
-type Props = {
+export type PostLayoutProps = {
   title: string;
   author?: {
     name: string;
@@ -20,33 +19,40 @@ type Props = {
     src: string;
     alt: string;
   };
-  tags?: string[];
+  backButton?: {
+    href: string;
+    content: React.ReactNode;
+  };
+  aside?: React.ReactNode;
   children: React.ReactNode;
 };
 
-export default function BlogPostTemplate({
+export default function PostLayout({
   title,
   author,
   date,
   thumb,
-  tags,
+  backButton,
+  aside,
   children,
-}: Props) {
+}: PostLayoutProps) {
   return (
     <div className={styles.container}>
+      {backButton && (
+        <Button
+          component={Link}
+          href={backButton.href}
+          variant="ghost"
+          size="sm"
+          colorScheme="neutral"
+          startDecorator={<ChevronLeftIcon />}
+          className={styles.backButton}
+        >
+          {backButton.content}
+        </Button>
+      )}
       <article>
         <header className={styles.header}>
-          <Button
-            component={Link}
-            href="/blog"
-            variant="ghost"
-            size="sm"
-            colorScheme="neutral"
-            startDecorator={<ChevronLeftIcon />}
-            className={styles.backButton}
-          >
-            Back to blog
-          </Button>
           {thumb && (
             <div className={styles.thumbImgWrap}>
               <Image src={thumb.src} alt={thumb.alt} fill />
@@ -58,26 +64,17 @@ export default function BlogPostTemplate({
             </time>
           )}
           <h1 className={styles.title}>{title}</h1>
-          <div className={styles.meta}>
-            {author && (
-              <div className={styles.author}>
-                <Avatar src={author.avatarImg} size="md" />
-                <div className={styles.author__name}>{author.name}</div>
-                <div className={styles.author__title}>{author.title}</div>
-              </div>
-            )}
-          </div>
+          {author && (
+            <div className={styles.author}>
+              <Avatar src={author.avatarImg} size="md" />
+              <div className={styles.author__name}>{author.name}</div>
+              <div className={styles.author__title}>{author.title}</div>
+            </div>
+          )}
         </header>
         <Markup className={styles.prose}>{children}</Markup>
       </article>
-      <aside className={styles.aside}>
-        {tags && (
-          <div className={styles.tagList}>
-            <h2>Tags</h2>
-            <BlogTagList tags={tags} />
-          </div>
-        )}
-      </aside>
+      {aside && <aside className={styles.aside}>{aside}</aside>}
     </div>
   );
 }

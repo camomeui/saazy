@@ -157,16 +157,12 @@ const navItems: Props["navItems"] = [
 
 const bottomLinks: Props["bottomLinks"] = [
   {
-    href: "/mdx-page#1",
+    href: "/terms",
     label: "Terms",
   },
   {
-    href: "/mdx-page#2",
+    href: "/privacy",
     label: "Privacy",
-  },
-  {
-    href: "/mdx-page#3",
-    label: "Security",
   },
 ];
 const socialLinks: Props["socialLinks"] = [

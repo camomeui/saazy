@@ -28,6 +28,9 @@ export const Blog = defineDocumentType(() => ({
     thumbImg: {
       type: "string",
     },
+    thumbAlt: {
+      type: "string",
+    },
     author: {
       type: "string",
     },

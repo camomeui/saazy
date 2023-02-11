@@ -29,8 +29,8 @@ export default function SignUpTemplate() {
           <SignUpForm />
           <p className={styles.terms}>
             By continuing, you agree to Saazy&apos;s{" "}
-            <Link href="#">Terms of Service</Link> and{" "}
-            <Link href="#">Privacy Policy.</Link>
+            <Link href="/terms">Terms of Service</Link> and{" "}
+            <Link href="/privacy">Privacy Policy.</Link>
           </p>
         </div>
       </div>

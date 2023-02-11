@@ -1,20 +1,37 @@
-import { Markup } from "@camome/core";
+import { NextSeo } from "next-seo";
 import React from "react";
 
 import PageLayout from "@/layouts/PageLayout";
+import PostLayout, { PostLayoutProps } from "@/layouts/PostLayout";
 
-import styles from "./styles.module.scss";
-
-type Props = {
-  title?: string;
+type Props = Omit<PostLayoutProps, "aside"> & {
   description?: string;
-  children?: React.ReactNode;
 };
 
-export default function MdxPageLayout({ children, ...props }: Props = {}) {
+export default function MdxPageLayout({
+  title,
+  description,
+  author,
+  date,
+  thumb,
+  backButton,
+  children,
+}: Props) {
   return (
-    <PageLayout {...props}>
-      <Markup className={styles.container}>{children}</Markup>
-    </PageLayout>
+    <>
+      {/* Add seo tags here for convenience */}
+      <NextSeo title={title} description={description} />
+      <PageLayout>
+        <PostLayout
+          title={title}
+          date={date}
+          author={author}
+          thumb={thumb}
+          backButton={backButton}
+        >
+          {children}
+        </PostLayout>
+      </PageLayout>
+    </>
   );
 }

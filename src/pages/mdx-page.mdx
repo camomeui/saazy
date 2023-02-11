@@ -1,16 +1,21 @@
 import MdxPageLayout from "@/layouts/MdxPageLayout";
-import { NextSeo } from "next-seo";
 
 export const meta = {
   title: "MDX Page",
   description: "This is description text",
+  thumb: {
+    src: "/images/office-chairs.webp",
+    alt: "Office",
+  },
+  date: "2023-02-12",
+  backButton: {
+    href: "/",
+    content: "Go back",
+  },
 };
 
 export default ({ children }) => (
-  <>
-    <NextSeo title={meta.title} />
-    <MdxPageLayout {...meta}>{children}</MdxPageLayout>
-  </>
+  <MdxPageLayout {...meta}>{children}</MdxPageLayout>
 );
 
 You can easily create static pages by adding `[slug].mdx` file under the `/pages` directory.

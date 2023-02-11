@@ -45,16 +45,16 @@ const navItems: NavItem[] = [
     href: "/docs/introduction",
   },
   {
+    id: "contact",
+    href: "/contact",
+    label: "Contact",
+  },
+  {
     id: "misc",
     label: "Misc",
     open: true,
     type: "collapsible",
     items: [
-      {
-        id: "contact",
-        href: "/contact",
-        label: "Contact",
-      },
       {
         id: "mdx-page",
         href: "/mdx-page",

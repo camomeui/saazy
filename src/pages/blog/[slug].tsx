@@ -1,8 +1,12 @@
 import { GetStaticPropsContext } from "next";
 import { NextSeo } from "next-seo";
 
+import BlogTagList from "@/components/BlogTagList";
+import MdxRenderer from "@/components/MdxRenderer";
+import siteData from "@/content/siteData";
 import createGetLayout from "@/layouts/PageLayout/createGetLayout";
-import BlogPostTemplate from "@/templates/BlogPostTemplate";
+import PostLayout from "@/layouts/PostLayout";
+import authors from "content/authors";
 import { allBlogs, type Blog } from "contentlayer/generated";
 
 type Props = {
@@ -10,10 +14,24 @@ type Props = {
 };
 
 export default function BlogPostPage({ post }: Props) {
+  const author = authors[post.author ?? siteData.defaultAuthor];
   return (
     <>
       <NextSeo title={post.title} description={post.description} />
-      <BlogPostTemplate post={post} />
+      <PostLayout
+        title={post.title}
+        thumb={
+          post.thumbImg && post.thumbAlt
+            ? { src: post.thumbImg, alt: post.thumbAlt }
+            : undefined
+        }
+        author={author}
+        date={post.date}
+        backButton={{ href: "/blog", content: "Back to Blog" }}
+        aside={<BlogTagList tags={post.tags} />}
+      >
+        <MdxRenderer code={post.body.code} />
+      </PostLayout>
     </>
   );
 }
