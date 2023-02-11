@@ -9,7 +9,7 @@ import { options as rehypePrettyCodeOptions } from "./rehype/rehypePrettyCode.mj
 import remarkAdmonitions from "./remark/remarkAdmonitions.mjs";
 import remarkImgToJsx from "./remark/remarkImgToJsx.mjs";
 
-/** @type {import('@mdx-js/mdx').CompileOptions} */
+/** @type {import('mdx-bundler/dist/types').BundleMDXOptions} */
 const mdxOptions = {
   remarkPlugins: [
     remarkGfm,
