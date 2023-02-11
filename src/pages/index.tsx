@@ -1,5 +1,3 @@
-import React from "react";
-
 import createGetLayout from "@/layouts/PageLayout/createGetLayout";
 import HomeTemplate from "@/templates/HomeTemplate";
 
