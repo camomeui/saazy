@@ -2,11 +2,16 @@ import { Message } from "@camome/core";
 import MdxPageLayout from "@/layouts/MdxPageLayout";
 import { NextSeo } from "next-seo";
 
+export const meta = {
+  title: "Success!",
+  backButton: {
+    href: "/",
+    content: "Go back",
+  },
+};
+
 export default ({ children }) => (
-  <>
-    <NextSeo title="Success" />
-    <MdxPageLayout>{children}</MdxPageLayout>
-  </>
+  <MdxPageLayout {...meta}>{children}</MdxPageLayout>
 );
 
 <Message

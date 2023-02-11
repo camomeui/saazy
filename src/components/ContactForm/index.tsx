@@ -29,7 +29,6 @@ export default function ContactForm({ className }: Props) {
         label="Subscribe to our newsletter"
         name="accept-terms"
         value="true"
-        required
       />
       <Button>Submit</Button>
       <p className={styles.terms}>
