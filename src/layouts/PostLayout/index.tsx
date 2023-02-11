@@ -51,7 +51,7 @@ export default function PostLayout({
           {backButton.content}
         </Button>
       )}
-      <article>
+      <article className={styles.article}>
         <header className={styles.header}>
           {thumb && (
             <div className={styles.thumbImgWrap}>
