@@ -18,7 +18,7 @@ export type LabeledLink = {
 
 export type SiteData = {
   title: string;
-  subTitle: string;
+  subtitle: string;
   description: string;
   url: string;
   ogImage: string;

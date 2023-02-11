@@ -4,7 +4,7 @@ import React from "react";
 import siteData from "content/siteData";
 
 const DefaultSeoConfig: DefaultSeoProps = {
-  defaultTitle: `${siteData.title} | ${siteData.subTitle}`,
+  defaultTitle: `${siteData.title} | ${siteData.subtitle}`,
   titleTemplate: `%s | ${siteData.title}`,
   description: siteData.description,
   twitter: {
