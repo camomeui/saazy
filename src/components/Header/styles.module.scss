@@ -4,16 +4,17 @@
   border-bottom: 1px solid var(--cmm-color-border-subtle);
   height: variables.$headerHeight;
   z-index: 50;
-  backdrop-filter: blur(4px);
-  background: hsl(0 0 100% / 0.9);
-
-  [data-theme="dark"] & {
-    background: hsl(0 0 0 / 0.8);
-  }
+  background: var(--cmm-color-surface-0);
 
   &.sticky {
     position: sticky;
     top: 0;
+    backdrop-filter: blur(4px);
+    background: hsl(0 0 100% / 0.9);
+
+    [data-theme="dark"] & {
+      background: hsl(0 0 8% / 0.9);
+    }
   }
 }
 
