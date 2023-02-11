@@ -6,7 +6,6 @@ import SignUpForm from "@/components/SignUpForm";
 
 import styles from "./styles.module.scss";
 
-
 export default function SignUpTemplate() {
   return (
     <div className={styles.container}>

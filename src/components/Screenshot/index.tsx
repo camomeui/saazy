@@ -4,7 +4,6 @@ import React from "react";
 
 import BrowserFrame from "@/components/BrowserFrame";
 
-
 import styles from "./styles.module.scss";
 
 type Props = {

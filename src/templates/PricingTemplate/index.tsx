@@ -7,7 +7,6 @@ import PricingTableSmall from "@/components/pricing-tables/PricingTableSmall";
 
 import styles from "./styles.module.scss";
 
-
 export default function PricingTemplate() {
   return (
     <div className={styles.container}>

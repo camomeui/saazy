@@ -1,12 +1,9 @@
-import path from "path";
 import { generateScopedName, hash } from "@camome/utils";
-import { withContentlayer } from "next-contentlayer";
 import createMdx from "@next/mdx";
-import remarkGfm from "remark-gfm";
-import rehypeExternalLinks from "rehype-external-links";
-import rehypePrismPlus from "rehype-prism-plus";
-import svgrRules from "./webpack/svgr.mjs";
+import { withContentlayer } from "next-contentlayer";
+
 import mdxOptions from "./src/lib/mdxOptions.mjs";
+import svgrRules from "./webpack/svgr.mjs";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

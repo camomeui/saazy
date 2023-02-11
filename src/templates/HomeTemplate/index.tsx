@@ -20,9 +20,6 @@ import WallpaperImg from "@/public/images/wallpaper.jpg";
 
 import styles from "./styles.module.scss";
 
-
-
-
 export default function HomeTemplate() {
   return (
     <>

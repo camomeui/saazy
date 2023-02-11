@@ -1,4 +1,13 @@
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+function _toConsumableArray(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+    return arr2;
+  } else {
+    return Array.from(arr);
+  }
+}
 
 // Older browsers don't support event options, feature detect it.
 
@@ -6,19 +15,24 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 // https://stackoverflow.com/questions/41594997/ios-10-safari-prevent-scrolling-behind-a-fixed-overlay-and-maintain-scroll-posi
 
 var hasPassiveEvents = false;
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   var passiveTestOptions = {
     get passive() {
       hasPassiveEvents = true;
       return undefined;
-    }
+    },
   };
-  window.addEventListener('testPassive', null, passiveTestOptions);
-  window.removeEventListener('testPassive', null, passiveTestOptions);
+  window.addEventListener("testPassive", null, passiveTestOptions);
+  window.removeEventListener("testPassive", null, passiveTestOptions);
 }
 
-var isIosDevice = typeof window !== 'undefined' && window.navigator && window.navigator.platform && (/iP(ad|hone|od)/.test(window.navigator.platform) || window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1);
-
+var isIosDevice =
+  typeof window !== "undefined" &&
+  window.navigator &&
+  window.navigator.platform &&
+  (/iP(ad|hone|od)/.test(window.navigator.platform) ||
+    (window.navigator.platform === "MacIntel" &&
+      window.navigator.maxTouchPoints > 1));
 
 var locks = [];
 var documentListenerAdded = false;
@@ -60,20 +74,27 @@ var preventDefault = function preventDefault(rawEvent) {
 var setOverflowHidden = function setOverflowHidden(options) {
   // If previousBodyPaddingRight is already set, don't set it again.
   if (previousBodyPaddingRight === undefined) {
-    var _reserveScrollBarGap = !!options && options.reserveScrollBarGap === true;
+    var _reserveScrollBarGap =
+      !!options && options.reserveScrollBarGap === true;
     var scrollBarGap = window.innerWidth - document.documentElement.clientWidth;
 
     if (_reserveScrollBarGap && scrollBarGap > 0) {
-      var computedBodyPaddingRight = parseInt(window.getComputedStyle(document.body).getPropertyValue('padding-right'), 10);
+      var computedBodyPaddingRight = parseInt(
+        window
+          .getComputedStyle(document.body)
+          .getPropertyValue("padding-right"),
+        10
+      );
       previousBodyPaddingRight = document.body.style.paddingRight;
-      document.body.style.paddingRight = computedBodyPaddingRight + scrollBarGap + 'px';
+      document.body.style.paddingRight =
+        computedBodyPaddingRight + scrollBarGap + "px";
     }
   }
 
   // If previousBodyOverflowSetting is already set, don't set it again.
   if (previousBodyOverflowSetting === undefined) {
     previousBodyOverflowSetting = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   }
 };
 
@@ -102,18 +123,18 @@ var setPositionFixed = function setPositionFixed() {
       previousBodyPosition = {
         position: document.body.style.position,
         top: document.body.style.top,
-        left: document.body.style.left
+        left: document.body.style.left,
       };
 
       // Update the dom inside an animation frame
       var _window = window,
-          scrollY = _window.scrollY,
-          scrollX = _window.scrollX,
-          innerHeight = _window.innerHeight;
+        scrollY = _window.scrollY,
+        scrollX = _window.scrollX,
+        innerHeight = _window.innerHeight;
 
-      document.body.style.position = 'fixed';
-      document.body.style.top = -scrollY + 'px';
-      document.body.style.left = -scrollX + 'px';
+      document.body.style.position = "fixed";
+      document.body.style.top = -scrollY + "px";
+      document.body.style.left = -scrollX + "px";
 
       setTimeout(function () {
         return window.requestAnimationFrame(function () {
@@ -148,8 +169,13 @@ var restorePositionSetting = function restorePositionSetting() {
 };
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
-var isTargetElementTotallyScrolled = function isTargetElementTotallyScrolled(targetElement) {
-  return targetElement ? targetElement.scrollHeight - targetElement.scrollTop <= targetElement.clientHeight : false;
+var isTargetElementTotallyScrolled = function isTargetElementTotallyScrolled(
+  targetElement
+) {
+  return targetElement
+    ? targetElement.scrollHeight - targetElement.scrollTop <=
+        targetElement.clientHeight
+    : false;
 };
 
 var handleScroll = function handleScroll(event, targetElement) {
@@ -173,24 +199,31 @@ var handleScroll = function handleScroll(event, targetElement) {
   return true;
 };
 
-export var disableBodyScroll = function disableBodyScroll(targetElement, options) {
+export var disableBodyScroll = function disableBodyScroll(
+  targetElement,
+  options
+) {
   // targetElement must be provided
   if (!targetElement) {
     // eslint-disable-next-line no-console
-    console.error('disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices.');
+    console.error(
+      "disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices."
+    );
     return;
   }
 
   // disableBodyScroll must not have been called on this targetElement before
-  if (locks.some(function (lock) {
-    return lock.targetElement === targetElement;
-  })) {
+  if (
+    locks.some(function (lock) {
+      return lock.targetElement === targetElement;
+    })
+  ) {
     return;
   }
 
   var lock = {
     targetElement: targetElement,
-    options: options || {}
+    options: options || {},
   };
 
   locks = [].concat(_toConsumableArray(locks), [lock]);
@@ -216,7 +249,11 @@ export var disableBodyScroll = function disableBodyScroll(targetElement, options
     };
 
     if (!documentListenerAdded) {
-      document.addEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
+      document.addEventListener(
+        "touchmove",
+        preventDefault,
+        hasPassiveEvents ? { passive: false } : undefined
+      );
       documentListenerAdded = true;
     }
   }
@@ -231,7 +268,11 @@ export var clearAllBodyScrollLocks = function clearAllBodyScrollLocks() {
     });
 
     if (documentListenerAdded) {
-      document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
+      document.removeEventListener(
+        "touchmove",
+        preventDefault,
+        hasPassiveEvents ? { passive: false } : undefined
+      );
       documentListenerAdded = false;
     }
 
@@ -251,7 +292,9 @@ export var clearAllBodyScrollLocks = function clearAllBodyScrollLocks() {
 export var enableBodyScroll = function enableBodyScroll(targetElement) {
   if (!targetElement) {
     // eslint-disable-next-line no-console
-    console.error('enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices.');
+    console.error(
+      "enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices."
+    );
     return;
   }
 
@@ -264,7 +307,11 @@ export var enableBodyScroll = function enableBodyScroll(targetElement) {
     targetElement.ontouchmove = null;
 
     if (documentListenerAdded && locks.length === 0) {
-      document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
+      document.removeEventListener(
+        "touchmove",
+        preventDefault,
+        hasPassiveEvents ? { passive: false } : undefined
+      );
       documentListenerAdded = false;
     }
   }

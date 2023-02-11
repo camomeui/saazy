@@ -16,7 +16,6 @@ import Heading from "@/components/Heading";
 
 import styles from "./styles.module.scss";
 
-
 type Props = {
   className?: string;
 };

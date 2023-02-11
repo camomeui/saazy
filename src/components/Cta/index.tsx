@@ -6,7 +6,6 @@ import LogoSvg from "@/public/icons/logo-icon.svg";
 
 import styles from "./styles.module.scss";
 
-
 type Props = {
   className?: string;
 };

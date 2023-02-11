@@ -6,7 +6,6 @@ import Heading from "@/components/Heading";
 
 import styles from "./styles.module.scss";
 
-
 type Props = {
   items: TestimonialProps[];
 };

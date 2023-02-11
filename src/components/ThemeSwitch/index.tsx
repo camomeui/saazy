@@ -4,7 +4,6 @@ import SunIcon from "@heroicons/react/24/outline/SunIcon";
 import { useTheme } from "next-themes";
 import React from "react";
 
-
 import styles from "./styles.module.scss";
 
 export default function ThemeSwitch() {
