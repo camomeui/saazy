@@ -55,6 +55,7 @@
     "remark-gfm": "^3.0.1",
     "remark-mdx": "^2.1.5",
     "remark-parse": "^10.0.1",
+    "sharp": "^0.31.3",
     "shiki": "^0.14.0",
     "unified": "^10.1.2",
     "unist-util-visit": "^4.1.1"
@@ -80,7 +81,6 @@
     "eslint-plugin-react": "^7.31.10",
     "globby": "^13.1.2",
     "husky": "^8.0.0",
-    "jsdom": "^21.1.0",
     "prettier": "^2.7.1",
     "sass": "^1.58.0",
     "typed-scss-modules": "^7.0.2",

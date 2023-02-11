@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import SignInForm from "@/components/SignInForm";
-import LogoSvg from "@/public/icons/logo-icon.svg";
+import LogoSvg from "@/public/vector/logo-icon.svg";
 
 import styles from "./styles.module.scss";
 

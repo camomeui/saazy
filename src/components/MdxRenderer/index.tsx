@@ -1,11 +1,9 @@
 import { Accordion, Message, Button } from "@camome/core";
 import clsx from "clsx";
 import { type MDXComponents } from "mdx/types";
+import Image from "next/image";
 import NextLink from "next/link";
 import { useMDXComponent } from "next-contentlayer/hooks";
-
-import ComponentPreview from "@/components/ComponentPreview";
-import Image from "@/components/Image";
 
 type Props = {
   code: string;
@@ -19,7 +17,6 @@ const components: MDXComponents = {
     <pre className={clsx(className, "no-markup")} {...props} />
   ),
   Image,
-  ComponentPreview,
   Accordion,
   Message,
   Button,

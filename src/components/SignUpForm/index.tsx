@@ -3,7 +3,7 @@ import { TextInput } from "@camome/core/TextInput";
 import Link from "next/link";
 import { FaGithub, FaGoogle, FaFacebook } from "react-icons/fa";
 
-import ButtonSocialSignIn from "@/components/ButtonSocialSignIn";
+import SocialSignInButton from "@/components/SocialSignInButton";
 
 import styles from "./styles.module.scss";
 
@@ -30,17 +30,17 @@ export default function SignUpForm() {
       </div>
 
       <div className={styles.social}>
-        <ButtonSocialSignIn
+        <SocialSignInButton
           Icon={FaGoogle}
           svgSize="1.1rem"
           aria-label="Sign up with Google"
         />
-        <ButtonSocialSignIn
+        <SocialSignInButton
           Icon={FaFacebook}
           svgSize="1.2rem"
           aria-label="Sign up with Facebook"
         />
-        <ButtonSocialSignIn
+        <SocialSignInButton
           Icon={FaGithub}
           svgSize="1.2rem"
           aria-label="Sign up with GitHub"

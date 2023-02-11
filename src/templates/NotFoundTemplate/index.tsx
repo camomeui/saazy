@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import NotFoundSvg from "@/public/icons/not-found.svg";
+import NotFoundSvg from "@/public/vector/not-found.svg";
 
 import styles from "./styles.module.scss";
 

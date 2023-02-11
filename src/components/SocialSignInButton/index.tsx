@@ -13,7 +13,7 @@ type Props = {
   HTMLButtonElement
 >;
 
-export default function ButtonSocialSignIn({
+export default function SocialSignInButton({
   Icon,
   svgSize,
   className,

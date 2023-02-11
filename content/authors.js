@@ -2,7 +2,7 @@
 const authors = {
   ["john-doe"]: {
     name: "John Doe",
-    avatarImg: "/images/avatars/john-doe.webp",
+    avatarImg: "/images/avatar-3.jpg",
     title: "CEO of Saazy",
   },
 };

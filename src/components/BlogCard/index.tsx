@@ -1,8 +1,8 @@
 import clsx from "clsx";
+import Image from "next/image";
 import Link from "next/link";
 
 import BlogTagList from "@/components/BlogTagList";
-import Image from "@/components/Image";
 import { ExtractContentMeta } from "@/lib/contentlayer";
 import { type Blog } from "contentlayer/generated";
 

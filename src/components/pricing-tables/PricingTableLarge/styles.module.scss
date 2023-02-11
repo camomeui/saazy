@@ -81,5 +81,6 @@ $borderColor: var(--cmm-color-border-base);
 .check {
   width: 1.25rem;
   height: 1.25rem;
-  color: #38a169;
+  color: var(--cmm-color-success-emphasis);
+  stroke-width: 3;
 }

@@ -2,7 +2,7 @@ import { Button } from "@camome/core/Button";
 import clsx from "clsx";
 import Link from "next/link";
 
-import LogoSvg from "@/public/icons/logo-icon.svg";
+import LogoSvg from "@/public/vector/logo-icon.svg";
 
 import styles from "./styles.module.scss";
 
