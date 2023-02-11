@@ -1,6 +1,6 @@
 @use "@/styles/variables";
 
-.Block {
+.container {
   @include variables.container;
 
   $shadowWidth: 0.5rem;

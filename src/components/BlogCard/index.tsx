@@ -23,7 +23,7 @@ export default function BlogCard({
 }: BlogCardProps) {
   const href = "/blog/" + slug;
   return (
-    <article className={clsx(styles.Block, className)}>
+    <article className={clsx(styles.container, className)}>
       <Link href={href} className={styles.image}>
         <Image src={thumbImg} alt="Hero image for the blog post" fill />
       </Link>

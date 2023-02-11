@@ -16,7 +16,7 @@ export default function NewsletterForm({ as = "h3", className }: Props) {
     <form
       action="/api/newsletter"
       method="POST"
-      className={clsx(styles.Block, className)}
+      className={clsx(styles.container, className)}
     >
       <H className={styles.title}>Newsletter</H>
       <p className={styles.subTitle}>Subscribe to our latest news and posts.</p>

@@ -12,7 +12,7 @@ type Props = {
 
 export default function BlogTagList({ tags }: Props) {
   return (
-    <ul className={styles.Block}>
+    <ul className={styles.container}>
       {tags?.map((t) => (
         <li key={t}>
           <Link href={`/blog/tags/${kebabCase(t)}`}>

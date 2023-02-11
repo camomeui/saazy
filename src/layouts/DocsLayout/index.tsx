@@ -24,7 +24,7 @@ export default function DocsLayout({ sidebarItems, children }: Props) {
           />
         )}
         classNames={{
-          block: styles.header,
+          container: styles.header,
           inner: styles.headerInner,
         }}
       />

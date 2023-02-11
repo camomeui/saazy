@@ -16,7 +16,7 @@ type Props = {
 
 export default function DocsPageNav({ prev, next }: Props) {
   return (
-    <nav className={styles.Block}>
+    <nav className={styles.container}>
       {prev ? <DocsPageLink {...prev} direction="prev" /> : <div />}
       {next ? <DocsPageLink {...next} direction="next" /> : <div />}
     </nav>

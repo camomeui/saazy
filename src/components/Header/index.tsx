@@ -90,7 +90,7 @@ type Props = {
   isSticky?: boolean;
   menuContent?: ({ close }: { close: () => void }) => React.ReactNode;
   classNames?: {
-    block?: string;
+    container?: string;
     inner?: string;
   };
 };
@@ -125,7 +125,7 @@ export default function Header({
     <header
       className={clsx(
         styles.container,
-        classNames?.block,
+        classNames?.container,
         isSticky && styles.sticky
       )}
     >

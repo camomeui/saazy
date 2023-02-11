@@ -23,7 +23,7 @@ type Props = {
 
 export default function PricingTableLarge({ plans, rows, className }: Props) {
   return (
-    <table className={clsx(styles.Block, className)}>
+    <table className={clsx(styles.container, className)}>
       <thead>
         <tr>
           <th className={clsx(styles.featureListTh, styles.topHeader)}>

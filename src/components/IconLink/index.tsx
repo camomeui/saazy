@@ -10,7 +10,7 @@ type Props = {
 
 export default function IconLink({ href, ariaLabel, Icon }: Props) {
   return (
-    <a href={href} aria-label={ariaLabel} className={styles.Block}>
+    <a href={href} aria-label={ariaLabel} className={styles.container}>
       <Icon className={styles.icon} />
     </a>
   );

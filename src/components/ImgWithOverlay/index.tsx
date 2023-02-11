@@ -9,7 +9,7 @@ type Props = {
 
 export default function ImgWithOverlay({ src, alt }: Props) {
   return (
-    <div className={styles.Block}>
+    <div className={styles.container}>
       <img src={src} alt={alt} className={styles.img} />
     </div>
   );

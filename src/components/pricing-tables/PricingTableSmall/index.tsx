@@ -23,7 +23,7 @@ type Props = {
 
 export default function PricingTableSmall({ plans, rows, className }: Props) {
   return (
-    <table className={clsx(styles.Block, className)}>
+    <table className={clsx(styles.container, className)}>
       <tbody>
         {plans.map((plan, i) => (
           <React.Fragment key={plan.name}>

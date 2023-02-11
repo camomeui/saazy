@@ -20,7 +20,7 @@ export default function ButtonSocialSignIn({
   ...props
 }: Props) {
   return (
-    <button className={clsx(styles.Block, className)} {...props}>
+    <button className={clsx(styles.container, className)} {...props}>
       <Icon style={{ width: svgSize, height: svgSize }} />
     </button>
   );

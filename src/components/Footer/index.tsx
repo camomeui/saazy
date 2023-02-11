@@ -33,7 +33,7 @@ type Props = {
 
 export default function Footer() {
   return (
-    <footer className={styles.Block}>
+    <footer className={styles.container}>
       <div className={styles.inner}>
         <div className={styles.description}>
           <div className={styles.description__logo}>

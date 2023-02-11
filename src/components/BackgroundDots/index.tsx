@@ -7,5 +7,5 @@ type Props = {
 };
 
 export default function BackgroundDots({ className }: Props) {
-  return <div className={clsx(styles.Block, className)} />;
+  return <div className={clsx(styles.container, className)} />;
 }

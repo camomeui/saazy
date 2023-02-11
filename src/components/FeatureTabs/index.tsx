@@ -30,7 +30,7 @@ export default function FeatureTabs({ items, className }: FeatureTabsProps) {
       data-tabs
       role="tablist"
       aria-label="Sample tabs"
-      className={clsx(styles.Block, className)}
+      className={clsx(styles.container, className)}
     >
       {items.map(({ id }, i) => (
         <input

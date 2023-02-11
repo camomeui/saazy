@@ -1,6 +1,6 @@
 @use "@/styles/variables";
 
-.Block {
+.container {
   @include variables.container(variables.$md);
 
   padding-top: 2rem;

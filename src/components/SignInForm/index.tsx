@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 
 export default function SignInForm() {
   return (
-    <section className={styles.Block}>
+    <section className={styles.container}>
       <h2 className={styles.title}>Sign in to your account</h2>
       <form>
         <TextInput

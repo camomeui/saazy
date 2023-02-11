@@ -14,7 +14,7 @@ type Props = {
 export default function MdxPageLayout({ children, ...props }: Props = {}) {
   return (
     <PageLayout {...props}>
-      <Markup className={styles.Block}>{children}</Markup>
+      <Markup className={styles.container}>{children}</Markup>
     </PageLayout>
   );
 }

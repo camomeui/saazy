@@ -15,7 +15,7 @@ export default function ComponentPreview({
   return (
     <div
       className={clsx(
-        styles.Block,
+        styles.container,
         direction === "horizontal" ? styles.horizontal : styles.vertical,
         "no-markup"
       )}
