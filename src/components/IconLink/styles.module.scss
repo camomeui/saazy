@@ -1,8 +1,6 @@
 .Block {
   display: inline-block;
   padding: 0.75rem;
-  transition-property: var(--cmm-transition-property-colors);
-  transition-duration: var(--cmm-transition-duration-normal);
   border-radius: var(--cmm-radius-full);
 
   &:hover {
@@ -16,5 +14,4 @@
   height: 1.25rem;
   width: 1.25rem;
   color: var(--cmm-color-font-subtle);
-  transition: color 0.3s;
 }
