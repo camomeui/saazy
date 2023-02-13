@@ -20,10 +20,9 @@ Then:
 
 ```bash
 pnpm dev
-# pnpm run -F \"@camome/*\" -r --parallel dev
 ```
 
-And open `localhost:3900` in your browser and the Next app should be running.
+And open `localhost:3930` in your browser and the Next app should be running.
 
 ## Build for production
 
@@ -35,28 +34,6 @@ pnpm build
 
 ```bash
 pnpm lint
-pnpm lint:fix
+pnpm format
 pnpm typecheck
 ```
-
-## Export Static App
-
-:::danger
-This command overwrites the whole Static App directory.
-:::
-
-```bash
-pnpm -F @camome/saazy export
-```
-
-See [Next App vs Static App](/docs/next-vs-static) for details about Static App.
-
-## Execute command for single package
-
-You can run npm scripts defined in `package.json` for each package from anywhere in monorepo by `-F <package_selector> <command>` option.
-
-```bash
-pnpm -F "@camome/saazy" dev
-```
-
-See more at [pnpm's Filtering doc](https://pnpm.io/filtering).

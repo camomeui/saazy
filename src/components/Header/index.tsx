@@ -42,7 +42,7 @@ const navItems: NavItem[] = [
   {
     id: "docs",
     label: "Docs",
-    href: "/docs/introduction",
+    href: "/docs/develop/introduction",
   },
   {
     id: "contact",

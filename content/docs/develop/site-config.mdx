@@ -27,15 +27,15 @@ Just replace `/public/images/og.png` or modify `/src/components/DefaultSeo.tsx` 
 
 ## Favicon
 
-Default icons and settings followed this article: [How to Favicon in 2022: Six files that fit most needs](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs).
+Generate favicons from single file by [Faviconize](https://github.com/sabigara/faviconize), a Deno CLI tool I developed.
 
-To change the favicon, you need to replace the following images:
-
-```md
-- /public
-  - favicon.ico
-  - icon.svg
-  - icon-192.png
-  - icon-512.png
-  - apple-touch-icon.png
+```bash
+deno run --unstable --allow-read --allow-write --allow-ffi \
+ "https://deno.land/x/faviconize/cmd.ts" \
+ -i "path/to/icon.<svg or png>" \
+ -o "path/to/outdir/"
 ```
+
+:::warn
+You need Deno runtime installed in you machine.
+:::

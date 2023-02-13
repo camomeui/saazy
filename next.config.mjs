@@ -11,9 +11,6 @@ const nextConfig = {
   swcMinify: true,
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   transpilePackages: ["@camome/core"],
-  images: {
-    unoptimized: process.env.EXPORT_MODE === "true",
-  },
   experimental: {
     scrollRestoration: true,
   },
