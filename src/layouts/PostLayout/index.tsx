@@ -55,7 +55,7 @@ export default function PostLayout({
         <header className={styles.header}>
           {thumb && (
             <div className={styles.thumbImgWrap}>
-              <Image src={thumb.src} alt={thumb.alt} fill />
+              <Image src={thumb.src} alt={thumb.alt} fill priority />
             </div>
           )}
           {date && (

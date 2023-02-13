@@ -11,6 +11,7 @@ import styles from "./styles.module.scss";
 export type BlogCardProps = Omit<ExtractContentMeta<Blog>, "thumbImg"> & {
   thumbImg: string;
   className?: string;
+  priority?: boolean;
 };
 
 export default function BlogCard({
@@ -20,12 +21,18 @@ export default function BlogCard({
   thumbImg,
   slug,
   className,
+  priority = false,
 }: BlogCardProps) {
   const href = "/blog/" + slug;
   return (
     <article className={clsx(styles.container, className)}>
       <Link href={href} className={styles.image}>
-        <Image src={thumbImg} alt="Hero image for the blog post" fill />
+        <Image
+          src={thumbImg}
+          alt="Hero image for the blog post"
+          fill
+          priority={priority}
+        />
       </Link>
       <div className={styles.content}>
         <aside className={styles.tagList}>

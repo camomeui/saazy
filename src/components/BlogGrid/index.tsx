@@ -14,7 +14,7 @@ export default function BlogGrid({ posts, className }: Props) {
     <div className={clsx(styles.grid, className)}>
       {posts.map((post, i) => (
         <div key={post.slug} className={i === 0 ? styles.featured : undefined}>
-          <BlogCard {...post} />
+          <BlogCard {...post} priority={i < 3} />
         </div>
       ))}
     </div>
