@@ -1,11 +1,7 @@
 @use "@/styles/variables";
 
 .container {
-  display: grid;
-}
-
-.left {
-  @include variables.container(48rem);
+  @include variables.container(50rem);
 
   display: flex;
   flex-direction: column;
