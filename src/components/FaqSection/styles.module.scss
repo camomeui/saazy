@@ -3,10 +3,14 @@
 .container {
   padding-top: 4rem;
   padding-bottom: 6rem;
-  background: linear-gradient(180deg, hsl(220 100% 80% / 0.2), transparent);
+  background: linear-gradient(180deg, hsl(220deg 100% 80% / 0.2), transparent);
 
   [data-theme="dark"] & {
-    background: linear-gradient(180deg, hsl(220 100% 60% / 0.1), transparent);
+    background: linear-gradient(
+      180deg,
+      hsl(220deg 100% 60% / 0.1),
+      transparent
+    );
   }
 }
 

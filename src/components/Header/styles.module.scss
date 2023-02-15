@@ -10,10 +10,10 @@
     position: sticky;
     top: 0;
     backdrop-filter: blur(4px);
-    background: hsl(0 0 100% / 0.9);
+    background: hsl(0deg 0% 100% / 0.9);
 
     [data-theme="dark"] & {
-      background: hsl(0 0 8% / 0.9);
+      background: hsl(0deg 0% 8% / 0.9);
     }
   }
 }
