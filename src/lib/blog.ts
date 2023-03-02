@@ -6,8 +6,8 @@ const { blogPostsPerPage } = siteData;
 
 export function getBlogPostsForPage(pageNumber: number) {
   const posts = allBlogs
-    .slice(blogPostsPerPage * (pageNumber - 1), blogPostsPerPage * pageNumber)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(blogPostsPerPage * (pageNumber - 1), blogPostsPerPage * pageNumber);
 
   const pagination = {
     currentPage: pageNumber,
