@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@camome/core': ^0.0.25
+  '@camome/core': ^0.0.29
   '@camome/system': ^0.1.24
   '@camome/utils': ^0.1.10
   '@headlessui/react': ^1.7.9
@@ -68,7 +68,7 @@ specifiers:
   unist-util-visit: ^4.1.1
 
 dependencies:
-  '@camome/core': 0.0.25_react@18.2.0
+  '@camome/core': 0.0.29_react@18.2.0
   '@camome/system': 0.1.24
   '@headlessui/react': 1.7.10_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.15_react@18.2.0
@@ -1386,8 +1386,8 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
 
-  /@camome/core/0.0.25_react@18.2.0:
-    resolution: {integrity: sha512-Vj5xSf/X81OJR6UGKuMUElISl8PLRvo3o93PLsOSV2O5L2kBbkMASH5q3yCHj97kG38K6TlJHDUY2IoXEb/DLQ==}
+  /@camome/core/0.0.29_react@18.2.0:
+    resolution: {integrity: sha512-aDJjZ1v1aRqWs2PCR8JT1i28RdU4HKyXU19T1wbQi9Ulimzq7MoSFclPvClMlRwsp7bSB+cvSkR7YajYJ1HWRQ==}
     peerDependencies:
       react: '>=18'
     dependencies:
@@ -2576,13 +2576,13 @@ packages:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
       '@types/eslint': 8.21.0
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
     dev: false
 
   /@types/eslint/8.21.0:
     resolution: {integrity: sha512-35EhHNOXgxnUgh4XCJsGhE7zdlDhYDN/aMG6UbkByCFFNgQ7b3U+uVoqBpicFydR8JEfgdjCF7SJ7MiJfzuiTA==}
     dependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
     dev: false
 

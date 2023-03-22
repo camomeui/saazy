@@ -1,6 +1,6 @@
 import { Button } from "@camome/core/Button";
 import { Checkbox } from "@camome/core/Checkbox";
-import { TextInput } from "@camome/core/TextInput";
+import { Input } from "@camome/core/Input";
 import { Textarea } from "@camome/core/Textarea";
 import clsx from "clsx";
 import Link from "next/link";
@@ -19,11 +19,11 @@ export default function ContactForm({ className }: Props) {
       className={clsx(styles.container, className)}
     >
       <div className={styles.column2}>
-        <TextInput label="First name" name="firstName" required />
-        <TextInput label="Last name" name="lastName" required />
+        <Input label="First name" name="firstName" required />
+        <Input label="Last name" name="lastName" required />
       </div>
-      <TextInput label="Company name" name="company" required />
-      <TextInput label="Work email" type="email" name="email" required />
+      <Input label="Company name" name="company" required />
+      <Input label="Work email" type="email" name="email" required />
       <Textarea label="Message" rows={5} name="message" required />
       <Checkbox
         label="Subscribe to our newsletter"

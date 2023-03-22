@@ -1,4 +1,4 @@
-import { Button, Checkbox, TextInput } from "@camome/core";
+import { Button, Checkbox, Input } from "@camome/core";
 import Link from "next/link";
 import { FaGithub, FaGoogle, FaFacebook } from "react-icons/fa";
 
@@ -11,14 +11,14 @@ export default function SignInForm() {
     <section className={styles.container}>
       <h2 className={styles.title}>Sign in to your account</h2>
       <form>
-        <TextInput
+        <Input
           label="Email"
           type="email"
           placeholder="you@example.com"
           required
           fill
         />
-        <TextInput label="Password" type="password" required fill />
+        <Input label="Password" type="password" required fill />
         <div className={styles.sub}>
           <Checkbox label="Remember me" name="remember" value="true" />
           <Link href="#">Forgot password?</Link>

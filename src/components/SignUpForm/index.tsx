@@ -1,5 +1,5 @@
 import { Button } from "@camome/core/Button";
-import { TextInput } from "@camome/core/TextInput";
+import { Input } from "@camome/core/Input";
 import Link from "next/link";
 import { FaGithub, FaGoogle, FaFacebook } from "react-icons/fa";
 
@@ -12,14 +12,14 @@ export default function SignUpForm() {
     <section className={styles.container}>
       <h2 className={styles.title}>Create a new account</h2>
       <form>
-        <TextInput
+        <Input
           label="Email"
           type="email"
           placeholder="you@example.com"
           required
           fill
         />
-        <TextInput label="Password" type="password" required fill />
+        <Input label="Password" type="password" required fill />
         <Button>Sign up</Button>
       </form>
 
